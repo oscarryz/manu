@@ -17,10 +17,10 @@ Idea is to create a blogging platform with the followig elements:
 
 # Prerrequisites
 
--node 10.16.3+
--npm 6.9.0+
--git
--github account
+- node 10.16.3+
+- npm 6.9.0+
+- git
+- github account
 
 
 # Install
