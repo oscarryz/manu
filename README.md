@@ -1,7 +1,6 @@
 # manu
 Minimalist Blogging Platform based on https://manuelmoreale.com/ blog because it's awesome.
 
-
 (WIP)
 
 Idea is to create a blogging platform with the followig elements:
@@ -14,5 +13,27 @@ Idea is to create a blogging platform with the followig elements:
 
 [Prototype](https://www.figma.com/proto/3dpkBtXMu7a01QbFbKZOoZ/Blog-Platform?node-id=40%3A131&scaling=min-zoom)
 
-
 ![manu-editor.svg](manu-editor.svg)
+
+# Prerrequisites
+
+node 10.16.3+
+npm 6.9.0+
+git
+github account
+
+
+# Install
+
+```
+git clone git@github.com:oscarryz/manu.git
+cd manu
+npm install
+```
+
+#Running
+
+```
+npm start
+```
+

@@ -1,0 +1,29 @@
+{
+  "name": "manu",
+  "version": "0.0.0",
+  "description": "\"Minimalistic Blogging Platform\" ",
+  "main": "index",
+  "scripts": {
+    "start": "node_modules/http-server/bin/http-server",
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oscarryz/manu.git"
+  },
+  "keywords": [
+    "cms",
+    "flat-file",
+    "blog",
+    "minimalist"
+  ],
+  "author": "\"The manu developers\"",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/oscarryz/manu/issues"
+  },
+  "homepage": "https://github.com/oscarryz/manu#readme",
+  "dependencies": {
+    "http-server": "^0.11.1"
+  }
+}
