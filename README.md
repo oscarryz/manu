@@ -13,7 +13,6 @@ Idea is to create a blogging platform with the followig elements:
 
 [Prototype](https://www.figma.com/proto/3dpkBtXMu7a01QbFbKZOoZ/Blog-Platform?node-id=40%3A131&scaling=min-zoom)
 
-![manu-editor.svg](manu-editor.svg)
 
 # Prerrequisites
 
