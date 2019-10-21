@@ -1,3 +1,50 @@
+:root {
+    --sans-font: "ABeeZee";
+    --serif-font: "Libre Baskerville";
+    --color-primary: rgba(0,0,0,0.85);
+    --color-secondary: rgba(0,0,0,0.65);
+
+}
 body {
     font-family: sans-serif;
+}
+
+
+.title {
+    font-family: var(--sans-font);
+    font-size: 1.6rem;
+    line-height: 2rem;
+    color: rgba(--color-primary);
+}
+
+.content {
+    font-family: var(--serif-font);
+    color: rgba(--color-secondary);
+    line-height: 1.25rem;
+}
+
+
+.entries-filter {
+    font-family: var(--sans-font);
+    font-size: 1.5rem;
+    line-height: 1.75rem;
+    text-align: center;
+    color: rgba(--color-primary);
+}
+.entries-list {
+    font-family: var(--serif-font);
+    color: rgba(--color-primary);
+    line-height: 2rem;
+}
+
+.footer a {
+    font-family: var(--sans-font);
+    font-size: 0.875rem;
+    text-align: center;
+}
+
+
+/*temporarily*/
+.content::before {
+    content: " Lorem ipsum dolor sit amet, consectetur adipiscing elit. Utinam quidem dicerent alium alio beatiorem! Iam ruinas videres. Velut ego nunc moveor. Quamquam ab iis philosophiam et omnes ingenuas disciplinas habemus; Duo Reges: constructio interrete. Dicet pro me ipsa virtus nec dubitabit isti vestro beato M. Quae in controversiam veniunt, de iis, si placet, disseramus. Iam id ipsum absurdum, maximum malum neglegi. Est enim effectrix multarum et magnarum voluptatum. Nam bonum ex quo appellatum sit, nescio, praepositum ex eo credo, quod praeponatur aliis. Quis est enim, in quo sit cupiditas, quin recte cupidus dici possit? Erat enim res aperta. Quid, quod homines infima fortuna, nulla spe rerum gerendarum, opifices denique delectantur historia? Item de contrariis, a quibus ad genera formasque generum venerunt. <mark>At iam decimum annum in spelunca iacet.</mark> Omnes enim iucundum motum, quo sensus hilaretur. Nihil enim hoc differt. Idem iste, inquam, de voluptate quid sentit? Quos nisi redarguimus, omnis virtus, omne decus, omnis vera laus deserenda est. Alterum significari idem, ut si diceretur, officia media omnia aut pleraque servantem vivere. <b>Ut in geometria, prima si dederis, danda sunt omnia.</b> His similes sunt omnes, qui virtuti student levantur vitiis, levantur erroribus, nisi forte censes Ti"
 }
