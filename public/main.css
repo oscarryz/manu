@@ -13,13 +13,13 @@
     font-family: var(--sans-font);
     font-size: 1.6rem;
     line-height: 2rem;
-    color: rgba(--color-primary);
+    color: var(--color-primary);
     grid-area: title;
 }
 
 .content {
     font-family: var(--serif-font);
-    color: rgba(--color-secondary);
+    color: var(--color-secondary);
     line-height: 1.5rem;
     grid-area: content;
 }
@@ -30,18 +30,19 @@
     font-size: 1.5rem;
     line-height: 1.75rem;
     text-align: center;
-    color: rgba(--color-primary);
+    color: var(--color-primary);
     grid-area: entries-filter;
 }
 .entries-list {
     font-family: var(--serif-font);
-    color: rgba(--color-primary);
+    color: var(--color-primary);
     line-height: 2rem;
     grid-area: entries-list;
 }
 
 .footer{
     font-family: var(--sans-font);
+    color: var(--color-secondary);
     font-size: 0.875rem;
     text-align: center;
     grid-area: footer;
