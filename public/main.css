@@ -6,24 +6,30 @@
 
 }
 
-.toolbar {
+.header {
     grid-area: editor-toolbar;
 }
+
+.main {
+  grid-area: main-content;
+}
+
 .title {
     font-family: var(--sans-font);
     font-size: 1.6rem;
     line-height: 2rem;
     color: var(--color-primary);
-    grid-area: title;
 }
 
 .content {
     font-family: var(--serif-font);
     color: var(--color-secondary);
     line-height: 1.5rem;
-    grid-area: content;
 }
 
+.entries {
+  grid-area: entries;
+}
 
 .entries-filter {
     font-family: var(--sans-font);
@@ -31,13 +37,11 @@
     line-height: 1.75rem;
     text-align: center;
     color: var(--color-primary);
-    grid-area: entries-filter;
 }
 .entries-list {
     font-family: var(--serif-font);
     color: var(--color-primary);
     line-height: 2rem;
-    grid-area: entries-list;
 }
 
 .footer{
@@ -48,39 +52,21 @@
     grid-area: footer;
 }
 
-
-
-html,
-body,
-.grid-container {
+html, body, .grid-container {
   height: 100%;
   margin: 0;
 }
 
-.grid-container * {
-  /* border: 1px solid red; */
-  position: relative;
-}
-
-.grid-container *::after {
-  /* content: attr(class); */
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
 .grid-container {
   display: grid;
-  grid-template-columns: auto 40rem auto;
-  grid-template-rows: 2em 4em auto 4em auto 1em;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto auto auto;
   grid-template-areas:
-    ". editor-toolbar ."
-    ". title ."
-    ". content ."
-    ". entries-filter ."
-    ". entries-list ."
-    ". footer .";
+  "editor-toolbar"
+  "main-content"
+  "entries"
+  "footer";
+  grid-gap: 50px;
+  max-width: 40rem;
+  margin: auto;
 }
-
-
-
