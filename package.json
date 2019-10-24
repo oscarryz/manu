@@ -4,7 +4,7 @@
   "description": "\"Minimalistic Blogging Platform\" ",
   "main": "index",
   "scripts": {
-    "start": "node_modules/http-server/bin/http-server -c-1",
+    "start": "node bin/server.js",
     "test": "test"
   },
   "repository": {
@@ -24,6 +24,8 @@
   },
   "homepage": "https://github.com/oscarryz/manu#readme",
   "dependencies": {
-    "http-server": "^0.11.1"
+    "commonmark": "^0.29.0",
+    "debug": "^4.1.1",
+    "express": "4.17.1"
   }
 }
