@@ -17,8 +17,9 @@ app.post('/api', apiRouter);
 // error handler
 app.use(function(err, req, res, next) {
   // render the error page
+  console.log(err);
   res.status(err.status || 500);
-  res.render('error');
+  res.send('An error occurred. Check logs for details');
 });
 
 module.exports = app;
