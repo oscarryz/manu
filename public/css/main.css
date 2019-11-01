@@ -6,6 +6,15 @@
 
 }
 
+a {
+    text-decoration: none;
+    color: var(--color-primary);
+
+}
+a:visited {
+    color: var(--color-primary);
+}
+
 .header {
     grid-area: editor-toolbar;
 }
@@ -24,7 +33,7 @@
 .content {
     font-family: var(--serif-font);
     color: var(--color-secondary);
-    line-height: 1.5rem;
+    line-height: 2rem;
 }
 
 .entries {
@@ -43,7 +52,7 @@
     color: var(--color-primary);
     line-height: 2rem;
 }
-
+.toolbar,
 .footer{
     font-family: var(--sans-font);
     color: var(--color-secondary);
@@ -69,4 +78,8 @@ html, body, .grid-container {
   grid-gap: 50px;
   max-width: 40rem;
   margin: auto;
+}
+
+iframe {
+    border-width: 0px;
 }

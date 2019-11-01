@@ -7,11 +7,11 @@ module.exports = function(req, res) {
   const reader = new commonmark.Parser();
   const writer = new commonmark.HtmlRenderer();
 
-  entries.newEntry(content);
   const parsed = reader.parse(content);
-  const result = writer.render(parsed) + entries.createIndex();
+  const result = writer.render(parsed);
+  const entryFile = entries.newEntry(content, result);
 
-  res.send(result);
+  res.redirect(301, entryFile)
 };
 
 // It's bad idea to simply take user input
