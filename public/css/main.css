@@ -3,7 +3,6 @@
     --serif-font: "Libre Baskerville";
     --color-primary: rgba(0,0,0,0.85);
     --color-secondary: rgba(0,0,0,0.65);
-
 }
 
 a {
@@ -30,6 +29,7 @@ a:visited {
     color: var(--color-primary);
 }
 
+.ProseMirror p, h1, h2, h3, h4, h5, h6,
 .content {
     font-family: var(--serif-font);
     color: var(--color-secondary);

@@ -3,13 +3,14 @@ const entries = require('../lib/entries');
 
 /* POST content. */
 module.exports = function(req, res) {
+  const title = sanitize(req.body.title);
   const content = sanitize(req.body.content);
   const reader = new commonmark.Parser();
   const writer = new commonmark.HtmlRenderer();
 
   const parsed = reader.parse(content);
   const result = writer.render(parsed);
-  const entryFile = entries.newEntry(content, result);
+  const entryFile = entries.newEntry(title, content, result);
 
   res.redirect(301, entryFile)
 };
