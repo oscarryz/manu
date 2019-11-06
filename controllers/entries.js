@@ -16,7 +16,9 @@ module.exports = (req, res) => {
         // but I think we're not going to need it
         // If we don't get to a react / phase we might use it.
         // In the meantime just this
-        const index = JSON.parse(fs.readFileSync(entriesIndex));
+        const index = fs.existsSync(entriesIndex)
+            ? JSON.parse(fs.readFileSync(entriesIndex))
+            : { entries: [] }
         let list = '<div id="entries-list" class="entries-list"><ul>';
         for (entry of index.entries) {
 
