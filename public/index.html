@@ -1,29 +1,59 @@
 <!doctype html>
 <meta charset=utf8>
-<link href="https://fonts.googleapis.com/css?family=ABeeZee|Libre+Baskerville&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/main.css">
 
-<script type="text/javascript" async src="js/main.js"></script>
-<link rel=stylesheet href="https://prosemirror.net/css/editor.css">
-<link rel="stylesheet" href="css/editor.css">
+<head>
+	<link href="https://fonts.googleapis.com/css?family=ABeeZee|Libre+Baskerville&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/main.css">
 
-<script src="https://prosemirror.net/examples/prosemirror.js"></script>
-<script src="require-pm.js"></script>
+	<script type="text/javascript" async src="js/main.js"></script>
+	<link rel=stylesheet href="https://prosemirror.net/css/editor.css">
+	<link rel="stylesheet" href="css/editor.css">
 
-<script src="pm.js" defer></script>
-<!-- <base href="https://prosemirror.net/"> -->
+	<script src="https://prosemirror.net/examples/prosemirror.js"></script>
+	<script src="require-pm.js"></script>
 
-<div id=editor style="margin-bottom: 23px"></div>
+	<script src="pm.js" defer></script>
+</head>
 
-<div style="display: none" id="content">
-	<h3>Hello manu</h3>
+<body>
 
-    <p>This right here is editable text.</p>
-	<p>Type something and click the <em>"save"</em> button below</p>
-    <p>For instance, change the title and/or add some format</p>
-    Images are not ready yet, but c'mon, Keanu is cool, isn't?
-	<p><img src="https://placekeanu.com/700/350"></p>
+	<!-- <base href="https://prosemirror.net/"> -->
+	<div class="grid-container">
+		<header class="header">
+			<div class="toolbar">
+			</div>
+		</header>
+		<main class="main">
+			<!-- <div id="context-text" class="content"> -->
+				<div id=editor style="margin-bottom: 23px"></div>
+
+			<div style="display: none" id="content" class="conent">
+				<h3>Hello manu</h3>
+
+				<p>This right here is editable text.</p>
+				<p>Type something and click the <em>"save"</em> button below</p>
+				<p>For instance, change the title and/or add some format</p>
+				Images are not ready yet, but c'mon, Keanu is cool, isn't?
+				<p><img src="https://placekeanu.com/700/350"></p>
 
 
+			</div> <input type="button" onclick="saveDoc()" value="Save">
+
+		</main>
+        <div class="entries">
+	<div id="entries-filter" class="entries-filter">Entries Filter Here</div>
+	<div id="entries-list" class="entries-list">
+
+		<iframe src="/entries"></iframe>
+	</div>
+    <a href="/">Add another entry</a>
 </div>
-<input type="button" onclick="saveDoc()" value="Save">
+<footer class="footer">
+	<nav id="footer-nav">
+		<a class="footer-link">Link1</a>
+		<a class="footer-link">Link2</a>
+		<a class="footer-link">Link3</a>
+	</nav>
+</footer>
+</div>
+</body>
