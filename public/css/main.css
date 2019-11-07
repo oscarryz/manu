@@ -20,6 +20,7 @@ a:visited {
 
 .main {
   grid-area: main-content;
+  max-width: inherit;
 }
 
 .title {
@@ -34,6 +35,7 @@ a:visited {
     font-family: var(--serif-font);
     color: var(--color-secondary);
     line-height: 2rem;
+    overflow-wrap: break-word;
 }
 
 .entries {
@@ -51,6 +53,8 @@ a:visited {
     font-family: var(--serif-font);
     color: var(--color-primary);
     line-height: 2rem;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 .toolbar,
 .footer{
@@ -58,7 +62,11 @@ a:visited {
     color: var(--color-secondary);
     font-size: 0.875rem;
     text-align: center;
+}
+
+.footer {
     grid-area: footer;
+    margin-bottom: 10px;
 }
 
 html, body, .grid-container {
@@ -82,4 +90,5 @@ html, body, .grid-container {
 
 iframe {
     border-width: 0px;
+    width: 100%;
 }
