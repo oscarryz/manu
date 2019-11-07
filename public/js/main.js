@@ -23,3 +23,6 @@ function saveDoc() {
     }
     http.send(params);
 }
+  function resizeIframe(obj) {
+    obj.style.height = obj.contentWindow.document.body.scrollHeight + 'px';
+  }
