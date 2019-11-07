@@ -4,7 +4,7 @@ const entries = require('../lib/entries');
 /* POST content. */
 module.exports = function(req, res) {
   const title = sanitize(req.body.title);
-  const content = sanitize(req.body.content);
+  const content = sanitize(req.body.content.replace(title, ''));
   const reader = new commonmark.Parser();
   const writer = new commonmark.HtmlRenderer();
 
@@ -20,4 +20,5 @@ module.exports = function(req, res) {
 // Data should always be sanitized
 // Not the scope atm, but this function will eventually
 // sanitize the user input.
-const sanitize = (data) => data;
+// Still not good, just trying to avoid losing data here.
+const sanitize = (data) => decodeURIComponent(data);

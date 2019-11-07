@@ -7,7 +7,7 @@ function saveDoc() {
     console.log(title);
     var http = new XMLHttpRequest();
     var url = '/api';
-    var params = `title=${title}&content=${html}`;
+    var params = `title=${title}&content=${encodeURIComponent(html)}`;
     http.open('POST', url, true);
 
     //Send the proper header information along with the request
