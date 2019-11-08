@@ -1,0 +1,3 @@
+[submodule "generated/manublog"]
+	path = generated/manublog
+	url = git@github.com:oscarryz/manublog.git
