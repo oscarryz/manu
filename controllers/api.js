@@ -3,8 +3,17 @@ const entries = require('../lib/entries');
 
 /* POST content. */
 module.exports = function(req, res) {
-  const title = sanitize(req.body.title);
+  let title = sanitize(req.body.title);
   const content = sanitize(req.body.content.replace(title, ''));
+
+  //Handles case of empty title and/or content.
+  if (title.trim().length === 0) {
+    if (content.replace(/<.+?>/g, '').trim().length === 0) {
+      return;
+    }
+    title = "Untitled";
+}
+
   const reader = new commonmark.Parser();
   const writer = new commonmark.HtmlRenderer();
 
