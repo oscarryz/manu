@@ -12,7 +12,6 @@ const errorHandler =	(e) => {
 
 copyfiles(['public/**', 'generated/manublog'] , 0, errorHandler);
 copyfiles(['generated/*.html','generated/manublog'] , errorHandler);
-git.status((e) => console.log(e));
-
-
-
+git.add('**');
+git.commit();
+git.push();
