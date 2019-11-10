@@ -2,7 +2,7 @@
   "name": "manu",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://oscarryz.github.io/manublog",
+  "homepage": "http://oscarryz.github.io/manu",
   "dependencies": {
     "gh-pages": "^2.1.1",
     "react": "^16.11.0",
