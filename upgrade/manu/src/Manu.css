@@ -1,0 +1,93 @@
+@import url("https://fonts.googleapis.com/css?family=ABeeZee|Libre+Baskerville&display=swap");
+
+:root {
+  --sans-font: "ABeeZee";
+  --serif-font: "Libre Baskerville";
+  --color-primary: rgba(0,0,0,0.85);
+  --color-secondary: rgba(0,0,0,0.65);
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-primary);
+
+}
+a:visited {
+  color: var(--color-primary);
+}
+
+header {
+  grid-area: editor-toolbar;
+}
+
+main {
+grid-area: main-content;
+max-width: inherit;
+}
+
+.title {
+  font-family: var(--sans-font);
+  font-size: 1.6rem;
+  line-height: 2rem;
+  color: var(--color-primary);
+}
+
+.ProseMirror p, h1, h2, h3, h4, h5, h6,
+.content {
+  font-family: var(--serif-font);
+  color: var(--color-secondary);
+  line-height: 2rem;
+  overflow-wrap: break-word;
+}
+
+.entries {
+grid-area: entries;
+}
+
+.entries-filter {
+  font-family: var(--sans-font);
+  font-size: 1.5rem;
+  line-height: 1.75rem;
+  text-align: center;
+  color: var(--color-primary);
+}
+.entries-list {
+  font-family: var(--serif-font);
+  color: var(--color-primary);
+  line-height: 2rem;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.toolbar,
+footer{
+  font-family: var(--sans-font);
+  color: var(--color-secondary);
+  font-size: 0.875rem;
+  text-align: center;
+}
+
+footer {
+  grid-area: footer;
+  margin-bottom: 10px;
+}
+
+.Manu {
+height: 100%;
+margin: 0;
+display: grid;
+grid-template-columns: 1fr;
+grid-template-rows: auto auto auto auto;
+grid-template-areas:
+"editor-toolbar"
+"main-content"
+"entries"
+"footer";
+grid-gap: 50px;
+max-width: 40rem;
+margin: auto;
+}
+
+iframe {
+  border-width: 0px;
+  width: 100%;
+}
