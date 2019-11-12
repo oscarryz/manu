@@ -6,23 +6,16 @@ function Manu() {
   return (
     <div className="Manu">
       <header>Header</header>
-      <main>Main</main>
+      <main>
+      <div class="content">
+          <h1 class="content-title">manu: a minimalistic blog system</h1>
+          <p>
+            Created with simplicity in mind, <em>manu</em> aims to bring back the joy of blog writting by making extremily easy to create and edit a blog. By removing a many of the elements of more complex systems, manu let's your ideas flow easier from your mind to the web. 
+          </p>
+          
+      </div>
+      </main>
       <footer>Footer</footer>
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-
     </div>
   );
 }
