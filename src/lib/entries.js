@@ -12,48 +12,95 @@ const entriesDir = path.join(__dirname, '../../entries');
 const publicDir = path.join(__dirname, '../../generated');
 
 const entriesIndex = `${entriesDir}/index.json`;
-module.exports = {
 
-    newEntry: (title, source, html) => {
-        const id = uuid(); // creates a new filename each time.
-        // Attempt to get a text title,
-        const t = titleFrom(title);
+
+    persistEntry = (entry) => {
+        const t = titleFrom(entry.title);
+        entry.title = t.title;
+
         const jsonFile = `${entriesDir}/${t.fileName}.json`;
         const fileHtml = `/${t.fileName}.html`;
 
-        const entry = {
-            id,
-            title: t.title,
+        _.defaults(entry, {
             fileHtml,
             created: Date.now(),
             author: 'me',
             status: 'draft',
-            source
-        }
+        });
 
+
+        // Write the entry regardless
         try {
             fs.writeFileSync(jsonFile, JSON.stringify(entry, null, 2));
-            let header = includes.header().toString().replace(/\${title}/g, t.original);
-            fs.writeFileSync(`${publicDir}${fileHtml}`,  header + html + includes.footer());
+            let header = includes.header()
+                .toString()
+                .replace(/\${title}/g, t.original)
+                .replace(/\${entryId}/g, entry.id );
+
+            fs.writeFileSync(`${publicDir}${fileHtml}`,  header + entry.html + includes.footer());
         } catch (e) {
             // file couldn't be saved
             throw e;
         }
 
-        // else... update the index
+        // Find the entry in the index if it exists
         const index = fs.existsSync(entriesIndex)
             ? JSON.parse(fs.readFileSync(entriesIndex))
             : { entries: [] }
-        delete entry.data;
-        index.entries.push(entry);
+
+        const indexOfEntry = index.entries.findIndex((e)=>e.id === entry.id);
+
+        // delete undeeded information from the index.json
+        delete entry.content;
+        delete entry.html;
+
+        if (indexOfEntry >= 0 ) {
+            // try to delete the old file ... 
+            let oldEntry = entries[indexOfEntry];
+            if (oldEntry.fileHtml !== entrie.fileHtml ) {
+                console.log(`should delete ${oldEntry.fileHtml} and ${oldEntry.fileHtml}`); 
+            }
+            entries[indexOfEntry] = entry;
+        } else {
+          index.entries.push(entry);
+        }
+
 
         try {
             fs.writeFileSync(entriesIndex, JSON.stringify(index, null, 2));
         } catch (e) {
             console.log('Coudn\'t update the index', e)
         }
+
         updateEntriesIndex();
         return fileHtml;
+    }
+
+module.exports = {
+
+    loadEntry: (id) => {
+        // Find the entry in the index if it exists
+        const index = fs.existsSync(entriesIndex)
+            ? JSON.parse(fs.readFileSync(entriesIndex))
+            : { entries: [] }
+
+        const indexOfEntry = index.entries.findIndex((e)=>e.id === id);
+        if (indexOfEntry >= 0) {
+            //TODO: return a page with the editor loaded ready to update
+            return index.entries[indexOfEntry].fileHtml;
+        } else {
+            return undefined;
+        }
+        
+    },
+    newEntry: (entry) => {
+        const id = uuid(); 
+        entry.id = id;
+        return persistEntry(entry);
+    }, 
+    updateEntry: (entry) => {
+        // look for the entry
+        // if is there, override it with the new content
     }
 }
 const updateEntriesIndex = () => {

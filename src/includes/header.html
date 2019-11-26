@@ -15,8 +15,9 @@
             <div class="toolbar">
                 <!-- The editor toolbar is here. -->
                 <a href="/">ADD ENTRY</a>
+                <a href="/" onClick="loadDoc(); return false;">UPDATE ENTRY</a>
             </div>
         </header>
-        <main class="main">
+        <main class="main" data-id="${entryId}">
             <h1 id="content-title" class="title">${title}</h1>
             <div id="context-text" class="content">
