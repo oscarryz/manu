@@ -19,11 +19,11 @@ app.put('/api', api.put);
 
 
 // error handler
-app.use(function(err, req, res, next) {
-  // render the error page
-  console.log(err);
-  res.status(err.status || 500);
-  res.send('An error occurred. Check logs for details');
+app.use(function (err, req, res, next) {
+    // render the error page
+    console.log(err);
+    res.status(err.status || 500);
+    res.send('An error occurred. Check logs for details');
 });
 
 module.exports = app;
