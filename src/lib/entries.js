@@ -8,8 +8,8 @@ const _ = require('lodash');
 
 const includes = require('./includes');
 
-const entriesDir = path.join(__dirname, '../entries');
-const publicDir = path.join(__dirname, '../generated');
+const entriesDir = path.join(__dirname, '../../entries');
+const publicDir = path.join(__dirname, '../../generated');
 
 const entriesIndex = `${entriesDir}/index.json`;
 module.exports = {

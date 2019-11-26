@@ -3,17 +3,15 @@ const express = require('express');
 const path = require('path');
 
 const api = require('./controllers/api');
-const entries = require('./controllers/entries');
 
 const app = express();
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
-app.use(express.static(path.join(__dirname, 'public')));
-app.use(express.static(path.join(__dirname, 'generated')));
+app.use(express.static(path.join(__dirname, '../public')));
+app.use(express.static(path.join(__dirname, '../generated')));
 
 app.post('/api', api);
-app.get('/entries', entries);
 
 
 
