@@ -5,6 +5,7 @@ const path = require('path');
 let header;
 let footer;
 let headerEntries;
+let editTemplate;
 
 const includesDir = path.join(__dirname, '../includes');
 
@@ -30,4 +31,10 @@ module.exports = {
         return headerEntries;
     },
 
+    editTemplate : () => {
+        if (editTemplate === undefined) {
+          editTemplate = fs.readFileSync(`${includesDir}/edit-template.html`, 'utf-8');
+        }
+        return editTemplate
+    }
 }

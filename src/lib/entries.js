@@ -14,35 +14,35 @@ const publicDir = path.join(__dirname, '../../generated');
 const entriesIndex = `${entriesDir}/index.json`;
 
 
-persistEntry = (entry) => {
-    
-    const t = titleFrom(entry.title);
-    entry.title = t.title;
+    persistEntry = (entry) => {
+        const t = titleFrom(entry.title);
+        entry.title = t.title;
 
-    const jsonFile = `${entriesDir}/${t.fileName}.json`;
-    const fileHtml = `/${t.fileName}.html`;
+        const fileJson = `/${t.fileName}.json`;
+        const fileHtml = `/${t.fileName}.html`;
 
-    _.defaults(entry, {
-        fileHtml,
-        created: Date.now(),
-        author: 'me',
-        status: 'draft',
-    });
+        _.defaults(entry, {
+            fileHtml,
+            fileJson,
+            created: Date.now(),
+            author: 'me',
+            status: 'draft',
+        });
 
 
-    // Write the entry regardless
-    try {
-        fs.writeFileSync(jsonFile, JSON.stringify(entry, null, 2));
-        let header = includes.header()
-            .toString()
-            .replace(/\${title}/g, t.original)
-            .replace(/\${entryId}/g, entry.id);
+        // Write the entry regardless
+        try {
+            fs.writeFileSync(`${entriesDir}${fileJson}`, JSON.stringify(entry, null, 2));
+            let header = includes.header()
+                .toString()
+                .replace(/\${title}/g, t.original)
+                .replace(/\${entryId}/g, entry.id );
 
-        fs.writeFileSync(`${publicDir}${fileHtml}`, header + entry.html + includes.footer());
-    } catch (e) {
-        // file couldn't be saved
-        throw e;
-    }
+            fs.writeFileSync(`${publicDir}${fileHtml}`,  header + entry.html + includes.footer());
+        } catch (e) {
+            // file couldn't be saved
+            throw e;
+        }
 
     // Find the entry in the index if it exists
     const index = fs.existsSync(entriesIndex)
@@ -85,14 +85,22 @@ module.exports = {
             ? JSON.parse(fs.readFileSync(entriesIndex))
             : { entries: [] }
 
-        const indexOfEntry = index.entries.findIndex((e) => e.id === id);
+        const indexOfEntry = index.entries.findIndex((e)=>e.id === id);
+        let content = `<h1>Title</h1><p>content</p>`;
+        let title = 'Untitled'
         if (indexOfEntry >= 0) {
             //TODO: return a page with the editor loaded ready to update
-            return index.entries[indexOfEntry].fileHtml;
-        } else {
-            return undefined;
+            const entry = index.entries[indexOfEntry]
+            content = JSON.parse(fs.readFileSync(`${entriesDir}${entry.fileJson}`)).content;
+            title = entry.title;
         }
 
+        console.log(includes.editTemplate());
+        return includes.editTemplate()
+            .replace(/\${id}/g, id)
+            .replace(/\${title}/g, title )
+            .replace(/\${content}/g, content)
+        
     },
     newEntry: (entry) => {
         const id = uuid();

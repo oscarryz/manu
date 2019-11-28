@@ -2,10 +2,10 @@ const commonmark = require('commonmark');
 const entries = require('../lib/entries');
 
 module.exports = {
-    get: (req, res) => {
-        const entryFile = entries.loadEntry(req.params.id);
-        //res.status(200).send(entryFile);
-        res.redirect(302, entryFile)
+    get: (req,res) => {
+      const entryFile = entries.loadEntry(req.params.id);
+      res.status(200).send(entryFile);
+      //res.redirect(302, entryFile)
     },
     post: (req, res) => {
         const e = entryFrom(req);
