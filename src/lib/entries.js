@@ -151,9 +151,9 @@ const titleFrom = (source) => {
 
     // TODO: validate if there are items in the array
     // const firstLine = lines[0];
-    firstLine = source;
+    const firstLine = source.substring(0,30);
     const fileName = _.kebabCase(firstLine);
-    const title = _.startCase(fileName);
+    //_.startCase(fileName);
     // if it fail return just the UUID?
-    return { fileName, title, original: firstLine };
+    return { fileName, title: firstLine, original: firstLine };
 }

@@ -63,4 +63,5 @@ typings/
 entries/*.json
 generated/*.html
 *.swp
+.idea/
 
