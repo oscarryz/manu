@@ -36,3 +36,14 @@ npm install
 npm start
 ```
 
+#Deploy 
+
+At the moment this blog has to be run locally and then deployed to a [Github pages](https://pages.github.com/) that is to be setup externally
+
+Once that is being setup run:
+
+```
+npm run deploy
+```
+
+Currently this project deploys to oscarryz.github.io/manu which only project members have access to. The places to look at are the directory `/bin/deploy.sh` and the `package.json` that uses the `gh-pages` npm artifact

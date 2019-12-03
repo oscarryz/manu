@@ -39,6 +39,7 @@ const entriesIndex = `${entriesDir}/index.json`;
                 .replace(/\${entryId}/g, entry.id );
 
             fs.writeFileSync(`${publicDir}${fileHtml}`,  header + entry.html + includes.footer());
+            fs.writeFileSync(`${publicDir}/index.html`, `<meta http-equiv="Refresh" content="0; url=.${fileHtml}" />`);
         } catch (e) {
             // file couldn't be saved
             throw e;
@@ -135,7 +136,7 @@ const updateEntriesIndex = () => {
     let list = '<div id="entries-list" class="entries-list"><ul>';
     for (entry of index.entries) {
 
-        list += `<li><a href="${entry.fileHtml}" target="_parent" class="archive-link">${entry.title}</a></li>\n`
+        list += `<li><a href="./${entry.fileHtml}" target="_parent" class="archive-link">${entry.title}</a></li>\n`
     }
     const entriesFile = includes.headerEntries() + list + '</ul></div>';
 
