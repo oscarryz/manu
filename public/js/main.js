@@ -5,8 +5,16 @@ function saveDoc() {
     const html = editor.innerHTML;
     const title = editor.innerText.split('\n', 1)[0];
     var params = `title=${title}&content=${encodeURIComponent(html)}`;
-    request('POST', '/api', params);
+
+    const doc = document.querySelector('body > div.grid-container > main');
+    if (doc.dataset.id === 'undefined') {
+        request('POST', '/api', params);
+    } else {
+        params += `&id=${doc.dataset.id}`        
+        request('PUT', '/api', params);
+    }
 }
+
 function request(method, url, params) {
     var http = new XMLHttpRequest();
     http.open(method, url, true);
@@ -21,6 +29,7 @@ function request(method, url, params) {
     }
     http.send(params);
 }
+
 function loadDoc() {
     const doc = document.querySelector('body > div.grid-container > main');
     request('GET', '/edit/' + doc.dataset.id);

@@ -57,11 +57,11 @@ const entriesIndex = `${entriesDir}/index.json`;
 
     if (indexOfEntry >= 0) {
         // try to delete the old file ... 
-        let oldEntry = entries[indexOfEntry];
-        if (oldEntry.fileHtml !== entrie.fileHtml) {
-            console.log(`should delete ${oldEntry.fileHtml} and ${oldEntry.fileHtml}`);
+        let oldEntry = index.entries[indexOfEntry];
+        if (oldEntry.fileHtml !== entry.fileHtml) {
+            console.log(`should delete ${oldEntry.fileJson} and ${oldEntry.fileHtml}`);
         }
-        entries[indexOfEntry] = entry;
+        index.entries[indexOfEntry] = entry;
     } else {
         index.entries.push(entry);
     }
@@ -80,12 +80,14 @@ const entriesIndex = `${entriesDir}/index.json`;
 module.exports = {
 
     loadEntry: (id) => {
-        // Find the entry in the index if it exists
+
+       // Find the entry in the index if it exists
         const index = fs.existsSync(entriesIndex)
             ? JSON.parse(fs.readFileSync(entriesIndex))
             : { entries: [] }
 
         const indexOfEntry = index.entries.findIndex((e)=>e.id === id);
+
         let content = `<h1>Title</h1><p>content</p>`;
         let title = 'Untitled'
         if (indexOfEntry >= 0) {
@@ -95,7 +97,6 @@ module.exports = {
             title = entry.title;
         }
 
-        console.log(includes.editTemplate());
         return includes.editTemplate()
             .replace(/\${id}/g, id)
             .replace(/\${title}/g, title )
@@ -110,6 +111,7 @@ module.exports = {
     updateEntry: (entry) => {
         // look for the entry
         // if is there, override it with the new content
+        return persistEntry(entry);
     }
 }
 const updateEntriesIndex = () => {
