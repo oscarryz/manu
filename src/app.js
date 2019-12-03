@@ -11,7 +11,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, '../public')));
 app.use(express.static(path.join(__dirname, '../generated')));
 
-app.get('/', api.get);
+app.get('/', api.first);
 app.get('/new', api.get);
 app.get('/edit/:id', api.get);
 app.post('/api', api.post);

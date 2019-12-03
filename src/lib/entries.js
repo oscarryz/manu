@@ -63,7 +63,7 @@ const entriesIndex = `${entriesDir}/index.json`;
         }
         index.entries[indexOfEntry] = entry;
     } else {
-        index.entries.push(entry);
+        index.entries.unshift(entry);
     }
 
 
@@ -79,6 +79,18 @@ const entriesIndex = `${entriesDir}/index.json`;
 
 module.exports = {
 
+    first: () => {
+        const index = fs.existsSync(entriesIndex)
+            ? JSON.parse(fs.readFileSync(entriesIndex))
+            : { entries: [] }
+
+        if (index.entries.length > 0 ) {
+          return index.entries[0].fileHtml;
+        } else {
+            return undefined;
+        }
+    },
+     
     loadEntry: (id) => {
 
        // Find the entry in the index if it exists
@@ -88,10 +100,10 @@ module.exports = {
 
         const indexOfEntry = index.entries.findIndex((e)=>e.id === id);
 
+
         let content = `<h1>Title</h1><p>content</p>`;
         let title = 'Untitled'
         if (indexOfEntry >= 0) {
-            //TODO: return a page with the editor loaded ready to update
             const entry = index.entries[indexOfEntry]
             content = JSON.parse(fs.readFileSync(`${entriesDir}${entry.fileJson}`)).content;
             title = entry.title;

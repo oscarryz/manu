@@ -3,10 +3,17 @@ const entries = require('../lib/entries');
 
 module.exports = {
 
+    first: (req, res) => {
+        const first = entries.first();
+        if (first === undefined) {
+            res.status(200).send(entries.loadEntry(undefined))
+        } else {
+            res.redirect(302, entries.first());
+        }
+    },
     get: (req,res) => {
       const entryFile = entries.loadEntry(req.params.id);
       res.status(200).send(entryFile);
-      //res.redirect(302, entryFile)
     },
 
     post: (req, res) => {
