@@ -135,7 +135,7 @@ const updateEntriesIndex = () => {
     let list = '<div id="entries-list" class="entries-list"><ul>';
     for (entry of index.entries) {
 
-        list += `<li><a href="${entry.fileHtml}" target="_parent">${entry.title}</a></li>\n`
+        list += `<li><a href="${entry.fileHtml}" target="_parent" class="archive-link">${entry.title}</a></li>\n`
     }
     const entriesFile = includes.headerEntries() + list + '</ul></div>';
 

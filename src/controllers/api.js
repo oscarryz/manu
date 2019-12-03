@@ -48,7 +48,7 @@ const sanitize = (data) => decodeURIComponent(data);
 const entryFrom = (req) => {
     const id = req.body.id;
     let title = sanitize(req.body.title);
-    const content = sanitize((req.body.content || '').replace(title, ''));
+    const content = sanitize((req.body.content || ''));//.replace(title, ''));
 
     //Handles case of empty title and/or content.
     if (title.trim().length === 0) {

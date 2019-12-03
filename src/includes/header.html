@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>${title}</title>
-    <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Material+Icons|Libre+Baskerville&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/main.css">
     <script type="text/javascript" async src="js/main.js"></script>
 </head>
@@ -13,9 +13,17 @@
     <div class="grid-container">
         <header class="header">
             <div class="toolbar">
-                <!-- The editor toolbar is here. -->
-                <a href="/new">ADD ENTRY</a>
-                <a href="/" onClick="loadDoc(); return false;">UPDATE ENTRY</a>
+                <div class="dropdown">
+                    <button class="dropbtn">
+                        <i class="material-icons">
+                            more_vert
+                        </i>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="/new">Add new</a>
+                        <a href="/" onClick="loadDoc(); return false;">Edit</a>
+                    </div>
+                </div>
             </div>
         </header>
         <main class="main" data-id="${entryId}">

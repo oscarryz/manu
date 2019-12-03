@@ -1,19 +1,42 @@
 :root {
     --sans-font: "ABeeZee";
     --serif-font: "Libre Baskerville";
-    --color-primary: rgba(0,0,0,0.85);
-    --color-secondary: rgba(0,0,0,0.65);
+    --color-primary: rgba(0,0,0,0.75);
+    --color-secondary: rgba(0,0,0,0.6);
+    --c-high: rgba(39, 121, 246, .25);
+    --c-high-light:   rgba(39, 121, 246, .1);
 }
 
 a {
     text-decoration: none;
     color: var(--color-primary);
+}
+p>a:not([class]), li>a:not([class]) {
+    text-decoration: none;
+    color: var(--color-primary);
+    background: linear-gradient( var(--c-high-light), var(--c-high));
+    background-size: 100% 40%;
+    background-repeat: no-repeat;
+    background-position: 0% 90%;
 
 }
-a:visited {
+p>a:not([class]), li>a:not([class]):visited {
     color: var(--color-primary);
 }
 
+.archive-link {
+    transition: color 300ms ease-out;
+    display: flex;
+    align-items: baseline;
+    position: relative;
+}
+.archive-link:hover {
+    color: var(--color-secondary);
+}
+
+.archive-link-current {
+    font-style : italic;
+}
 .header {
     grid-area: editor-toolbar;
 }
@@ -91,4 +114,61 @@ a:visited {
 iframe {
     border-width: 0px;
     width: 100%;
+}
+
+/**
+Dropdown menu
+ */
+
+.toolbar {
+    right: 21rem;
+    position: absolute;
+    top: 3.6rem;
+    z-index: 11;
+}
+.dropdown {
+    float: right;
+    right: 0;
+    overflow: hidden;
+}
+
+.dropdown .dropbtn {
+    font-size: 16px;
+    border: none;
+    outline: none;
+    /*color: white;*/
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+    /*background-color: red;*/
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    float: none;
+    /*color: black;*/
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
 }

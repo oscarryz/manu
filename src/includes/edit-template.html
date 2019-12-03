@@ -2,7 +2,7 @@
 <meta charset=utf8>
 
 <head>
-	<link href="https://fonts.googleapis.com/css?family=Libre+Baskerville&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Material+Icons|Libre+Baskerville&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="/css/main.css">
 
 	<script type="text/javascript" async src="/js/main.js"></script>
@@ -20,7 +20,16 @@
 	<div class="grid-container">
 		<header class="header">
 			<div class="toolbar">
-            <a href="/">ADD ENTRY</a>
+				<div class="dropdown">
+					<button class="dropbtn">
+						<i class="material-icons">
+							more_vert
+						</i>
+					</button>
+					<div class="dropdown-content">
+						<a href="#" onClick="saveDoc();return false;">Save</a>
+					</div>
+				</div>
 			</div>
 		</header>
     <main class="main" data-id="${id}">
@@ -28,8 +37,7 @@
         <div id=editor style="margin-bottom: 23px"></div>
         <div style="display: none" id="content" class="content">
             ${content}
-			</div> <input type="button" onclick="saveDoc()" value="Save">
-
+			</div>
 		</main>
         <div class="entries">
 	<div id="entries-filter" class="entries-filter">Other entries</div>
