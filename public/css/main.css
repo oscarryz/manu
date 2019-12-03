@@ -24,7 +24,7 @@ a:visited {
 }
 
 .title {
-    font-family: var(--sans-font);
+    font-family: var(--serif-font);
     font-size: 1.6rem;
     line-height: 2rem;
     color: var(--color-primary);
@@ -43,7 +43,7 @@ a:visited {
 }
 
 .entries-filter {
-    font-family: var(--sans-font);
+    font-family: var(--serif-font);
     font-size: 1.5rem;
     line-height: 1.75rem;
     text-align: center;
@@ -58,7 +58,7 @@ a:visited {
 }
 .toolbar,
 .footer{
-    font-family: var(--sans-font);
+    font-family: var(--serif-font);
     color: var(--color-secondary);
     font-size: 0.875rem;
     text-align: center;

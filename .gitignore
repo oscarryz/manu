@@ -62,4 +62,5 @@ typings/
 
 entries/*.json
 generated/*.html
+*.swp
 
