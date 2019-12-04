@@ -63,6 +63,7 @@ p>a:not([class]), li>a:not([class]):visited {
 
 .entries {
   grid-area: entries;
+  padding-top: 6rem;
 }
 
 .entries-filter {
