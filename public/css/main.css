@@ -59,6 +59,8 @@ p>a:not([class]), li>a:not([class]):visited {
     color: var(--color-secondary);
     line-height: 2rem;
     overflow-wrap: break-word;
+}
+.content {
     padding-top: 5rem;
 }
 
