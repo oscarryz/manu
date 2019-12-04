@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Creating a minimalist blogging</title>
+    <link rel="stylesheet" href="css/main.css">
+    <script type="text/javascript" async src="js/main.js"></script>
+</head>
+
+<body>
+    <div class="grid-container">
+        <header class="header">
+            <div class="toolbar">
+                <div class="dropdown">
+                    <button class="dropbtn">
+                        <i class="material-icons">
+                            more_vert
+                        </i>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="/new">Add new</a>
+                        <a href="/" onClick="loadDoc(); return false;">Edit</a>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main class="main" data-id="dbadc260-161a-11ea-a4f9-9f0827755cf1">
+<!--            <h1 id="content-title" class="title">Creating a minimalist blogging</h1>-->
+            <div id="context-text" class="content">
+<h2>Creating a minimalist blogging platform</h2><p>That was the goal of this project; create a simple way to create blogs by simply start writing directly in the blog instead of having to go through an complex application or having to write the blog in a regular text editor and have it transformed to html with a static site generator.</p><p>The idea while good, turned out to be (as many things in programming) easier to say that actually building it. It wasn’t particularly hard, just a little bit cumbersome, mostly due the lack of time. <br><br></p><p>So, taking as “inspiration” the <a href="https://manuelmoreale.com/">https://manuelmoreale.com/</a> blog, we came up with this “design”:</p><p><img src="https://raw.githubusercontent.com/oscarryz/manu/master/etc/Editor-View.png" alt="Editor view of the blog platform" title="Manu blog platform" contenteditable="false" draggable="true">Which is basically the same design but adding editor menus to for new entries, edit them and publish them.</p><p>I’ll keep documenting the approach we took to write this down and how far we got. This right here is the first entry on the working platform, and while still far from complete is now usable.</p>
+</div>
+</main>
+<div class="entries">
+	<div id="entries-filter" class="entries-filter">Other entries</div>
+	<div id="entries-list" class="entries-list">
+
+		<iframe src="entries.html" onload="resizeIframe(this)"></iframe>
+	</div>
+</div>
+<footer class="footer">
+	<nav id="footer-nav">
+    <!--
+		<a class="footer-link">Link1</a>
+		<a class="footer-link">Link2</a>
+		<a class="footer-link">Link3</a>
+    -->
+	</nav>
+</footer>
+</div>
+</body>
+
+</html>

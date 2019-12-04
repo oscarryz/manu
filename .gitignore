@@ -61,8 +61,6 @@ typings/
 .next
 
 dist/*
-entries/*.json
-generated/*.html
 *.swp
 .idea/
 

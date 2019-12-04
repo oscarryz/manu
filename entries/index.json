@@ -1,0 +1,31 @@
+{
+  "entries": [
+    {
+      "id": "a2297a50-1630-11ea-b83a-ff5a186ef7f6",
+      "title": "What if…",
+      "fileHtml": "/what-if.html",
+      "fileJson": "/what-if.json",
+      "created": 1575431355702,
+      "author": "me",
+      "status": "draft"
+    },
+    {
+      "id": "db9465a0-1628-11ea-8c38-5f6264b7bac9",
+      "title": "The implementation idea",
+      "fileHtml": "/the-implementation-idea.html",
+      "fileJson": "/the-implementation-idea.json",
+      "created": 1575436831935,
+      "author": "me",
+      "status": "draft"
+    },
+    {
+      "id": "dbadc260-161a-11ea-a4f9-9f0827755cf1",
+      "title": "Creating a minimalist blogging",
+      "fileHtml": "/creating-a-minimalist-blogging.html",
+      "fileJson": "/creating-a-minimalist-blogging.json",
+      "created": 1575437308477,
+      "author": "me",
+      "status": "draft"
+    }
+  ]
+}
