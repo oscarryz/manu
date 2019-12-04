@@ -6,6 +6,7 @@
   "scripts": {
     "start": "node bin/server.js",
     "test": "test",
+    "build": "sh ./bin/deploy.sh"
     "deploy": "sh ./bin/deploy.sh"
   },
   "repository": {
