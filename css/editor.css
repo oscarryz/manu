@@ -1,0 +1,17 @@
+:root {
+    --sans-font: "ABeeZee";
+    --serif-font: "Libre Baskerville";
+    --color-primary: rgba(0,0,0,0.85);
+    --color-secondary: rgba(0,0,0,0.65);
+}
+
+#editor, .editor {
+  background-clip: padding-box;
+  border-radius: 4px;
+  border: 0px ;
+  padding: 5px 0;
+  margin-bottom: 23px;
+}
+.ProseMirror-menubar {
+    border: 0px ;
+}

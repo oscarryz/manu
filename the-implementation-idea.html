@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>The implementation idea</title>
+    <link rel="stylesheet" href="css/main.css">
+    <script type="text/javascript" async src="js/main.js"></script>
+</head>
+
+<body>
+    <div class="grid-container">
+        <header class="header">
+            <div class="toolbar">
+                <div class="dropdown">
+                    <button class="dropbtn">
+                        <i class="material-icons">
+                            more_vert
+                        </i>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="/new">Add new</a>
+                        <a href="/" onClick="loadDoc(); return false;">Edit</a>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main class="main" data-id="db9465a0-1628-11ea-8c38-5f6264b7bac9">
+<!--            <h1 id="content-title" class="title">The implementation idea</h1>-->
+            <div id="context-text" class="content">
+<h2>The implementation idea</h2><p>This should be simple right?</p><ul><li><p>Add a text area.</p></li><li><p>When the user clicks on save, an html file is created</p></li><li><p>Then copy the files served by any static page site (gh-pages for instance).</p></li></ul><p>What could go wrong?</p><p>With this in mind, we created a backlog in using&nbsp;<a href="https://github.com/features/project-management" title="GitHub project management">GitHub project management feature</a>. That way we can divide the work and team members can take an issue and work it out.</p><p>We intended to work using a scrum-ish / agile with a week long iterations, initially to be divided as follows:</p><ul><li><p>w1 Setup the project and create a scratch version</p></li><li><p>w2 Work on integrating an existing editor and/or give up and don't use one at all</p></li><li><p>w3 Reactify / work on the mobile version, other nice to have thing</p></li><li><p>w4 Security to prevent injection, limits, abuse,&nbsp;&nbsp;user profiles</p></li><li><p>w5 Wrap up and deploy</p></li></ul><p>So, the issues for the first week were created, and we started to work, doing daily “standups” in slack.<br><br></p><p>The task for the first week were:</p><ul><li><p>Setup environment (npm, js, node)</p></li><li><p>Create a sample html file with the CSS needed from the mockup</p></li><li><p>Search for a markdown processor</p></li><li><p>Create an example file with a &lt;textarea&gt; for input</p></li><li><p>Create a controller that takes that input and save the file.</p></li></ul><p><br>I would say the first week was very smooth, we were very motivated to start working and everything went as planned.</p><p>Then we reached the second week, and thing got a bit complicated.</p>
+</div>
+</main>
+<div class="entries">
+	<div id="entries-filter" class="entries-filter">Other entries</div>
+	<div id="entries-list" class="entries-list">
+
+		<iframe src="entries.html" onload="resizeIframe(this)"></iframe>
+	</div>
+</div>
+<footer class="footer">
+	<nav id="footer-nav">
+    <!--
+		<a class="footer-link">Link1</a>
+		<a class="footer-link">Link2</a>
+		<a class="footer-link">Link3</a>
+    -->
+	</nav>
+</footer>
+</div>
+</body>
+
+</html>
