@@ -58,9 +58,13 @@ p>a:not([class]), li>a:not([class]):visited {
 .ProseMirror p, h1, h2, h3, h4, h5, h6,
 .content {
     font-family: var(--serif-font);
-    color: var(--color-secondary);
+    color: var(--color-primary);
     line-height: 2rem;
     overflow-wrap: break-word;
+}
+
+.ProseMirror p {
+    color: var(--color-secondary)
 }
 .content {
     padding-top: 5rem;
@@ -148,6 +152,9 @@ Dropdown menu
     font-family: inherit;
     margin: 0;
 }
+.material-icons {
+    color: var(--color-primary);
+}
 
 .navbar a:hover, .dropdown:hover .dropbtn {
     /*background-color: red;*/
@@ -160,6 +167,8 @@ Dropdown menu
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
+    right: 15px;
+    top: 38px;
 }
 
 .dropdown-content a {
