@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Creating a simplistic blogging</title>
+    <link rel="stylesheet" href="css/main.css">
+    <script type="text/javascript" async src="js/main.js"></script>
+</head>
+
+<body>
+    <div class="grid-container">
+        <header class="header">
+            <div class="toolbar">
+                <div class="dropdown">
+                    <button class="dropbtn">
+                        <i class="material-icons">
+                            more_vert
+                        </i>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="/new">Add new</a>
+                        <a href="/" onClick="loadDoc(); return false;">Edit</a>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main class="main" data-id="0ccfe070-5eab-11ea-857b-ed3954ab3a20">
+<!--            <h1 id="content-title" class="title">Creating a simplistic blogging</h1>-->
+            <div id="context-text" class="content">
+<h2>Creating a simplistic blogging platform</h2><h6>MARCH 4, 2020</h6><p>That was the goal of this project; create a simple way to create blogs where you can just start writing directly into the blog instead of having to go through a complex application or have to write in a weird format and then transform the blog somehow, like you do with static site generators.</p><p>The idea while good, turned out to be (as many things in software development) easier to say that actually execute. It wasn’t particularly hard, just a little bit cumbersome, mostly due the lack of time.</p><p>So, taking as “inspiration” the&nbsp;<a href="https://manuelmoreale.com/">https://manuelmoreale.com/</a>&nbsp;blog, we came up with this “design”:</p><p><img src="https://raw.githubusercontent.com/oscarryz/manu/master/etc/Editor-View.png" alt="Editor view of the blog platform" title="Manu blog platform" contenteditable="false" draggable="true" class="">Which is basically the same ui but adding an editor bar to create new entries, edit them and publish them.</p><p>I’ll keep documenting the approach we took to write this down and how far we’ve got. This right here is the first entry on the working platform, and while still far from complete is now usable.</p>
+</div>
+</main>
+<div class="entries">
+	<div id="entries-filter" class="entries-filter">Other entries</div>
+	<div id="entries-list" class="entries-list">
+
+		<iframe src="entries.html" onload="resizeIframe(this)"></iframe>
+	</div>
+</div>
+<footer class="footer">
+	<nav id="footer-nav">
+    <!--
+		<a class="footer-link">Link1</a>
+		<a class="footer-link">Link2</a>
+		<a class="footer-link">Link3</a>
+    -->
+	</nav>
+</footer>
+</div>
+</body>
+
+</html>

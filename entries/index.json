@@ -2,10 +2,10 @@
   "entries": [
     {
       "id": "0ccfe070-5eab-11ea-857b-ed3954ab3a20",
-      "title": "Creating a minimalist blogging",
-      "fileHtml": "/creating-a-minimalist-blogging.html",
-      "fileJson": "/creating-a-minimalist-blogging.json",
-      "created": 1583390919962,
+      "title": "Creating a simplistic blogging",
+      "fileHtml": "/creating-a-simplistic-blogging.html",
+      "fileJson": "/creating-a-simplistic-blogging.json",
+      "created": 1583391359026,
       "author": "me",
       "status": "draft"
     }
