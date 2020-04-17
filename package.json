@@ -26,7 +26,7 @@
   },
   "homepage": "https://github.com/oscarryz/manu#readme",
   "dependencies": {
-    "commonmark": "^0.29.0",
+    "commonmark": "^0.29.1",
     "debug": "^4.1.1",
     "express": "4.17.1",
     "gh-pages": "^2.1.1",
@@ -34,9 +34,5 @@
     "prosemirror-example-setup": "^1.0.1",
     "start": "^5.1.0",
     "uuid": "^3.3.3"
-  },
-  "devDependencies": {
-    "copyfiles": "^2.1.1",
-    "simple-git": "^1.126.0"
   }
 }
