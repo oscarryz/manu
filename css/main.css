@@ -25,6 +25,11 @@ p>a:not([class]), li>a:not([class]) {
 p>a:not([class]), li>a:not([class]):visited {
     color: var(--color-primary);
 }
+@media only screen and (max-width: 520px) {
+  :root {
+      font-size: 17px;
+  }
+}
 
 .archive-link {
     transition: color 300ms ease-out;
