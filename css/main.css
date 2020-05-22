@@ -9,6 +9,11 @@
     --c-high-light:   rgba(39, 121, 246, .1);
 }
 
+body {
+    padding : 5rem 1.5rem 1.5rem;
+}
+
+
 a {
     text-decoration: none;
     color: var(--color-primary);
