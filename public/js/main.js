@@ -35,6 +35,3 @@ function loadDoc() {
     request('GET', '/edit/' + doc.dataset.id);
 }
 
-function resizeIframe(obj) {
-    obj.style.height = obj.contentWindow.document.body.scrollHeight + 'px';
-}
