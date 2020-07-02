@@ -19,7 +19,8 @@ module.exports = {
     post: (req, res) => {
         const e = entryFrom(req);
         const entryFile = entries.newEntry(e);
-        res.redirect(303, entryFile)
+        publish();
+        res.redirect(303, entryFile); 
     },
 
     put: (req, res) => {
@@ -30,8 +31,22 @@ module.exports = {
         }
         const e = entryFrom(req);
         const entryFile = entries.updateEntry(e);
-        res.redirect(303, entryFile)
+        publish();
+        res.redirect(303, entryFile);
     }
+}
+
+const publish = () => {
+    const exec = require('child_process').exec;
+    exec("npm run deploy", (error, stdout, stderr) => {
+        if (error) {
+            console.error(`exec error: ${error}`);
+            return;
+        }
+        console.log(`stdout: ${stdout}`);
+        console.error(`stderr: ${stderr}`);
+    })
+
 }
 
 // It's bad idea to simply take user input
