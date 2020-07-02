@@ -1,8 +1,8 @@
-@import url("https://fonts.googleapis.com/css?family=Material+Icons|Libre+Baskerville&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Material+Icons|Tinos&display=swap");
 
 :root {
     --sans-font: "ABeeZee";
-    --serif-font: "Libre Baskerville";
+    --serif-font: "Tinos";
     --color-primary: rgba(0,0,0,0.75);
     --color-secondary: rgba(0,0,0,0.6);
     --c-high: rgba(39, 121, 246, .25);
