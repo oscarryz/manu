@@ -5,11 +5,12 @@
     --serif-font: "Manuale";
     --color-primary: #F8F9FC;
     --color-secondary: #D6D9E0;
-    --c-high: rgba(39, 121, 246, .25);
-    --c-high-light:   rgba(39, 121, 246, .1);
+    --c-higha: (39, 121, 246, .75);
+    --c-high: #445FCF;
+    --c-high-light:   rgba(39, 121, 246, .5);
     --color-background: #23262E;
 }
-@media (prefers-color-scheme: light) {
+@media (prefers-color-scheme: lightl) {
     :root {
         --serif-font: "Manuale";
         --color-primary: rgba(0,0,0,0.75);
@@ -33,14 +34,26 @@ a {
     text-decoration: none;
     color: var(--color-primary);
 }
+
 p>a:not([class]), li>a:not([class]) {
     text-decoration: none;
     color: var(--color-primary);
     background: linear-gradient( var(--c-high-light), var(--c-high));
-    background-size: 100% 40%;
+    background-size: 100% 15%;
     background-repeat: no-repeat;
-    background-position: 0% 90%;
+    background-position: 0% 100%;
 
+}
+@media (prefers-color-scheme: lightl) {
+    p>a:not([class]), li>a:not([class]) {
+        text-decoration: none;
+        color: var(--color-primary);
+        background: linear-gradient( var(--c-high-light), var(--c-high));
+        background-size: 100% 40%;
+        background-repeat: no-repeat;
+        background-position: 0% 90%;
+
+    }
 }
 p>a:not([class]), li>a:not([class]):visited {
     color: var(--color-primary);
