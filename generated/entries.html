@@ -1,13 +1,19 @@
-<html lang="en" data-theme=dark>
+<html data-theme="dark">
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="css/main.css">
     <script type="text/javascript" async src="/js/main.js"></script>
+    <script>
+       (function setTheme() {
+            const currentTheme = localStorage.getItem('theme') || 'dark';
+            document.querySelector("html").dataset.theme=currentTheme;
+        })();
+</script>
 </head>
-<div id="entries-list" class="entries-list"><ul><li><a href="./ideas.html" target="_parent" class="archive-link">Ideas</a></li>
+<div id="entries-list" class="entries-list"><ul><li><a href="./curating-social-media.html" target="_parent" class="archive-link">Curating social media</a></li>
+<li><a href="./ideas.html" target="_parent" class="archive-link">Ideas</a></li>
 <li><a href="./a-social-network-without.html" target="_parent" class="archive-link">A Social Network without</a></li>
 <li><a href="./r-manuelmoreale.html" target="_parent" class="archive-link">r/manuelmoreale</a></li>
 <li><a href="./finding-coincidences.html" target="_parent" class="archive-link">Finding coincidences</a></li>
 <li><a href="./creating-a-simplistic-blogging.html" target="_parent" class="archive-link">Creating a simplistic blogging</a></li>
-</ul></div>
-</html>
+</ul></div></html>
