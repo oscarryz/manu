@@ -37,6 +37,10 @@ module.exports = {
 }
 
 const publish = () => {
+    const env = process.env.NODE_ENV || 'development';
+    if (env !== 'production' ) {
+        return;
+    }
     const exec = require('child_process').exec;
     exec("npm run deploy", (error, stdout, stderr) => {
         if (error) {

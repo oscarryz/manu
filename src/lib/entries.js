@@ -138,7 +138,7 @@ const updateEntriesIndex = () => {
 
         list += `<li><a href=".${entry.fileHtml}" target="_parent" class="archive-link">${entry.title}</a></li>\n`
     }
-    const entriesFile = includes.headerEntries() + list + '</ul></div>';
+    const entriesFile = includes.headerEntries() + list + '</ul></div></html>';
 
     try {
         fs.writeFileSync(`${publicDir}/entries.html`, entriesFile);
