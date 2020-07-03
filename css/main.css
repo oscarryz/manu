@@ -1,25 +1,29 @@
 @import url("https://fonts.googleapis.com/css?family=Material+Icons|Manuale&display=swap");
 
-
-:root {
+/* Dark theme */
+html[data-theme='dark'] {
     --serif-font: "Manuale";
     --color-primary: #F8F9FC;
     --color-secondary: #D6D9E0;
     --c-higha: (39, 121, 246, .75);
     --c-high: #445FCF;
     --c-high-light:   rgba(39, 121, 246, .5);
+    --color-selected: #393E4B;
     --color-background: #23262E;
 }
-@media (prefers-color-scheme: lightl) {
-    :root {
+/* Light theme */
+/* @media (prefers-color-scheme: light) { */
+ html[data-theme='light'] {
         --serif-font: "Manuale";
         --color-primary: rgba(0,0,0,0.75);
         --color-secondary: rgba(0,0,0,0.6);
         --c-high: rgba(39, 121, 246, .25);
         --c-high-light:   rgba(39, 121, 246, .1);
         --color-background: #ffffff;
+        --color-selected: #dddddd;
+
     }
-}
+/* } */
 
 body {
     padding : 0rem 1.5rem 1.5rem;
@@ -201,7 +205,7 @@ Dropdown menu
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #f9f9f9;
+    background-color: var(--color-background);
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
@@ -219,17 +223,13 @@ Dropdown menu
 }
 
 .dropdown-content a:hover {
-    background-color: #ddd;
+        background-color: var(--color-selected);
+
+    /* background-color: #ddd; 
+    */
 }
 
 .dropdown:hover .dropdown-content {
     display: block;
 }
-/* Rules for using icons as black on a light background. */
-.material-icons.md-dark { color: rgba(0, 0, 0, 0.54); }
-.material-icons.md-dark.md-inactive { color: rgba(0, 0, 0, 0.26); }
-
-/* Rules for using icons as white on a dark background. */
-.material-icons.md-light { color: rgba(255, 255, 255, 1); }
-.material-icons.md-light.md-inactive { color: rgba(255, 255, 255, 0.3); }
 .dropdown { display:none; }
