@@ -32,6 +32,16 @@ body {
     font-family: var(--serif-font);
     background: var(--color-background);
 }
+p {
+    color: var(--color-secondary);
+}
+
+blockquote {
+    padding-left: 1em;
+    border-left: 3px solid var(--color-selected);
+    margin-left: 0;
+    margin-right: 0;
+}
 
 
 a {
@@ -232,3 +242,5 @@ Dropdown menu
 .dropdown:hover .dropdown-content {
     display: block;
 }
+
+
