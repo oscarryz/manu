@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<title>Happiness</title>
+	<link rel="stylesheet" href="css/main.css">
+	<script type="text/javascript" async src="js/main.js"></script>
+	<script>
+		function resizeIframe(obj) {
+            obj.style.height = obj.contentWindow.document.body.scrollHeight + 'px';
+            const currentTheme = localStorage.getItem('theme') || 'dark';
+            obj.querySelector("html").dataset.theme=currentTheme;
+        }
+        function toggleTheme() {
+          let theme = document.querySelector("html").dataset.theme;
+          if (theme === 'light') {
+            document.querySelector("html").dataset.theme='dark';
+            document.querySelector('iframe').contentDocument.querySelector("html").dataset.theme = 'dark';
+            localStorage.setItem('theme', 'dark');
+        } else {
+            document.querySelector("html").dataset.theme = 'light';
+            document.querySelector('iframe').contentDocument.querySelector("html").dataset.theme= 'light';
+            localStorage.setItem('theme', 'light');
+
+          }
+        }
+	</script>
+</head>
+
+<body>
+	<div class="grid-container">
+		<header class="header">
+			<div class="toolbar">
+				<div class="dropdown">
+					<button class="dropbtn">
+                        <i class="material-icons">
+                            more_vert
+                        </i>
+                    </button>
+					<div class="dropdown-content">
+						<a href="/new">New</a>
+						<a href="/" onClick="loadDoc(); return false;">Edit</a>
+					</div>
+				</div>
+			</div>
+		</header>
+		<main class="main" data-id="b050b170-c026-11ea-b8f8-d52ffa796a70">
+			<!--            <h1 id="content-title" class="title">Happiness</h1>-->
+			<div id="context-text" class="content"><h1>Happiness</h1><h6><strong>Jul 6, 2020</strong></h6><p>Happiness is not quantifiable, like money or time. You cannot say I have X amount of happiness.</p><p>Happiness is an absolute, you're happy and that's it! You cannot be more or less happy, the perceived amount of happiness is perhaps the amount of continuous-time you feel it (oftentimes manifested as Joy) but there are all kinds of sources of happiness; when you eat your favorite meal, when you had a good night of sleep, when you see a beautiful sunset, when you see the eyes of the person you love.</p><p>Some of the sources of happiness are quite obvious, like joy after a good laugh, but many of them are subtle and almost hidden everywhere else, like that warm feeling of a blanket on a cold night.</p><p>And this is the real meaning of life, this is why we're here for, to find and link together all these sources and keep the streak as long as possible.</p>
+</div>
+</main>
+<div class="entries">
+	<div id="entries-filter" class="entries-filter">Other entries</div>
+	<div id="entries-list" class="entries-list">
+		<iframe src="entries.html" onload="resizeIframe(this)"></iframe>
+	</div>
+</div>
+<footer class="footer">
+	<nav id="footer-nav">
+        <a href="https://twitter.com/OscarRyz">@OscarRyz</a>
+	</nav>
+    <a href="#" onclick="toggleTheme()">Tooggle theme</a>
+
+</footer>
+</div>
+</body>
+<script>
+       (function setTheme() {
+            const currentTheme = localStorage.getItem('theme') || 'dark';
+            document.querySelector("html").dataset.theme=currentTheme;
+        })();
+</script>
+</html>
