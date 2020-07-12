@@ -10,7 +10,7 @@ html[data-theme='dark'] {
     --c-high-light:   rgba(39, 121, 246, .5);
     --color-selected: #393E4B;
     --color-background-blue: #23262E;
-    --color-background: #1D1f20;
+    --color-background: #1D1f24;
 }
 /* Light theme */
 /* @media (prefers-color-scheme: light) { */
@@ -29,7 +29,7 @@ html[data-theme='dark'] {
 body {
     padding : 0rem 1.5rem 1.5rem;
     line-height: 1.6;
-    font-size: 18px;
+    font-size: 20px;
     font-family: var(--serif-font);
     background: var(--color-background);
 }
