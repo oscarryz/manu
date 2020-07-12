@@ -11,6 +11,7 @@ module.exports = {
             res.redirect(302, entries.first());
         }
     },
+    
     get: (req,res) => {
       const entryFile = entries.loadEntry(req.params.id);
       res.status(200).send(entryFile);
@@ -80,13 +81,12 @@ const entryFrom = (req) => {
     const reader = new commonmark.Parser();
     const writer = new commonmark.HtmlRenderer();
     const parsed = reader.parse(content);
-    const html = writer.render(parsed);
+    const content_html = writer.render(parsed);
 
     return {
         id,
         title,
-        content,
-        html
+        content_html
     }
 }
 
