@@ -9,7 +9,8 @@ html[data-theme='dark'] {
     --c-high: #445FCF;
     --c-high-light:   rgba(39, 121, 246, .5);
     --color-selected: #393E4B;
-    --color-background: #23262E;
+    --color-background-blue: #23262E;
+    --color-background: #1D1f20;
 }
 /* Light theme */
 /* @media (prefers-color-scheme: light) { */
