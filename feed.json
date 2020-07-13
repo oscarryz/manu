@@ -1,9 +1,4 @@
 {
-  "version": "https://jsonfeed.org/version/1",
-  "title": "RSS test",
-  "home_page_url": "https://oscarryz.now.sh",
-  "feed_url": "https://oscarryz.now.sh/feed.json",
-  "icon": "h{
    "version": "https://jsonfeed.org/version/1",
    "title": "oscarryz blog",
    "home_page_url": "https://oscarryz.now.sh",
@@ -87,35 +82,4 @@
          "date_modified": "2020-05-22T03:16:45.372Z"
       }
    ]
-}ttps://oscarryz.now.sh/img/favicon.ico",
-  "author": {
-    "name": "OscarRyz",
-    "url": "https://twitter.com/oscarryz"
-  },
-  "items": [
-    {
-      "id": "778335e0-c4d4-11ea-87a1-578b9175e6d1",
-      "title": "Titlec",
-      "content_html": "<h1>Titlec</h1><p>contentc</p>\n",
-      "date_published": "2020-07-13T06:45:40.542Z",
-      "url": "https://oscarryz.now.sh/titlec.html",
-      "date_modified": "2020-07-13T06:45:40.543Z"
-    },
-    {
-      "id": "340dc550-c4d4-11ea-a5cb-ffd8f90ce2bc",
-      "title": "Titleb",
-      "content_html": "<h1>Titleb</h1><p>contentb</p>\n",
-      "date_published": "2020-07-13T06:43:47.365Z",
-      "url": "https://oscarryz.now.sh/titleb.html",
-      "date_modified": "2020-07-13T06:43:47.365Z"
-    },
-    {
-      "id": "2b6e2110-c4d4-11ea-a5cb-ffd8f90ce2bc",
-      "title": "Title",
-      "content_html": "<h1>Title</h1><p>content</p>\n",
-      "date_published": "2020-07-13T06:43:32.898Z",
-      "url": "https://oscarryz.now.sh/title.html",
-      "date_modified": "2020-07-13T06:43:32.899Z"
-    }
-  ]
 }
