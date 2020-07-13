@@ -128,7 +128,7 @@ module.exports = {
         entry.id = uuid();
         entry.date_published = new Date().toISOString();
         const html = persistEntry(entry);
-        fs.writeFileSync(`${publicDir}/index.html`, `<meta http-equiv="Refresh" content="0; url=${entry.url}" />`);
+        fs.writeFileSync(`${publicDir}/index.html`, `<meta http-equiv="Refresh" content="0; url=${relativePath(entry)}" />`);
         return html;
     },
 
@@ -137,6 +137,9 @@ module.exports = {
         return persistEntry(entry);
     }
 }
+// removes the fqdn
+const relativePath = (entry) => entry.url.substring(entry.url.lastIndexOf('/')); 
+
 
 // Updates the navigations iframe "entries.html" 
 const updateEntriesIndex = () => {
@@ -147,8 +150,7 @@ const updateEntriesIndex = () => {
 
     let list = '<div id="entries-list" class="entries-list"><ul>';
     for (entry of index.items) {
-        const relativePath = entry.url.substring(entry.url.lastIndexOf('/')); // removes the fqdn
-        list += `<li><a href="${relativePath}" target="_parent" class="archive-link">${entry.title}</a></li>\n`
+        list += `<li><a href="${relativePath(entry)}" target="_parent" class="archive-link">${entry.title}</a></li>\n`
     }
     const entriesFile = includes.headerEntries() + list + '</ul></div></html>';
 
