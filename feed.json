@@ -3,6 +3,7 @@
   "title": "RSS test",
   "home_page_url": "https://oscarryz.now.sh",
   "feed_url": "https://oscarryz.now.sh/feed.json",
+  "icon": "https://oscarryz.now.sh/img/favicon.ico",
   "author": {
     "name": "OscarRyz",
     "url": "https://twitter.com/oscarryz"
