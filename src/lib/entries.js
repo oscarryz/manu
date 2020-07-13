@@ -148,7 +148,7 @@ const updateEntriesIndex = () => {
     let list = '<div id="entries-list" class="entries-list"><ul>';
     for (entry of index.items) {
         const relativePath = entry.url.substring(entry.url.lastIndexOf('/')); // removes the fqdn
-        list += `<li><a href="${relativePath}" target="_parent" class="archive-link">${entry.original}</a></li>\n`
+        list += `<li><a href="${relativePath}" target="_parent" class="archive-link">${entry.title}</a></li>\n`
     }
     const entriesFile = includes.headerEntries() + list + '</ul></div></html>';
 
@@ -172,6 +172,7 @@ const defaultFeed = () => ({
         title: 'oscarryz blog',
         home_page_url: 'https://oscarryz.now.sh',
         feed_url: 'https://oscarryz.now.sh/feed/json',
+        icon: 'https://oscarryz.now.sh/img/favicon.ico',
         author: {
             name: "OscarRyz",
             url: "https://twitter.com/oscarryz"
