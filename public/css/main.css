@@ -154,6 +154,17 @@ p>a:not([class]), li>a:not([class]):visited {
     grid-area: footer;
     margin-bottom: 10px;
 }
+.footer {
+    list-style: none;
+}
+.footer a {
+    display: inline;
+    padding: 0 10px;
+    border-left: solid 1px var(--color-selected);
+}
+.footer a:first-child{
+    border-left: none;
+}
 
 .grid-container {
   height: 100%;
