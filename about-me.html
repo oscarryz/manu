@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+	<meta charset="UTF-8">
+	<link href="https://fonts.googleapis.com/css2?family=Prosto+One&display=swap&text=Oscar+Reyes" rel="stylesheet">
+	<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="img/favicon.ico" type="image/x-icon">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<title>Oscar Reyes</title>
+	<link rel="stylesheet" href="css/main.css">
+	  <link href="css/all.css" rel="stylesheet"> <!--load all styles -->
+	<script>
+		function toggleTheme() {
+			let theme = document.querySelector("html").dataset.theme;
+			if (theme === 'light') {
+				document.querySelector("html").dataset.theme = 'dark';
+				document.querySelector('iframe').contentDocument.querySelector("html").dataset.theme = 'dark';
+				localStorage.setItem('theme', 'dark');
+			} else {
+				document.querySelector("html").dataset.theme = 'light';
+				document.querySelector('iframe').contentDocument.querySelector("html").dataset.theme = 'light';
+				localStorage.setItem('theme', 'light');
+
+			}
+		}
+	</script>
+</head>
+
+<body>
+	<div class="grid-container">
+		<header class="header">
+			<div class="toolbar">
+			</div>
+		</header>
+		<style>
+			.display {
+				font-family: "Prosto One", cursive;
+				font-size: 5rem;
+				line-height: 6rem;;
+				color: linear-gradient( var(--c-high-light), var(--c-high));
+
+			}
+			.grid-container {
+				max-width: 50rem;
+			}
+			.highlight {
+				border-bottom: 2px solid #DE8B98;	
+			} 
+		</style>
+		<main class="main" data-id="ddad7880-c7db-11ea-9c10-ed5a9bda1952">
+			<div id="context-text" class="content">
+				<h1 class="display">Oscar Reyes</h1>
+				<h6 class="highlight">about</h6>
+				<p>Software Engineer at Blizzard Entertainment</p>
+				<p>Has been playing StarCraft II since 2013 - Diamond</p>
+				<p>When asked about anything in life, somehow everything revoles around food</p>
+				<p>Lives in Austin Texas</p>
+				<h6 class="highlight">links</h6>
+				<p><i class="fab fa-twitter"></i> <a href="https://twitter.com/oscarryz">@oscarryz</a></p>
+				<p><i class="fab fa-github"></i> <a href="https://github.com/oscarryz" title="">/oscarryz</a></p>
+				<p><i class="fab fa-stack-overflow"></i> <a href="https://stackoverflow.com/users/20654/oscarryz" title="">OscarRyz</a></p>
+				<p><i class="fa fa-globe-americas"></i> <a href="https://oscarryz.now.sh" title="">oscarryz.now.sh</a><br><br><br></p>
+			</div>
+		</main>
+		<footer class="footer">
+			<nav id="footer-nav">
+				<a href="#" onclick="toggleTheme()">Theme: Ligth / Dark</a>
+			</nav>
+		</footer>
+	</div>
+</body>
+<script>
+	(function setTheme() {
+		const currentTheme = localStorage.getItem('theme') || 'dark';
+		document.querySelector("html").dataset.theme = currentTheme;
+	})();
+</script>
+
+</html>
