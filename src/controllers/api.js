@@ -1,5 +1,6 @@
 const commonmark = require('commonmark');
 const entries = require('../lib/entries');
+const sanitizeHtml = require('sanitize-html');
 
 module.exports = {
 
@@ -54,13 +55,9 @@ const publish = () => {
 
 }
 
-// It's bad idea to simply take user input
-// and use it blindly.
-// Data should always be sanitized
-// Not the scope atm, but this function will eventually
-// sanitize the user input.
-// Still not good, just trying to avoid losing data here.
-const sanitize = (data) => decodeURIComponent(data);
+const sanitize = (data) => sanitizeHtml(data, {
+  allowedTags: sanitizeHtml.defaults.allowedTags.concat([ 'h1', 'h2', ])
+});
 
 /* 
  * Creates an entry object from the request
@@ -68,7 +65,7 @@ const sanitize = (data) => decodeURIComponent(data);
 const entryFrom = (req) => {
     const id = req.body.id;
     let title = sanitize(req.body.title);
-    const content = sanitize((req.body.content || ''));//.replace(title, ''));
+    const content = sanitize((req.body.content || ''));
 
     //Handles case of empty title and/or content.
     if (title.trim().length === 0) {

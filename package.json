@@ -34,5 +34,8 @@
     "prosemirror-example-setup": "^1.0.1",
     "start": "^5.1.0",
     "uuid": "^3.3.3"
+  },
+  "devDependencies": {
+    "sanitize-html": "^1.27.1"
   }
 }
