@@ -6,9 +6,8 @@ const path = require('path');
 const uuid = require('uuid/v1');
 const _ = require('lodash');
 
-const includes = require('./includes');
+const templates = require('./templates');
 
-const entriesDir = path.join(__dirname, '../../entries');
 const publicDir = path.join(__dirname, '../../generated');
 
 const entriesIndex = `${publicDir}/feed.json`;
@@ -19,35 +18,20 @@ persistEntry = (entry) => {
     const t = titleFrom(entry.title);
     entry.title = t.title;
 
-    const fileJson = `/${t.fileName}.json`;
     const fileHtml = `/${t.fileName}.html`;
 
     _.defaults(entry, {
-        // id: entry.id,
         url: `${domain}${fileHtml}`,
         title: t.original,
         date_modified: new Date().toISOString(),
     });
     
 
-    const item = {
-        id: entry.id,
-        url: `${domain}/${t.fileName}.html`,
-        title: t.original,
-        content_html: entry.html,
-        date_modified: new Date().toISOString(),
-    }
 
     // Write the entry regardless
     try {
-        //fs.writeFileSync(`${entriesDir}${fileJson}`, JSON.stringify(entry, null, 2));
-        let header = includes.header()
-            .toString()
-            .replace(/\${title}/g, t.original)
-            .replace(/\${entryId}/g, entry.id);
-
-        fs.writeFileSync(`${publicDir}${fileHtml}`, header + entry.content_html + includes.footer());
-
+        const output = interpolate(templates.entry(), entry);
+        fs.writeFileSync(`${publicDir}${fileHtml}`, output);
     } catch (e) {
         // file couldn't be saved
         throw e;
@@ -116,11 +100,9 @@ module.exports = {
             title = entry.title;
         }
 
-        return includes.editTemplate()
-            .replace(/\${id}/g, id)
-            .replace(/\${title}/g, title)
-            .replace(/\${content}/g, content)
-
+        return interpolate(
+            templates.editEntry(), {id, title, content}
+        );
     },
 
     // Saves a new entry
@@ -128,7 +110,8 @@ module.exports = {
         entry.id = uuid();
         entry.date_published = new Date().toISOString();
         const html = persistEntry(entry);
-        fs.writeFileSync(`${publicDir}/index.html`, `<meta http-equiv="Refresh" content="0; url=${relativePath(entry)}" />`);
+        fs.writeFileSync(`${publicDir}/index.html`, 
+        `<meta http-equiv="Refresh" content="0; url=${entry.url.substring(entry.url.lastIndexOf('/'))}" />`);
         return html;
     },
 
@@ -137,10 +120,6 @@ module.exports = {
         return persistEntry(entry);
     }
 }
-// removes the fqdn
-const relativePath = (entry) => entry.url.substring(entry.url.lastIndexOf('/')); 
-
-
 // Updates the navigations iframe "entries.html" 
 const updateEntriesIndex = () => {
 
@@ -148,18 +127,26 @@ const updateEntriesIndex = () => {
         ? JSON.parse(fs.readFileSync(entriesIndex))
         : defaultFeed();
 
-    let list = '<div id="entries-list" class="entries-list"><ul>';
-    for (entry of index.items) {
-        list += `<li><a href="${relativePath(entry)}" target="_parent" class="archive-link">${entry.title}</a></li>\n`
-    }
-    const entriesFile = includes.headerEntries() + list + '</ul></div></html>';
-
     try {
-        fs.writeFileSync(`${publicDir}/entries.html`, entriesFile);
+        fs.writeFileSync(`${publicDir}/entries.html`, 
+            interpolate(templates.entriesListing(), {items:index.items})
+        );
     } catch (e) {
         throw e;
     }
 
+}
+
+/**
+ * Given a string with interpolate marks (e.g. `Hello ${name}` )
+ * this function executes using the params passed as argument.
+ * @param {string} string The string conaining the interpolation marks
+ * @param {object} params The object to be used in the replacement
+ */
+const interpolate = (string, params) => {
+    const names = Object.keys(params);
+    const vals = Object.values(params);
+    return new Function(...names, `return \`${string}\`;`)(...vals);
 }
 // Given a source text, creates the title from the 
 // first 30 chars.
