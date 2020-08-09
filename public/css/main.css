@@ -134,6 +134,7 @@ p>a:not([class]), li>a:not([class]):visited {
     line-height: 1.75rem;
     text-align: center;
     color: var(--color-primary);
+    font-weight: 800;
 }
 .entries-list {
     font-family: var(--serif-font);
