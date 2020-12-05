@@ -115,6 +115,9 @@ p>a:not([class]), li>a:not([class]):visited {
     line-height: 2rem;
     overflow-wrap: break-word;
 }
+h1 {
+    line-height: 3rem;
+}
 
 .ProseMirror p {
     color: var(--color-secondary)
