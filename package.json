@@ -36,6 +36,6 @@
     "uuid": "^3.3.3"
   },
   "devDependencies": {
-    "sanitize-html": "^1.27.1"
+    "sanitize-html": "^2.3.2"
   }
 }
