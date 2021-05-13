@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <link rel="alternate" type="application/json" href="https://oscarryz.now.sh/feed.json" title="OscarRyz JSON Feed">
+    <title>A year of remote working</title>
+    <link rel="stylesheet" href="css/main.css">
+    <script type="text/javascript" async src="js/main.js"></script>
+    <script>
+        function resizeIframe(obj) {
+            obj.style.height = obj.contentWindow.document.body.scrollHeight + 'px';
+            const currentTheme = localStorage.getItem('theme') || 'dark';
+            obj.querySelector("html").dataset.theme = currentTheme;
+        }
+        function toggleTheme() {
+            let theme = document.querySelector("html").dataset.theme;
+            if (theme === 'light') {
+                document.querySelector("html").dataset.theme = 'dark';
+                document.querySelector('iframe').contentDocument.querySelector("html").dataset.theme = 'dark';
+                localStorage.setItem('theme', 'dark');
+            } else {
+                document.querySelector("html").dataset.theme = 'light';
+                document.querySelector('iframe').contentDocument.querySelector("html").dataset.theme = 'light';
+                localStorage.setItem('theme', 'light');
+
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div class="grid-container">
+        <header class="header">
+            <div class="toolbar">
+                <div class="dropdown">
+                    <button class="dropbtn">
+                        <i class="material-icons">
+                            more_vert
+                        </i>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="/new">New</a>
+                        <a href="/" onClick="loadDoc(); return false;">Edit</a>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main class="main" data-id="e3b3d050-b414-11eb-a1e4-05b636d6a0bc">
+            <div id="context-text" class="content">
+                <h1>A year of remote working</h1><h6>May 13, 2021</h6><p>I always wanted to do remote work, since the days I had to commute 4-5 hrs a day, every single day for years and years, the only thing I could think of was to move away from that. </p><p>Then I’ve got a job where I had to commute 10 minutes (20 total) it was like a dream. That’s all fine and good, absolutely no complaints there. I even started to ride my bicycle to the office and sometimes I walked. </p><p>Then the lockdown forced us to do remote work. I always wanted to try and even did some while having to be away from home for a couple of weeks, but I always heard about the perils of it; distractions, lack of boundaries, lack of communication. Fortunately for me none of that happened and was the opposite. I get distracted when there's a lot of conversations around me, I suffer from involuntary eavesdropping-ism :P aggravated by the fact, sometimes those conversations turn into important work-related information that was easy to miss if you're not paying attention constantly. Also, I liked to stay after office hours to play a few games to decompress but more than once I stayed way longer than I should. That's all gone with the remote work. </p><p>Now I wake up and I'm at my desk in ... well less than a minute. Also, the communication has improved as all the work-related information has to be delivered by e-mail or chat, or in a conference call and you're explicitly summoned and waited for, and if you're gone for that day there's usually a way to catch up. So during the day, I'm able to focus on my work. If I have a question I can ask or call one of my coworkers without having to check if they're at their desk. If they're not available they'll reply eventually, or if busy they just won't reply. Unlike the person to person where it's a bit awkward when someone is busy and can't help you at the moment or the other way around, you're busy and someone shows up at your desk and you feel bad to tell them you’re busy. Now you just put your do-not-disturb sign the the chat. As for drawing the line between work / home times, we have been very good at saying good night at the end of the day so there's a clear boundary when you have to stop working. </p><p>Do I miss the social interaction? Yes. A bit, but I realized I was the reserved type anyway, or rather, I'm fine being reserved. </p><h3>Next step?</h3><p>Now I know we're living in exceptional circumstances, but can't help to imagine a time where remote work is the norm and you can live anywhere. I'm starting to daydream about living in other countries, one month at a time. Working during the week (albeit in probably weird hours due to the timezones difference) and going during the weekend get to know wherever I am. </p>
+
+            </div>
+        </main>
+        <div class="entries">
+            <div id="entries-filter" class="entries-filter">Other entries</div>
+            <div id="entries-list" class="entries-list">
+                <iframe src="entries.html" onload="resizeIframe(this)"></iframe>
+            </div>
+        </div>
+        <footer class="footer">
+            <nav id="footer-nav">
+                <a href="about-me.html">About me</a>
+                <a href="/feed.json">JSON feed</a>
+                <a href="#" onclick="toggleTheme()">Theme: Ligth / Dark</a>
+            </nav>
+        </footer>
+    </div>
+</body>
+<script>
+    (function setTheme() {
+        const currentTheme = localStorage.getItem('theme') || 'dark';
+        document.querySelector("html").dataset.theme = currentTheme;
+    })();
+</script>
+
+</html>
