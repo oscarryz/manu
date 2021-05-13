@@ -11,7 +11,7 @@ const templates = require('./templates');
 const publicDir = path.join(__dirname, '../../generated');
 
 const entriesIndex = `${publicDir}/feed.json`;
-const domain = 'https://oscarryz.now.sh';
+const domain = 'https://oscarryz.com';
 
 // Saves an entry to disk.
 persistEntry = (entry) => {
