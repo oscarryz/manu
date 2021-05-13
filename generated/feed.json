@@ -1,9 +1,9 @@
 {
   "version": "https://jsonfeed.org/version/1",
   "title": "oscarryz blog",
-  "home_page_url": "https://oscarryz.now.sh",
-  "feed_url": "https://oscarryz.now.sh/feed/json",
-  "icon": "https://oscarryz.now.sh/img/favicon.ico",
+  "home_page_url": "https://oscarryz.com",
+  "feed_url": "https://oscarryz.com/feed/json",
+  "icon": "https://oscarryz.com/img/favicon.ico",
   "author": {
     "name": "OscarRyz",
     "url": "https://twitter.com/oscarryz"
@@ -13,21 +13,21 @@
       "id": "e3b3d050-b414-11eb-a1e4-05b636d6a0bc",
       "title": "A year of remote working",
       "content_html": "<h1>A year of remote working</h1><h6>May 13, 2021</h6><p>I always wanted to do remote work, since the days I had to commute 4-5 hrs a day, every single day for years and years, the only thing I could think of was to move away from that. </p><p>Then I’ve got a job where I had to commute 10 minutes (20 total) it was like a dream. That’s all fine and good, absolutely no complaints there. I even started to ride my bicycle to the office and sometimes I walked. </p><p>Then the lockdown forced us to do remote work. I always wanted to try and even did some while having to be away from home for a couple of weeks, but I always heard about the perils of it; distractions, lack of boundaries, lack of communication. Fortunately for me none of that happened and was the opposite. I get distracted when there's a lot of conversations around me, I suffer from involuntary eavesdropping-ism :P aggravated by the fact, sometimes those conversations turn into important work-related information that was easy to miss if you're not paying attention constantly. Also, I liked to stay after office hours to play a few games to decompress but more than once I stayed way longer than I should. That's all gone with the remote work. </p><p>Now I wake up and I'm at my desk in ... well less than a minute. Also, the communication has improved as all the work-related information has to be delivered by e-mail or chat, or in a conference call and you're explicitly summoned and waited for, and if you're gone for that day there's usually a way to catch up. So during the day, I'm able to focus on my work. If I have a question I can ask or call one of my coworkers without having to check if they're at their desk. If they're not available they'll reply eventually, or if busy they just won't reply. Unlike the person to person where it's a bit awkward when someone is busy and can't help you at the moment or the other way around, you're busy and someone shows up at your desk and you feel bad to tell them you’re busy. Now you just put your do-not-disturb sign the the chat. As for drawing the line between work / home times, we have been very good at saying good night at the end of the day so there's a clear boundary when you have to stop working. </p><p>Do I miss the social interaction? Yes. A bit, but I realized I was the reserved type anyway, or rather, I'm fine being reserved. </p><h3>Next step?</h3><p>Now I know we're living in exceptional circumstances, but can't help to imagine a time where remote work is the norm and you can live anywhere. I'm starting to daydream about living in other countries, one month at a time. Working during the week (albeit in probably weird hours due to the timezones difference) and going during the weekend get to know wherever I am. </p>\n",
-      "url": "https://oscarryz.now.sh/a-year-of-remote-working.html",
+      "url": "https://oscarryz.com/a-year-of-remote-working.html",
       "date_modified": "2021-05-13T19:29:52.360Z"
     },
     {
       "id": "d0f14f50-a844-11eb-b2cf-bb640f6f2694",
       "title": "Things will not always go well",
       "content_html": "<h1>Things will not always go well though</h1><h6>April 28 2021</h6><p>Sometimes things that are not under our control will go bad, which is already hard to deal with but to some degree easier to get over, they weren’t our fault after all. But when things that are under our control go bad the feeling is terrible. We should remember not to be too harsh with ourselves in those situations either, this is how life is.</p><p>Better is to recognize the mistake as soon as possible, it might be hard especially when the ego is involved. Also as soon as we admit the responsibility for the fault it’s very useful to try to find out what’s the underlying reason for the mistake instead of just degrade ourselves thinking we are stupid or worthless, that’s not helpful at all.</p><p>Eventually, things will turn around, they always do, the trick is to try to create the conditions for the good things to extend as much as possible and endure the bad times while they last, learn from the mistakes, and move on. Easier to say than do of course.</p><p><br /><br /><br /></p>\n",
-      "url": "https://oscarryz.now.sh/things-will-not-always-go-well.html",
+      "url": "https://oscarryz.com/things-will-not-always-go-well.html",
       "date_modified": "2021-05-13T20:19:14.312Z"
     },
     {
       "id": "b36473c0-8d7f-11eb-9cce-b9cbcc929643",
       "title": "The best time of my life",
       "content_html": "<h1>The best time of my life</h1><p>I have been very fortunate and many ways, and this lockdown has given me opportunities I never had before, namely work from home.</p><p>At the end of the workday, I just walk out of the room I use as an office and I’m instantly at home, my commute was already good, but at some point in my life it was taking me up to 3 hrs each way, needless to say, I switched jobs.</p><p>There are some distractions having the family so close, but I would argue there were some (albeit different) distractions in my workplace when people around start chatting (even if it was work-related). At home, we have managed to keep the distractions at a minimum and my employer has been awesome in allowing us to have extra time off when required during these special circumstances.</p><p>My family is healthy, I am healthy although I had recently spent some time in the hospital due to what I thought was a stroke, which turned to be a number of things combined (migraine, arm numbness) that looked like one. I’m glad to know it wasn’t as serious but definitely gave me the wake-up shake that I needed to go back and being active and eat healthier.</p><p>I have found love, and what an awesome person did I find. Sometimes when there is some struggle I tell her “Well don’t blame me, I chose wisely, you not so much” but of course I try to improve on whatever we were struggling with, for instance among other things, cook more often, who would’ve thought cooking was so easy and rewarding. <br /><br />Anyway, I know I’m really privileged and there are a lot of people that are struggling. Yet I think it’s important to stop for a second and be grateful for what you have and enjoy the moment and this is what this post is all about.</p>\n",
-      "url": "https://oscarryz.now.sh/the-best-time-of-my-life.html",
+      "url": "https://oscarryz.com/the-best-time-of-my-life.html",
       "date_modified": "2021-03-25T16:00:53.749Z"
     },
     {
@@ -35,7 +35,7 @@
       "title": "Social Networks power",
       "content_html": "<h1>Social Networks power</h1><p>There have been some concerns about how much power do social networks have, and if people should abandon them or not, and also move to where exactly.</p><p>Some other voices disregard these concerns with “Well they already know everything about me” or “Social Networks only care about famous people, not simpletons like you”. None of these arguments are valid.</p><p>I don’t think that’s the problem here. It’s very unlikely and impractical to try to go back to a previous era where these things didn’t exist. Some communities have tried to isolate themselves from modern society and the problems it brings (I think about the <a href=\"https://en.wikipedia.org/wiki/Amish\">Amish</a>), but let’s be realistic, that’s not going to happen.</p><p>I’m not sure if I’m just getting older and wiser but, I’ve seen this before, with the T.V. while the differences are notable the same principle can be followed; educate yourself and your family on how much exposure is healthy, how many hours do you need to be on the device (t.v., or phones, or in this case Social Networks), and how much is too much. Another example is any kind of addiction if you stop doing X activity for spending all your time doing Y, you have an addiction problem.</p><p>So I think it’s a matter of education, I see in the future kids will get a class on social media just like today (most) get Sexual Education.</p><p>So, don’t abandon them or move to some other platform. They are a very good tool if used properly (never before like today we’ve been able to get so much information so quickly or to be face to face with someone in an instant just like we used to see in the SciFi shows in the ’80s). Treat them as you would treat a stranger (because that’s exactly that it is, a window for a stranger to peek in your life), don’t overshare your life, don’t share your personal information, don’t tell them who your family is and all your details to someone you don’t even know.</p><p>Yes, they need to be regulated and it will take some time before that happens, in the meantime, keep using them wisely to keep in contact with your friends and family for that’s what I think is the best use of them.</p>\n",
       "date_published": "2021-02-02T20:38:58.733Z",
-      "url": "https://oscarryz.now.sh/social-networks-power.html",
+      "url": "https://oscarryz.com/social-networks-power.html",
       "date_modified": "2021-02-02T20:38:58.735Z"
     },
     {
@@ -43,7 +43,7 @@
       "title": "Good intention does not exempt",
       "content_html": "<h1>Good intention does not exempt from consequences.</h1><p>When we do or say something we are still responsible for the effect it has on others, even if our intention was good. On the other hand, when someone else says or does something that results harmful or offensive to us, we have to speak out and let them know, as most of the time they didn’t mean bad for us.  </p><p>When this situation happens both parties have to be open and receptive to what the other has to say, why they did it in the case of the one offending, and how it was received in the case of the offended; that way they both learn and grow and adjust their values and reduce friction. </p><p>All of this sounds very obvious and it’s common sense, but until we have to put it into practice it’s hard to understand and particularly difficult to realize it’s happening when we are the offending side. What we think is obvious might not be for others. And while we can say: “Oh I did it with the best intention” might still have a negative impact. </p><p>As always a good dose of patience and will is required to make this good communication happen.</p>\n",
       "date_published": "2020-11-25T23:54:29.804Z",
-      "url": "https://oscarryz.now.sh/good-intention-does-not-exempt.html",
+      "url": "https://oscarryz.com/good-intention-does-not-exempt.html",
       "date_modified": "2020-11-25T23:54:29.808Z"
     },
     {
@@ -51,28 +51,28 @@
       "title": "Where does the money come from",
       "content_html": "<h1>Where does the money come from?</h1><p>I was trying to reflect on the origin of the money, and after a while, I realized I have no idea. <br /><br />There are goods and services, you pay for them with money you earned doing some other things (probably selling goods and services too), on a lower layer there’s manufacturing, having build supplies and applying human labor. </p><p>That human labor ultimately came from the ground, as food, which in turn makes them come from the Sun 🤔. </p><p>And then there’s a layer on top which are digital goods (just think how much did Google earned by “selling” screen pixels). </p><p>So, it seems all this money is moving from the Sun to digital services in a pyramid scheme? </p><p>I wonder if there’s another explanation.</p><p><br /></p>\n",
       "date_published": "2020-10-20T18:35:00.720Z",
-      "url": "https://oscarryz.now.sh/where-does-the-money-come-from.html",
+      "url": "https://oscarryz.com/where-does-the-money-come-from.html",
       "date_modified": "2020-10-20T18:35:00.721Z"
     },
     {
       "id": "e870d770-f7fc-11ea-ad7e-bfb0df3ce950",
       "title": "No keyboard, less entries",
       "content_html": "<h1>No keyboard, less entries</h1><p>I usually write at night when I have these ideas floating in my head. Unfortunately due to unexpected circumstances my Chromebook's keyboard stopped working (well not exactly “unexpected”, but I'm too embarrassed to explain how spills happen). Because of that I'm writing less.</p><p>The other reason is because I'm starting to get self conscious of what I said because I might have an audience (albeit small) and started to care what they would think, which is sad, because I shouldn't</p><p>But mostly is because of the keyboard (and the sub optimal support for mobile in this blog “engine”)</p><p>Now I'll click on “Save” and see what happens.</p>\n",
-      "url": "https://oscarryz.now.sh/no-keyboard-less-entries.html",
+      "url": "https://oscarryz.com/no-keyboard-less-entries.html",
       "date_modified": "2020-09-16T09:18:05.362Z"
     },
     {
       "id": "4bc16360-e59e-11ea-ad7e-bfb0df3ce950",
       "title": "Sunday",
       "content_html": "<h1>Sunday</h1><p>It's 35C outside. I hung a hammock, pour a beer and turned on the fans. Took a nap for about good 20 minutes.</p><p>I'm waiting for the Ragú to finish its mandatory 2hr slow cook, so technically speaking I'm cooking.</p><p><br /></p><p>Now I'm hungry and the good news is it will only take 15 more minutes to have dinner ready</p>\n",
-      "url": "https://oscarryz.now.sh/sunday.html",
+      "url": "https://oscarryz.com/sunday.html",
       "date_modified": "2020-08-24T07:53:13.874Z"
     },
     {
       "id": "f9caceb0-dd33-11ea-ad7e-bfb0df3ce950",
       "title": "Star gazing",
       "content_html": "<h1>Star gazing</h1><h5>August 13th, 2am</h5><p>It took me three days but finally today I was able to watch shooting stars.</p><p>I grew up in a place where going out after 8pm requires you to wear a sweater, no matter the time of the year, and definitely at least three layers after midnight. Now I live in Texas and my brain struggles to understand it's 30C (86f) at 2 am. I for one am glad as I could pull a chair in the garden and layback to watch the sky.</p><p>Now, when they say “meteor shower” what comes to mind? Meteorites falling as rain, am I right? Nothing even close. But definitely much more than what one could expect to see by just turning your head up to the sky.</p><p>It's a fun experience, at the beginning it's confusing, you're there and absolutely nothing happens. Then the night sounds started to freak me out, the wind blowing in the trees, the crickets, the creaking on the neighbor fence, and even the AC turning on and off make me wanted to run back into the house. Then it hits me, all of these things still happen without me while I’m sleeping. These night things welcome me into their world by just ignoring me and accepting me as I am.</p><p>So I relax a bit and start to feel comfortable, but still nothing happens. Then there it is! A first shooting star, although I immediately start wondering if I imagined it, it was way too brief and too dim, nothing like some others I’ve seen before. Oh well.</p><p>20 minutes in, check my phone app to see (for the 10th time) where the perseids are located and while I’m moving my sight into the screen I see another one, very clear! very bright!. Ok ok, put the phone away and get ready to be amazed by the rest of the stars. Nothing happens.</p><p>So, things start getting a bit uncomfortable, I’m wearing pants and a long sleeve in 30c (86f) weather due to the mosquitoes, so I’m sweating a bit. My hands (the only uncovered part besides my face) start getting a bit itchy, a mosquito must have found it’s way there. I’m starting to worry about the possibility of having the chair in the middle of an ant “house”, and I’ve just seen 1 1/2 star.</p><p>“Come on! where are they?” I ask myself knowing (but not accepting) that I need to be patient. I take a conscious deep breath and realize all of this is part of the experience, the being in the middle of the yard , in the dark, my head leaning back. So I cover my hands a bit more, lay back and enjoy the moment. I hear the same night sounds but now they’re just like a lullaby, the cracking on the fence it’s not scary anymore, it’s just a rhythmic sound. The wind on the trees, which is a sound I adore in the day, it’s even delightful in the night. I hear some dogs barking very far away and I compare them to those where I grew up. There are some other sounds whose source I cannot fully detect but they’re fine I stop trying to figure out where they come from.</p><p>40 minutes in and finally I stopped trying to make things happen just because I want to. They’ll just happen when they have to. I just have to be present. So I start preparing my wishes for the upcoming stars as I know they’ll show up. And a few minutes later there was one, and another, and another. Some of them dim and shy, that last one I saw, about the brightest I’ve ever seen, 4 seconds crossing the sky.</p><p>One hour after and many wishes for all my loved ones after, I walk back to the house. The moon is about to show up and Illuminate the sky. Went  into the house and enjoyed all the other things that sleep in there.</p><p>This has been a very nice star gazing night.</p>\n",
-      "url": "https://oscarryz.now.sh/star-gazing.html",
+      "url": "https://oscarryz.com/star-gazing.html",
       "date_modified": "2020-08-13T17:29:52.172Z"
     },
     {
@@ -80,21 +80,21 @@
       "title": "Physical Work",
       "content_html": "<h1>Physical Work</h1><p>It may seem obvious, but I think it’s important to remember how hard physical work is. </p><p>In a modernized world, it’s easy to take granted things farming, mining, construction, or even more mundane activities like mowing the lawn or cleaning the house. But we have been doing physical work since the beginnings of human history.</p><p>Physical work dignifies and envigorates; there is something about it that is different from say, training or working out. Seeing the final product and get tired at the end of the day seems a bit of a reward in itself.</p><p><br /></p>\n",
       "date_published": "2020-08-12T18:42:07.114Z",
-      "url": "https://oscarryz.now.sh/physical-work.html",
+      "url": "https://oscarryz.com/physical-work.html",
       "date_modified": "2020-08-12T18:42:07.114Z"
     },
     {
       "id": "d5030480-da13-11ea-ad7e-bfb0df3ce950",
       "title": "Continuous improvement",
       "content_html": "<h1>Continuous improvement</h1><p>I’m really impressed by people that do <strong>A LOT</strong> of work; think of someone that has written an 8 series book or ran an <a href=\"https://en.wikipedia.org/wiki/Ultramarathon\">ultramarathon</a> or learned all Chopin’s piano pieces, all of them.</p><p>The common trait all of these people have is perseverance and consistency, these milestones are more often than not achieved through continuous and consistent work. Of course, natural ability makes it easier but that just takes you so far. This daily work combined with analysis to remove deficiencies creates a continuous and constant improvement that eventually develops into mastery.</p><p>But how do you get this consistency? How you force yourself to do something <em>every day?</em> You just do it? Are you forced by an external force (your parents when you’re a child and then your obligations when grown-up?). I think I know the answer, I think I’ve always had. But it’s slightly different to know the path and walk the path.</p><p>I can also just sit here comfortably and see if an alternative method appears all of the sudden in front of me.</p>\n",
-      "url": "https://oscarryz.now.sh/continuous-improvement.html",
+      "url": "https://oscarryz.com/continuous-improvement.html",
       "date_modified": "2020-08-09T08:31:46.623Z"
     },
     {
       "id": "103d43e0-d572-11ea-ad7e-bfb0df3ce950",
       "title": "Always learning",
       "content_html": "<h1>Always learning</h1><h6>Aug 3rd, 2020</h6><p>We are like no other specie, always curious about our surroundings, we are from a few weeks after being born, always trying to learn and understand how things work. Probably this curiosity slows down as we get older, but as far as I’m concerned I’m still trying to learn as much as possible.</p><p>This trait has been exploited by the current state of the Internet, specifically \"Social Media”, we are always trying to find more information everywhere and these companies are pushing content we were not even interested on in the first place, and we, animals of habit find hard to disregard them.</p><p>And yet, we keep eager to learn new things, it just seems there are no suitable tools to enable us to satisfy this curiosity without turning us into mindless manipulated entities. Some tools like note-taking apps and knowledge tools come to mind (Notion, Evernote, Google Docs), even things like creating your own blog to preserve your thoughts (like I’m doing with this one) might help, but they will never be as easy as going to _____ app and scroll infinitely just looking for another spike of dopamine.</p><p>There most be a way of course. Probably it’s just as simple as turning off the device and see the world around us. But we are probably afraid to think that without “likes” and “follows” we are all alone.</p>\n",
-      "url": "https://oscarryz.now.sh/always-learning.html",
+      "url": "https://oscarryz.com/always-learning.html",
       "date_modified": "2020-08-03T10:21:31.910Z"
     },
     {
@@ -102,14 +102,14 @@
       "title": "English is not my native langu",
       "content_html": "<h1>English is not my native language</h1><p>So, if you spot a grammatical error here, please send me a message and I’ll fix it.</p><p>I’m currently in that weird spot where my thoughts are in English, I feel more comfortable speaking it and yet, I make some silly mistakes. </p><p>The worst part is sometimes when I switch to my native I run out of words too.</p>\n",
       "date_published": "2020-07-28T15:41:21.443Z",
-      "url": "https://oscarryz.now.sh/english-is-not-my-native-langu.html",
+      "url": "https://oscarryz.com/english-is-not-my-native-langu.html",
       "date_modified": "2020-07-28T15:41:21.443Z"
     },
     {
       "id": "05c92440-cfc0-11ea-ad7e-bfb0df3ce950",
       "title": "Why should we try to be a bett",
       "content_html": "<h1>Why should we try to be a better person</h1><p>Why? Is it because if we don't try, we drift to worsen? What defines what's better or worse? Is it subjective? Cultural? A social construct?</p><p>Assuming the meaning of life if to enjoy it, the better we are, the better the opportunities to enjoy it will be.</p><p>For example, let's take sleeping all day long; we can argue that's something enjoyable and thus a good thing to do, but by doing it in excess, we would miss chances to do something else. In this case, not sleeping all day would make us better. What if, we insist, that sleeping is what we want to do. In that case, that wouldn't be a problem and would be the rare case of someone who found what they want to do for the rest of their life. The reality, however, is not that simple. We need to do something else (go to work to buy food, make food, eat, etc.).</p><p>That's why good habits, like sleep well, healthy food, exercise, among many others, are deemed as good things as they enable us to enjoy life better, a healthy, well-slept body will enjoy a sunset better than one with sleep deprivation.</p><p>When we become self-sufficient, we enable ourselves to give us more opportunities to enjoy life (making yourself your favorite food is an example).</p><p>That's why I think we should try to be better persons because, in the end, it benefits ourselves. It seems so obvious isn’t it?</p><p>We don't get better overnight though it takes time to develop these skills and habits, hence the improvement is always an ongoing gradual process. There's no rush, but there's no reason to delay it either.</p><p>More often than not, the things we do to be better are also themselves the reward to enjoy life.</p>\n",
-      "url": "https://oscarryz.now.sh/why-should-we-try-to-be-a-bett.html",
+      "url": "https://oscarryz.com/why-should-we-try-to-be-a-bett.html",
       "date_modified": "2020-07-28T15:36:14.164Z"
     },
     {
@@ -117,21 +117,21 @@
       "title": "Choose to remember",
       "content_html": "<h1>Choose to remember</h1><p>Never like before we have had the opportunity to capture our experiences as we go.</p><p>We have devices (phones but they are not really \"phones\" anymore) where we can capture video, take photos and write notes at any given time.</p><p>The problem is these devices are also a distracting tool that alienates us from living the present moment.</p><p>Still, the ability to capture memories overweights the downsides. However, a tool to better organize these memories in a way the human brain does is still needed. It's not a very complex problem, but not trivial.</p>\n",
       "date_published": "2020-07-18T21:28:23.439Z",
-      "url": "https://oscarryz.now.sh/choose-to-remember.html",
+      "url": "https://oscarryz.com/choose-to-remember.html",
       "date_modified": "2020-07-18T21:28:23.440Z"
     },
     {
       "id": "6e161ca0-c68e-11ea-90e2-ffb7e57b375c",
       "title": "How to get to sleep",
       "content_html": "<h1>How to get to sleep</h1><h6>July 15th, 2020</h6><p><em>Guarantee to work… almost</em></p><ol><li><p>Think of a fond memory of yours; it could be a trip, a childhood memory. Pretty much anything.</p></li><li><p>Try to remember the details, how did you get there, what happened the day before or a few moments earlier.</p></li><li><p>Remember the details of the event and let it flow into what happened next. Recreate it in your mind.</p></li><li><p>Remember who you were with, details about the place. What became of those people? What other memories do you have about that place?</p></li><li><p>Finally, stop trying to control the memories and let it flow.</p></li></ol><p>This works for me almost all the time. I find that while trying to remember those things I usually start dreaming about them and eventually fall asleep. Also, I stop thinking about other topics which are usually the reason why I can’t sleep in the first place. <br><br>And if it doesn’t work at least I’ve had a good time reliving those memories that otherwise get lost in the business of the everyday.</p>\n",
-      "url": "https://oscarryz.now.sh/how-to-get-to-sleep.html",
+      "url": "https://oscarryz.com/how-to-get-to-sleep.html",
       "date_modified": "2020-07-17T05:03:25.886Z"
     },
     {
       "id": "2364d850-c4f3-11ea-8106-5948db66e7b8",
       "title": "Online discussions",
       "content_html": "<h1>Online discussions</h1><p>Just like in real life, discussions are better when they are personal, with someone you know and when the parts already know how to have a civil discussion.</p><p>Otherwise, they are just a waste of time really. Sometimes is worth trying but bear in mind you won’t change someone’s mind, when that someone has a preconceived idea.</p><p>Obligatory <a href=\"https://xkcd.com/386/\" title=\"xkcd: Duty Calls\">xkcd</a>.</p>\n",
-      "url": "https://oscarryz.now.sh/online-discussions.html",
+      "url": "https://oscarryz.com/online-discussions.html",
       "date_modified": "2020-07-13T16:31:01.741Z"
     },
     {
@@ -139,7 +139,7 @@
       "title": "It’s not just about happiness ",
       "content_html": "<h1>It’s not just about happiness though</h1><h5>July 11th, 2020</h5><p>We cannot pretend, however, that we can be <a href=\"/happiness.html\" title=\"\">happy</a> all the time. We are very complex creatures and we can have all sorts of emotions even when they seem contradictory, especially in times like these.</p><p>While is desirable to strive for happiness, it’s important to recognize and accept we can also be fearful, scared, anxious, etc. There’s nothing wrong with that. In the past , society has enforced stereotypes in which only the positive should be promoted and the negative suppressed. This is <a href=\"https://www.google.com/search?q=toxic+positivity\" title=\"\">toxic positivity</a> and even when well-intentioned it causes more damage than what it tries to help.</p><p>These “negative” feelings are also part of ourselves, and we cannot just ignore them and push them aside. For one, that would be denying our own human nature; secondly, they will find their way in sometimes unpredictable ways; and finally, they’re there for a reason, either to create awareness of our surroundings, serving as an alert, to stop doing something that’s damaging us, or enabling us to feel empathy and create a connection with others.</p>",
       "date_published": "2020-07-12T06:12:44.182Z",
-      "url": "https://oscarryz.now.sh//its-not-just-about-happiness.html",
+      "url": "https://oscarryz.com/its-not-just-about-happiness.html",
       "date_modified": "2020-07-12T06:12:44.182Z"
     },
     {
@@ -147,7 +147,7 @@
       "title": "Happiness",
       "content_html": "<h1>Happiness</h1><h6><strong>Jul 6, 2020</strong></h6><p>Happiness is not quantifiable, like money or time. You cannot say I have X amount of happiness.</p><p>Happiness is an absolute, you're happy and that's it! You cannot be more or less happy, the perceived amount of happiness is perhaps the amount of continuous-time you feel it (oftentimes manifested as Joy) but there are all kinds of sources of happiness; when you eat your favorite meal, when you had a good night of sleep, when you see a beautiful sunset, when you see the eyes of the person you love.</p><p>Some of the sources of happiness are quite obvious, like joy after a good laugh, but many of them are subtle and almost hidden everywhere else, like that warm feeling of a blanket on a cold night.</p><p>And this is the real meaning of life, this is why we're here for, to find and link together all these sources and keep the streak as long as possible.</p>",
       "date_published": "2020-07-12T00:12:07.202Z",
-      "url": "https://oscarryz.now.sh//happiness.html",
+      "url": "https://oscarryz.com/happiness.html",
       "date_modified": "2020-07-12T00:12:07.202Z"
     },
     {
@@ -155,7 +155,7 @@
       "title": "About this blog",
       "content_html": "<h1>About this blog</h1><h5>Jul 1st, 2020</h5><p>It's just a place to write my extended thoughts about life (mainly digital life atm), inner replies to a post I read somewhere else, and yes, to reclaim my web presence and own my content among this sea of social networks, memes, cloud solutions, and whatnot.</p><p>What's funny is I tried to blog several times since forever, I have a Blogger account, a Medium account, even a <a href=\"https://proseful.com/\" title=\"Proseful\">Proseful</a> account. Never posted anything beyond the “hello world”.</p><p>I wasn't until I built this blog “engine” myself from the ground up that I get to use it, and I mean, really built it, no Gatsby, Jekyll, or static generators. Pure string concatenation (not saying this is good, but wanted to experiment how to do it).</p><p>There's no likes, analytics, comments, share button or alike (maybe I'll add those later). Just a link to my twitter in case someone wants to DM a reply, but that's not the intention.</p><p>I have it as a (really messy) <a href=\"https://github.com/oscarryz/manu\" title=\"Manu in Github\">open source project</a> and keep learning while I build it (e.g. yesterday added support to toggle dark mode).</p><p>There's something special about crafting your stuff, I guess similar to when we used to build our bows and arrows; if they suck you suck, but you can go home and improve them. When they work you feel proud. That's something we've lost in our technological evolution and yet so innate to human nature, it still finds its way in such an abstract world like the Internet.</p>",
       "date_published": "2020-07-04T17:02:38.966Z",
-      "url": "https://oscarryz.now.sh//about-this-blog.html",
+      "url": "https://oscarryz.com/about-this-blog.html",
       "date_modified": "2020-07-04T17:02:38.966Z"
     },
     {
@@ -163,7 +163,7 @@
       "title": "Curating social media",
       "content_html": "<h1>Curating social media</h1><h5>July 2nd, 2020</h5><p>There’s&nbsp;<a href=\"https://www.indiehackers.com/post/antisocial-media-60ebd9250e?commentId=-MAm-HJB318OskEhU6mZ\">this post</a>&nbsp;on indie hackers about how social media is currently more about trying to get people’s attention to what you think they might like:</p><blockquote><p>&nbsp;<em>On Facebook, you show others what you think they'll like. You spend time picking the best photo, edit your text to be snappy, agonize over the feedback you&nbsp;<strong>might</strong>&nbsp;get[…] I think that could be a remedy for the ills of social media - antisocial media. Time with oneself. Curating an environment... for you.</em></p></blockquote><p>A similar topic was addressed in this blog&nbsp;<a href=\"https://manuelmoreale.com/websites-and-complexity\">Websites and complexity</a>:</p><blockquote><p><em>At the same time though, it makes me kinda sad to see people giving up ownership of their web presence. Personal websites are a mirror of the human beings behind them.</em></p></blockquote><p><br>Makes me wonder; How many of the 2.2 billion (2,200+ million) users of Facebook are interested in customizing their profile and content to make it truly unique? I guess that many, I mean most of us don’t even post original content, we just repost what someone else’s did.</p><p>I know&nbsp;carrd.co&nbsp;offers a service to create your own web page. Let’s do a Google search. Oh wow,&nbsp;<a href=\"https://www.google.com/search?q=site:carrd.co\">200k results</a>!! That’s quite a number. I guess there’s some interest after all.&nbsp;<br>That’s still the 0.01 percent&nbsp; of the Facebook users, but then again, how many of them know about carrd.co?</p><p>The other aspect people might be interested on, is curating the content (not so much the appearance of the site) to keep track of their thoughts, photos, memories. Personal things. I don’t think there’s much out there except for all those note-taking apps and document management. Let’s see.</p><p>According to&nbsp;<a href=\"https://expandedramblings.com/index.php/evernote-statistics/\">this site</a>, there are 225 million Evernote users (obviously many of them are probably inactive, like the account I created years ago) that’s about 11 percent of Facebook users. Not bad at all.</p><p>Well it looks like people are indeed interested. It’s just mainstream social media is more prevalent and easier to use.</p><p>So, it seems people are willing to curate their content and tune the appearance of their profiles/sites after all.</p><p>Certainly, a topic to keep researching on.</p>",
       "date_published": "2020-07-03T05:15:16.201Z",
-      "url": "https://oscarryz.now.sh//curating-social-media.html",
+      "url": "https://oscarryz.com/curating-social-media.html",
       "date_modified": "2020-07-03T05:15:16.201Z"
     },
     {
@@ -171,14 +171,14 @@
       "title": "Ideas",
       "content_html": "<h1>Ideas</h1><p>You have an idea.</p><p>The idea doesn’t do anything, it’s just sitting there buzzing around your head.</p><p>Sometimes you speak out the idea. It becomes noise. Then if there’s someone around you and hear the idea they might like it and now they can use it, or just ignore it.</p><p>If the idea is not written down, it might be forgotten. If the idea is repeated out loud may shape into other ideas.</p><p>But ideas never turn into anything else if they are not put in practice.</p><p>I had an idea 10 years ago. Never did anything with it. Recently someone asked me:</p><p><em>“Hey, do you have a spare idea you’re not using?”</em></p><p>And suddenly I felt like using it again. I shared it. I created something with it (a drawing), now that idea is a drawing, until I turn it into something else.</p>",
       "date_published": "2020-07-03T02:54:11.298Z",
-      "url": "https://oscarryz.now.sh//ideas.html",
+      "url": "https://oscarryz.com/ideas.html",
       "date_modified": "2020-07-03T02:54:11.298Z"
     },
     {
       "id": "cd3b3950-babc-11ea-9080-e9046fc766e8",
       "title": "A Social Network without",
       "content_html": "<h1>A Social Network without</h1><h5>30 June 2020, 5:20 am</h5><p>Imagine a social network without advertisement</p><p>That doesn’t profile you</p><p>With no Likes or Followers</p><p>Without distraction machinery to make you crave for more</p><p>What you have left is what really matters, your own stories, your own memories, your own connection.<br><br><br><br><br><br><br><br><br><br><br></p>\n",
-      "url": "https://oscarryz.now.sh/a-social-network-without.html",
+      "url": "https://oscarryz.com/a-social-network-without.html",
       "date_modified": "2020-07-13T10:21:20.566Z"
     },
     {
@@ -186,15 +186,15 @@
       "title": "r/manuelmoreale",
       "content_html": "<h1>r/manuelmoreale</h1><h5>May 21st 2020</h5><p>Thoughts on this manuemoreale’s blog <a href=\"https://manuelmoreale.com/on-random-interactions\" title=\"this post\">post</a>.</p><p>Mass social media (Facebook, Instagram, Twitter, et al) certainly creates a disconnection between what’s important in human communication in favor of advertisement and popularity. But they also offer a way to communicate with the OP.</p><p>There are alternatives to this, of course, the most basic is to add a comments section on the blog, but seems inadequate (had to create accounts, moderate, etc) and it might just not fit the blog style.</p><p>Another is to let the interested party (the audience) create a blog/site of its own and post the reply there (just like I’m doing now) but that’s not trivial at all, and it was already addressed <a href=\"https://manuelmoreale.com/websites-and-complexity\" title=\"\">previously here</a>.</p><p>Maybe a new type of platform is needed. Probably this not-knowing-each-other is a good thing in some extent, but in the meantime, I’m still adding this reply here.</p><h3>Or Reddit…</h3><p>Or, I can use another platform such as Reddit which is … well it’s reddit.</p><p>Let’s see how that goes.</p><p>The idea is to create <a href=\"https://www.reddit.com/r/manuelmoreale\" title=\"\">r/manuelmoreale</a> and then for every post on the blog, create an entry on the subreddit where the audience can comment.</p>",
       "date_published": "2020-07-02T05:02:22.209Z",
-      "url": "https://oscarryz.now.sh//r-manuelmoreale.html",
+      "url": "https://oscarryz.com/r-manuelmoreale.html",
       "date_modified": "2020-07-02T05:02:22.209Z"
     },
     {
       "id": "e6652020-5eb5-11ea-899e-37f41fb5f8ad",
       "title": "Finding coincidences",
-      "content_html": "<h2>Finding coincidences</h2><h6>March 05 2020</h6><p><em>In reply to </em><a href=\"https://www.indiehackers.com/codemysoul\" title=\"\"><em>@codemysoul</em></a><em> post on </em><a href=\"https://www.indiehackers.com/post/new-way-of-blogging-da65509db8\" title=\"\"><em>this IH post</em></a></p><p>I do find coincidence on what you're saying. I personally don't blog that often (or if at all) The thinking of having to conform to \"conventional\" practices and adhere to certain style creates a bit of anxiety in me. What if what I'm writing is seems boring? What if my grammar is terrible? What if the content is all over the place?</p><p>Fortunately I came across this blog <a href=\"https://manuelmoreale.com/\" title=\"https://manuelmoreale.com/\">manuelmoreale.com</a> which is is a great source of inspiration for a different type social media content. Way simpler, no SEO goals, personal.</p><p>I also can relate to the \"graveyard\" folder situation. Many projects started and never finished because of lack of time and/or lack of definition of a MVP.</p><p>So, as a way of applying what I've learned in IH about creating and MVP and keep it minimum I created a clone of <a href=\"https://manuelmoreale.com/\" title=\"manuelmoreale.com/\">manuelmorale.com</a> blog, but this one could be edited <em>in situ</em>. Unfortunately I also wanted to experiment with \"extreme\" serverlessness and the editor only runs locally and publishes the generated static site, so no online demo, only the final output: <a href=\"https://manu.oscarryz.now.sh/\" title=\"https://manu.oscarryz.now.sh/\">https://manu.oscarryz.now.sh/</a></p><p>So that's my MVP for the same goal as yours, create something for myself.</p><p>I'm sorry if I'm just talking about myself. What I meant to say with all of this, is yes! I like your idea and I'm myself going to keep exploring on these different ways to do things.</p>",
+      "content_html": "<h2>Finding coincidences</h2><h6>March 05 2020</h6><p><em>In reply to </em><a href=\"https://www.indiehackers.com/codemysoul\" title=\"\"><em>@codemysoul</em></a><em> post on </em><a href=\"https://www.indiehackers.com/post/new-way-of-blogging-da65509db8\" title=\"\"><em>this IH post</em></a></p><p>I do find coincidence on what you're saying. I personally don't blog that often (or if at all) The thinking of having to conform to \"conventional\" practices and adhere to certain style creates a bit of anxiety in me. What if what I'm writing is seems boring? What if my grammar is terrible? What if the content is all over the place?</p><p>Fortunately I came across this blog <a href=\"https://manuelmoreale.com/\" title=\"https://manuelmoreale.com/\">manuelmoreale.com</a> which is is a great source of inspiration for a different type social media content. Way simpler, no SEO goals, personal.</p><p>I also can relate to the \"graveyard\" folder situation. Many projects started and never finished because of lack of time and/or lack of definition of a MVP.</p><p>So, as a way of applying what I've learned in IH about creating and MVP and keep it minimum I created a clone of <a href=\"https://manuelmoreale.com/\" title=\"manuelmoreale.com/\">manuelmorale.com</a> blog, but this one could be edited <em>in situ</em>. Unfortunately I also wanted to experiment with \"extreme\" serverlessness and the editor only runs locally and publishes the generated static site, so no online demo, only the final output: <a href=\"https://manu.oscarryz.com/\" title=\"https://manu.oscarryz.com/\">https://manu.oscarryz.com/</a></p><p>So that's my MVP for the same goal as yours, create something for myself.</p><p>I'm sorry if I'm just talking about myself. What I meant to say with all of this, is yes! I like your idea and I'm myself going to keep exploring on these different ways to do things.</p>",
       "date_published": "2020-05-22T03:17:35.467Z",
-      "url": "https://oscarryz.now.sh//finding-coincidences.html",
+      "url": "https://oscarryz.com/finding-coincidences.html",
       "date_modified": "2020-05-22T03:17:35.467Z"
     },
     {
@@ -202,7 +202,7 @@
       "title": "Creating a simplistic blogging",
       "content_html": "<h2>Creating a simplistic blogging platform</h2><h6>MARCH 4, 2020</h6><p>That was the goal of this project; create a simple way to create blogs where you can just start writing directly into the blog instead of having to go through a complex application or have to write in a weird format and then transform the blog somehow, like you do with static site generators.</p><p>The idea while good, turned out to be (as many things in software development) easier to say that actually execute. It wasn’t particularly hard, just a little bit cumbersome, mostly due the lack of time.</p><p>So, taking as “inspiration” the&nbsp;<a href=\"https://manuelmoreale.com/\">https://manuelmoreale.com/</a>&nbsp;blog, we came up with this “design”:</p><p><img src=\"https://raw.githubusercontent.com/oscarryz/manu/master/etc/Editor-View.png\" alt=\"Editor view of the blog platform\" title=\"Manu blog platform\" contenteditable=\"false\" draggable=\"true\">Which is basically the same ui but adding an editor bar to create new entries, edit them and publish them.</p><p>I’ll keep documenting the approach we took to write this down and how far we’ve got. This right here is the first entry on the working platform, and while still far from complete is now usable.</p>",
       "date_published": "2020-05-22T03:16:45.372Z",
-      "url": "https://oscarryz.now.sh//creating-a-simplistic-blogging.html",
+      "url": "https://oscarryz.com/creating-a-simplistic-blogging.html",
       "date_modified": "2020-05-22T03:16:45.372Z"
     }
   ]
