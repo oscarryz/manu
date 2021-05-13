@@ -30,12 +30,12 @@
     "debug": "^4.1.1",
     "express": "4.17.1",
     "gh-pages": "^2.1.1",
-    "lodash": "^4.17.19",
+    "lodash": "^4.17.21",
     "prosemirror-example-setup": "^1.0.1",
     "start": "^5.1.0",
     "uuid": "^3.3.3"
   },
   "devDependencies": {
-    "sanitize-html": "^1.27.1"
+    "sanitize-html": "^2.3.2"
   }
 }
