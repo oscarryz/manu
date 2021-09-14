@@ -8,6 +8,7 @@ const app = require('../src/app');
 const debug = require('debug')('manu:server');
 const http = require('http');
 
+console.log(`NODE_ENV: ${process.env.NODE_ENV}`)
 /**
  * Get port from environment and store in Express.
  */
