@@ -56,7 +56,7 @@ const publish = () => {
 }
 
 const sanitize = (data) => sanitizeHtml(data, {
-  allowedTags: sanitizeHtml.defaults.allowedTags.concat([ 'h1', 'h2', ])
+  allowedTags: sanitizeHtml.defaults.allowedTags.concat([ 'h1', 'h2','img' ])
 });
 
 /* 
