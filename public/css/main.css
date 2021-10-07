@@ -10,7 +10,7 @@ html[data-theme='dark'] {
     --c-high-light:   rgba(39, 121, 246, .5);
     --color-selected: #393E4B;
     --color-background-blue: #23262E;
-    --color-background: #1D1f24;
+    --color-background: #141619;
 }
 /* Light theme */
 /* @media (prefers-color-scheme: light) { */
@@ -104,7 +104,7 @@ p>a:not([class]), li>a:not([class]):visited {
 .title {
     font-family: var(--serif-font);
     font-size: 1.6rem;
-    line-height: 2rem;
+    line-height: 2.4rem;
     color: var(--color-primary);
 }
 
@@ -112,7 +112,7 @@ p>a:not([class]), li>a:not([class]):visited {
 .content {
     font-family: var(--serif-font);
     color: var(--color-primary);
-    line-height: 2rem;
+    line-height: 2.4rem;
     overflow-wrap: break-word;
 }
 h1 {
@@ -142,7 +142,7 @@ h1 {
 .entries-list {
     font-family: var(--serif-font);
     color: var(--color-primary);
-    line-height: 2rem;
+    line-height: 2.4rem;
     margin-top: 20px;
     margin-bottom: 20px;
 }
