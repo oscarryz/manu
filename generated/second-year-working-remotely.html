@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <link rel="alternate" type="application/json" href="https://oscarryz.com/feed.json" title="OscarRyz JSON Feed">
+    <title>Second year working remotely</title>
+    <link rel="stylesheet" href="css/main.css">
+    <script type="text/javascript" async src="js/main.js"></script>
+    <script>
+        function resizeIframe(obj) {
+            obj.style.height = obj.contentWindow.document.body.scrollHeight + 'px';
+            const currentTheme = localStorage.getItem('theme') || 'dark';
+            obj.querySelector("html").dataset.theme = currentTheme;
+        }
+        function toggleTheme() {
+            let theme = document.querySelector("html").dataset.theme;
+            if (theme === 'light') {
+                document.querySelector("html").dataset.theme = 'dark';
+                document.querySelector('iframe').contentDocument.querySelector("html").dataset.theme = 'dark';
+                localStorage.setItem('theme', 'dark');
+            } else {
+                document.querySelector("html").dataset.theme = 'light';
+                document.querySelector('iframe').contentDocument.querySelector("html").dataset.theme = 'light';
+                localStorage.setItem('theme', 'light');
+
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div class="grid-container">
+        <header class="header">
+            <div class="toolbar">
+                <div class="dropdown">
+                    <button class="dropbtn">
+                        <i class="material-icons">
+                            more_vert
+                        </i>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="/new">New</a>
+                        <a href="/" onClick="loadDoc(); return false;">Edit</a>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main class="main" data-id="411d6580-94c0-11ec-99f5-5d6a149ce6d2">
+            <div id="context-text" class="content">
+                <h1>Second year working remotely</h1><p>I’ve been working almost two years remotely by now. <br /><br />There has been a lot of <a href="https://oscarryz.com/a-year-of-remote-working.html">good things about it</a>, specially in this second year and I’ve noticed the reason is the interaction I have with my team. <br /><br /></p><p>We increased the social interaction we have with each other, we talk more on 1:1’s, we stay longer after a meeting is over to talk socialize. The long term effect is we have build trust and we know we can rely on each other to talk about work problems, and propose solutions too. Our company has been very helpful in this regard, we have a budget for team events (around $35 USD per person) which usually goes into buying lunch. Also we have a 1 hr per week obligatory game time (in addition to the existing ones) So, we use that time to connect. </p><p>I think while working from home is very important to build this connections. Not only to do the work itself  but for our mental health. <br /><br />Starting a conversation is much easier now with a video conf. Staying longer after a meeting is easier too. There’s no need to find conference rooms. Half of my team is 2hrs timezone difference anyway. </p><p>There has been a lot of stress about being in a constant lockdown. Many people is tired of doing so and just retuned to “normality” which makes the whole pandemic last even longer. Yes, it’s hard, but we can make it easier by building connections online. </p><p><br /></p>
+
+            </div>
+        </main>
+        <div class="entries">
+            <div id="entries-filter" class="entries-filter">Other entries</div>
+            <div id="entries-list" class="entries-list">
+                <iframe src="entries.html" onload="resizeIframe(this)"></iframe>
+            </div>
+        </div>
+        <footer class="footer">
+            <nav id="footer-nav">
+                <a href="about-me.html">About me</a>
+                <a href="/feed.json">JSON feed</a>
+                <a href="#" onclick="toggleTheme()">Theme: Ligth / Dark</a>
+            </nav>
+        </footer>
+    </div>
+</body>
+<script>
+    (function setTheme() {
+        const currentTheme = localStorage.getItem('theme') || 'dark';
+        document.querySelector("html").dataset.theme = currentTheme;
+    })();
+</script>
+
+</html>
