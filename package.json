@@ -4,7 +4,7 @@
   "description": "\"Minimalistic Blogging Platform\" ",
   "main": "index",
   "scripts": {
-    "start": "node bin/server.js",
+    "start": "sh prod.sh",
     "test": "test",
     "build": "sh ./bin/deploy.sh",
     "deploy": "sh ./bin/deploy.sh"
