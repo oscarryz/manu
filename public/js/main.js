@@ -1,12 +1,18 @@
-// This is all temporarily and may no even run in all browsers.
+function getEditor() {
+    return document.querySelector('#editor > div > div.ProseMirror.ProseMirror-example-setup-style')
+}
+function getDocElement() {
+    return document.querySelector('body > div.grid-container > main');
+}
+
 function saveDoc() {
-    const editor = document.querySelector('#editor > div > div.ProseMirror.ProseMirror-example-setup-style')
+    const editor = getEditor()
 
     const html = editor.innerHTML;
     const title = editor.innerText.split('\n', 1)[0];
     var params = `title=${title}&content=${encodeURIComponent(html)}`;
 
-    const doc = document.querySelector('body > div.grid-container > main');
+    const doc = getDocElement()
     if (doc.dataset.id === 'undefined') {
         request('POST', '/api', params);
     } else {
@@ -31,7 +37,25 @@ function request(method, url, params) {
 }
 
 function loadDoc() {
-    const doc = document.querySelector('body > div.grid-container > main');
+    const doc = getDocElement()
     request('GET', '/edit/' + doc.dataset.id);
 }
 
+function autoSave() {
+  const editor = getEditor()
+  if (editor == null ) {
+    return;
+  }
+  if (sessionStorage.getItem('autosave')) {
+    editor.innerHTML = sessionStorage.getItem('autosave');
+  }
+  editor.addEventListener('keyup', function() {
+    sessionStorage.setItem('autosave', editor.innerHTML);
+  });
+}
+function clearSession() {
+  sessionStorage.removeItem('autosave');
+}
+
+
+window.onload = autoSave;
