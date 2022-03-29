@@ -25,7 +25,7 @@ persistEntry = (entry) => {
         title: t.original,
         date_modified: new Date().toISOString(),
     });
-    
+
 
 
     // Write the entry regardless
@@ -110,7 +110,7 @@ module.exports = {
         entry.id = uuid();
         entry.date_published = new Date().toISOString();
         const html = persistEntry(entry);
-        fs.writeFileSync(`${publicDir}/index.html`, 
+        fs.writeFileSync(`${publicDir}/index.html`,
         `<meta http-equiv="Refresh" content="0; url=${entry.url.substring(entry.url.lastIndexOf('/'))}" />`);
         return html;
     },
@@ -128,7 +128,7 @@ const updateEntriesIndex = () => {
         : defaultFeed();
 
     try {
-        fs.writeFileSync(`${publicDir}/entries.html`, 
+        fs.writeFileSync(`${publicDir}/entries.html`,
             interpolate(templates.entriesListing(), {items:index.items})
         );
     } catch (e) {
@@ -140,7 +140,7 @@ const updateEntriesIndex = () => {
 /**
  * Given a string with interpolate marks (e.g. `Hello ${name}` )
  * this function executes using the params passed as argument.
- * @param {string} string The string conaining the interpolation marks
+ * @param {string} string The string containing the interpolation marks
  * @param {object} params The object to be used in the replacement
  */
 const interpolate = (string, params) => {
@@ -148,10 +148,10 @@ const interpolate = (string, params) => {
     const vals = Object.values(params);
     return new Function(...names, `return \`${string}\`;`)(...vals);
 }
-// Given a source text, creates the title from the 
-// first 30 chars.
+// Uses the first line of text as title.
 const titleFrom = (source) => {
-    const firstLine = source.substring(0, 30);
+    // const firstLine = source.substring(0, 30);
+    const firstLine = source.split('\r')[0]
     const fileName = _.kebabCase(firstLine);
     return { fileName, title: firstLine, original: firstLine };
 }
