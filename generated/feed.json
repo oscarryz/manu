@@ -10,6 +10,13 @@
   },
   "items": [
     {
+      "id": "d2b08240-b845-11ec-b732-a5360b70def9",
+      "title": "My favorite analogy for writing code is writing a book",
+      "content_html": "<h1>My favorite analogy for writing code is writing a book</h1><p>When I want to explain the challenges of writing software I usually use an analogy book writing (or any type of writing) </p><p>I’ve heard and used others like building a house, but it doesn't quite cut it; the one that works almost perfectly is writing a book.</p><ul><li><p>Writing code -&gt; Writing the book.</p></li><li><p>Modules / Libraries / Components -&gt; Chapters, Episodes, Paragraphs (not 1:1 relation, just an idea depending) .</p></li><li><p>Code review -&gt; Peer review.</p></li><li><p>Compiling -&gt; Putting your peer's work and assembling the book.</p></li><li><p>Deploying -&gt; Send it to the print, or distribute it to the libraries.</p></li><li><p>SRE’s -&gt; The printer guys (or who help with the printers).</p></li><li><p>Bugs -&gt; Errata.</p></li><li><p>Versioning -&gt; Editions.</p></li><li><p>Refactoring -&gt; Change style or re-arrange the storyline so new characters can be included in the future.</p></li><li><p>Cloud computing or microservices -&gt; We’re renting someone else’s printer and now will distribute the chapters instead of the full book</p></li><li><p>Open source -&gt; We can include someone else’s IP in our books to write it faster</p></li><li><p>Security fixes -&gt; A bit harder to explain but somehow the book shipped with something dangerous (a razor in extreme cases) and we have to remove them from all the libraries and put the old version while we figure out how that happened</p></li></ul><p>And the list goes on. It’s fun.</p>\n",
+      "url": "https://oscarryz.com/my-favorite-analogy-for-writing-code-is-writing-a-book.html",
+      "date_modified": "2022-04-09T20:59:36.927Z"
+    },
+    {
       "id": "47639a10-a40e-11ec-b757-4b5dcc95651d",
       "title": "Finally this blog has autosave",
       "content_html": "<h1>Finally this blog has autosave</h1><p>It only took <a href=\"https://github.com/oscarryz/manu/issues/32\">me</a> (according to <a href=\"https://www.wolframalpha.com/input?i=March+14+2022+-+Sep+10%2C+2021\">Wolfram Alpha</a>) 6 months and 4 days.</p><p>I lost a couple of entries for postponing this feature so long, but not anymore!</p><p>It’s a bit embarrassing to be honest but that’s ok, this blog is more like a “if I ever have time” kind of project, so it doesn’t stresses me at all.</p><h5>14 mar 2022 #meta</h5>\n",
