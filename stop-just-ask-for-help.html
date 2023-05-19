@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <link rel="alternate" type="application/json" href="https://oscarryz.com/feed.json" title="OscarRyz JSON Feed">
+    <link rel="me" href="https://mastodon.social/@oscarryz">
+
+    <title>Stop! Just ask for help!</title>
+    <link rel="stylesheet" href="css/main.css">
+    <script type="text/javascript" async src="js/main.js"></script>
+    <script>
+        function resizeIframe(obj) {
+            obj.style.height = obj.contentWindow.document.body.scrollHeight + 'px';
+            const currentTheme = localStorage.getItem('theme') || 'dark';
+            obj.querySelector("html").dataset.theme = currentTheme;
+        }
+        function toggleTheme() {
+            let theme = document.querySelector("html").dataset.theme;
+            if (theme === 'light') {
+                document.querySelector("html").dataset.theme = 'dark';
+                document.querySelector('iframe').contentDocument.querySelector("html").dataset.theme = 'dark';
+                localStorage.setItem('theme', 'dark');
+            } else {
+                document.querySelector("html").dataset.theme = 'light';
+                document.querySelector('iframe').contentDocument.querySelector("html").dataset.theme = 'light';
+                localStorage.setItem('theme', 'light');
+
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div class="grid-container">
+        <header class="header">
+            <div class="toolbar">
+                <div class="dropdown">
+                    <button class="dropbtn">
+                        <i class="material-icons">
+                            more_vert
+                        </i>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="/new">New</a>
+                        <a href="/" onClick="loadDoc(); return false;">Edit</a>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main class="main" data-id="8628a4d0-f65f-11ed-86a2-5ff6008f6132">
+            <div id="context-text" class="content">
+                <h1>Stop! Just ask for help!</h1><p>I often times delay asking for help because I want to try to resolve the problem myself, which is great, that's I think is the right thing to do; give it a try, gather information, make notes on what have you tried before so when you ask for help you can let who is helping you what have you tried and the problems you faced so far. </p><p>What I've been improving lately is how soon should I ask for help. Sometimes I think I'm close to find the solution so I delay the call, sometimes I haven't tried all the steps in a guide I'm following so I delay the request. Sometimes there's a meeting in the next 10 minutes so I postpone the request for help because I'm going to be interrupted anyway. And sometimes too much time goes by and I'm still stuck. Which leads me to feel uncomfortable to ask for help then because I should've asked before, which then leads to a bad cycle. When I notice that I think to my self: *"Stop! Just ask for help!"*</p><h2>What if's</h2><p>What if nobody can help me? What if they don't know either? What if nobody wants to help me? What if it shows I have no clue what I'm doing? Another reason why I postponed asking for help was all these what if's. From them all the only valid one is "What if they ask me what have I tried before" which I agree, I have to try something before. But for the rest the end result might be that I still have the problem (e.g. if nobody knows how to solve) which is basically the same spot where I am, so there's no loss in asking. The sooner I ask (after trying) the faster I'll know if there's something missing. </p><h2>Preparing for asking might solve the problem</h2><p>Often times, when I get ready to ask for help I have to explain what is the problem clearly. For instance if asking in a written form (forum, chat, slack channel, email) when I have to describe clearly and succinctly the problem, what I have tried and what's the problem I'm facing. More than once going through this process I have realized I missed one step, and then I don't need to ask anymore.  When I ask verbally there's a similar process while I'm explaining I realize or the helper realize a step is missing and the problem is solved. Even trying out-loud with an unanimated object such as a <a href="https://en.wikipedia.org/wiki/Rubber_duck_debugging">Rubber Duck</a> can help. </p><p>Some problems might take days, to solve and I might not remember all the details, writing a document with dates and tries helps remember all these details, and this document can be shared with others when asking for help.</p><h2>When the problem is solved write it down</h2><p>I might not have the same problem again, but that's not guaranteed, furthermore, I might have exactly the same problem six months for now and I might not remember all the details. Things might have changed, new variants appeared, guides get outdated. There might not be guides in the first place. So it's good to write down what the solution was because that can help me in the future, and potentially help others.</p><p>The sooner I get into this process the sooner I stop going in circles by myself and the faster the problem might get solved. So I have to remember to just ask for help.</p>
+
+            </div>
+        </main>
+        <div class="entries">
+            <div id="entries-filter" class="entries-filter">Other entries</div>
+            <div id="entries-list" class="entries-list">
+                <iframe src="entries.html" onload="resizeIframe(this)"></iframe>
+            </div>
+        </div>
+        <footer class="footer">
+            <nav id="footer-nav">
+                <a href="about-me.html">About me</a>
+                <a href="/feed.json">JSON feed</a>
+                <a href="#" onclick="toggleTheme()">Theme: Ligth / Dark</a>
+            </nav>
+        </footer>
+    </div>
+</body>
+<script>
+    (function setTheme() {
+        const currentTheme = localStorage.getItem('theme') || 'dark';
+        document.querySelector("html").dataset.theme = currentTheme;
+    })();
+</script>
+
+</html>
