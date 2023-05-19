@@ -64,3 +64,6 @@ dist/*
 *.swp
 .idea/
 
+# gitpod
+.gitpod.yml
+
