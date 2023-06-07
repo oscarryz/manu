@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <link rel="alternate" type="application/json" href="https://oscarryz.com/feed.json" title="OscarRyz JSON Feed">
+    <link rel="me" href="https://mastodon.social/@oscarryz">
+
+    <title>How to get to sleep (again)</title>
+    <link rel="stylesheet" href="css/main.css">
+    <script type="text/javascript" async src="js/main.js"></script>
+    <script>
+        function resizeIframe(obj) {
+            obj.style.height = obj.contentWindow.document.body.scrollHeight + 'px';
+            const currentTheme = localStorage.getItem('theme') || 'dark';
+            obj.querySelector("html").dataset.theme = currentTheme;
+        }
+        function toggleTheme() {
+            let theme = document.querySelector("html").dataset.theme;
+            if (theme === 'light') {
+                document.querySelector("html").dataset.theme = 'dark';
+                document.querySelector('iframe').contentDocument.querySelector("html").dataset.theme = 'dark';
+                localStorage.setItem('theme', 'dark');
+            } else {
+                document.querySelector("html").dataset.theme = 'light';
+                document.querySelector('iframe').contentDocument.querySelector("html").dataset.theme = 'light';
+                localStorage.setItem('theme', 'light');
+
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div class="grid-container">
+        <header class="header">
+            <div class="toolbar">
+                <div class="dropdown">
+                    <button class="dropbtn">
+                        <i class="material-icons">
+                            more_vert
+                        </i>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="/new">New</a>
+                        <a href="/" onClick="loadDoc(); return false;">Edit</a>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main class="main" data-id="87812390-053f-11ee-9fdb-75ee7d54a249">
+            <div id="context-text" class="content">
+                <h1>How to get to sleep (again)</h1><h2>What didn’t work</h2><p>Well it turns out <a href="https://oscarryz.com/how-to-get-to-sleep.html">my previous technique</a> to get to sleep stopped working usually for one of these reasons:</p><ul><li><p>Sometimes the fond memory is too interesting and I just keep thinking about it and my mind starts wondering instead of falling sleep.</p></li><li><p>I’ve had too much screen time and/or just played a video game and the adrenaline rush is still there</p></li><li><p>Too much caffeine after 4 pm</p></li><li><p>Too much light from electronics in the room; keyboard with backlight, wi-fi endpoint, electric plug on/off indicator, computer charging etc. </p></li></ul><p>So I’ve changed the technique to avoid these things. I’m not going to lie it’s hard to get out of the phone, and realistically I will stop trying, so what I do instead is use the “Bedtime mode” + “Night Light” the phone provides to reduce the amount of light my eyes receive. I do stop playing games and just browse things instead, I try to finish my coffee by 4 pm. I unplug or turn off electronics and recently I’m trying using a face mask to increase darkness.</p><h2>Visualize darkness</h2><p>In addition to that the most impactful thing I’ve done is to “visualize” what my eyes see when I close them. I don’t know if this happens to everybody but when I close my eyes, I don’t actually see “black” but like a red/black cloud moving very slowly. I assume is the blood flowing through my eye lids veins or something, is very subtle. When there’s more light the cloud is blue or yellow. Anyway now instead of having a fond memory I try to see this dark cloud and see where it moves. I guess is a form of meditation because I don’t think of anything else. Eventually I fall asleep. </p><h2>Summary</h2><ul><li><p>Reduce screen time before bed and/or use soft light</p></li><li><p>Don’t get into adrenaline rushes before bed</p></li><li><p>Visualize darkness</p></li></ul>
+
+            </div>
+        </main>
+        <div class="entries">
+            <div id="entries-filter" class="entries-filter">Other entries</div>
+            <div id="entries-list" class="entries-list">
+                <iframe src="entries.html" onload="resizeIframe(this)"></iframe>
+            </div>
+        </div>
+        <footer class="footer">
+            <nav id="footer-nav">
+                <a href="about-me.html">About me</a>
+                <a href="/feed.json">JSON feed</a>
+                <a href="#" onclick="toggleTheme()">Theme: Ligth / Dark</a>
+            </nav>
+        </footer>
+    </div>
+</body>
+<script>
+    (function setTheme() {
+        const currentTheme = localStorage.getItem('theme') || 'dark';
+        document.querySelector("html").dataset.theme = currentTheme;
+    })();
+</script>
+
+</html>
