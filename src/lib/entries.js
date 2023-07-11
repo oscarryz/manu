@@ -1,4 +1,5 @@
-// define operations for entries
+// Defines operations for entries
+// in the static generation phase
 // read / write / delete / update
 
 const fs = require('fs');

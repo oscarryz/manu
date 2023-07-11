@@ -2,6 +2,7 @@ const commonmark = require('commonmark');
 const entries = require('../lib/entries');
 const sanitizeHtml = require('sanitize-html');
 
+// Used in the static generation phase
 module.exports = {
 
     first: (req, res) => {
