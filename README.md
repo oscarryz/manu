@@ -1,10 +1,11 @@
 # manu
 
-Minimalist Blogging Platform based on https://manuelmoreale.com/ blog because it's awesome.
+Minimalist Blogging Platform based on that powers https://oscarryz.com. 
 
-(WIP)
+This is based largely on the https://manuelmoreale.com/ blog (he was very kind to share some tips).
 
-Idea is to create a blogging platform with the followig elements:
+
+This is a very simple blogging platform with the followig elements:
 
 - A WYSIWYG editor ( Use https://prosemirror.net to avoid start from scratch)
 - A controller that takes what the user writes and generate the HTML
