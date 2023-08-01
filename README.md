@@ -1,6 +1,6 @@
 # manu
 
-Minimalist Blogging Platform based on that powers https://oscarryz.com. 
+Minimalist Blogging Platform that powers https://oscarryz.com. 
 
 This is based largely on the https://manuelmoreale.com/ blog (he was very kind to share some tips).
 
