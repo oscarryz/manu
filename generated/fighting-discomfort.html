@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <link rel="alternate" type="application/json" href="https://oscarryz.com/feed.json" title="OscarRyz JSON Feed">
+    <link rel="me" href="https://mastodon.social/@oscarryz">
+
+    <title>Fighting discomfort</title>
+    <link rel="stylesheet" href="css/main.css">
+    <script type="text/javascript" async src="js/main.js"></script>
+    <script>
+        function resizeIframe(obj) {
+            obj.style.height = obj.contentWindow.document.body.scrollHeight + 'px';
+            const currentTheme = localStorage.getItem('theme') || 'dark';
+            obj.querySelector("html").dataset.theme = currentTheme;
+        }
+        function toggleTheme() {
+            let theme = document.querySelector("html").dataset.theme;
+            if (theme === 'light') {
+                document.querySelector("html").dataset.theme = 'dark';
+                document.querySelector('iframe').contentDocument.querySelector("html").dataset.theme = 'dark';
+                localStorage.setItem('theme', 'dark');
+            } else {
+                document.querySelector("html").dataset.theme = 'light';
+                document.querySelector('iframe').contentDocument.querySelector("html").dataset.theme = 'light';
+                localStorage.setItem('theme', 'light');
+
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div class="grid-container">
+        <header class="header">
+            <div class="toolbar">
+                <div class="dropdown">
+                    <button class="dropbtn">
+                        <i class="material-icons">
+                            more_vert
+                        </i>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="/new">New</a>
+                        <a href="/" onClick="loadDoc(); return false;">Edit</a>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main class="main" data-id="1af89c70-3786-11ee-bd73-710b096f83b8">
+            <div id="context-text" class="content">
+                <h1>Fighting discomfort</h1><p>Well, fighting isn’t the right word; tolerating? enduring? ignoring? pushing through?</p><p>Sometimes there are things around us (or inside us) that we find annoying and we can’t stop thinking about them and we can’t focus on whatever we have to do at that moment. Sometimes we can fix the annoying thing (e.g. a small stone in your shoe), and some other times we can avoid it (e.g. go to another room to read when the one were you were is too loud). But what happens when the thing that annoys us is out of our control? ( e.g. a folded strap on someone’s backpack … on a tv show?) Or even worse, the thing that annoy us is the very thing we have to do in that moment?  (e.g. doing the dishes)  We have to learn how to push through the discomfort it causes, otherwise we would go into a halt and the discomfort would just last longer.<br /><br />Often times this “push through” will help to manage better those annoying but necessary things we have to do. Eventually they’ll become easier and we’ll be ready to handle other more annoying or difficult task better, but we have to try, otherwise we’ll stay forever in level 1.  </p><p><br /></p>
+
+            </div>
+        </main>
+        <div class="entries">
+            <div id="entries-filter" class="entries-filter">Other entries</div>
+            <div id="entries-list" class="entries-list">
+                <iframe src="entries.html" onload="resizeIframe(this)"></iframe>
+            </div>
+        </div>
+        <footer class="footer">
+            <nav id="footer-nav">
+                <a href="about-me.html">About me</a>
+                <a href="/feed.json">JSON feed</a>
+                <a href="#" onclick="toggleTheme()">Theme: Ligth / Dark</a>
+            </nav>
+        </footer>
+    </div>
+</body>
+<script>
+    (function setTheme() {
+        const currentTheme = localStorage.getItem('theme') || 'dark';
+        document.querySelector("html").dataset.theme = currentTheme;
+    })();
+</script>
+
+</html>
