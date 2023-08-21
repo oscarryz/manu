@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <link rel="alternate" type="application/json" href="https://oscarryz.com/feed.json" title="OscarRyz JSON Feed">
+    <link rel="me" href="https://mastodon.social/@oscarryz">
+
+    <title>Ask yourself, what’s the benefit?</title>
+    <link rel="stylesheet" href="css/main.css">
+    <script type="text/javascript" async src="js/main.js"></script>
+    <script>
+        function resizeIframe(obj) {
+            obj.style.height = obj.contentWindow.document.body.scrollHeight + 'px';
+            const currentTheme = localStorage.getItem('theme') || 'dark';
+            obj.querySelector("html").dataset.theme = currentTheme;
+        }
+        function toggleTheme() {
+            let theme = document.querySelector("html").dataset.theme;
+            if (theme === 'light') {
+                document.querySelector("html").dataset.theme = 'dark';
+                document.querySelector('iframe').contentDocument.querySelector("html").dataset.theme = 'dark';
+                localStorage.setItem('theme', 'dark');
+            } else {
+                document.querySelector("html").dataset.theme = 'light';
+                document.querySelector('iframe').contentDocument.querySelector("html").dataset.theme = 'light';
+                localStorage.setItem('theme', 'light');
+
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div class="grid-container">
+        <header class="header">
+            <div class="toolbar">
+                <div class="dropdown">
+                    <button class="dropbtn">
+                        <i class="material-icons">
+                            more_vert
+                        </i>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="/new">New</a>
+                        <a href="/" onClick="loadDoc(); return false;">Edit</a>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main class="main" data-id="15320220-4034-11ee-aafc-195b044a1cce">
+            <div id="context-text" class="content">
+                <h1>Ask yourself, what’s the benefit?</h1><p>Sometimes I have to do something, but I don’t really want to; it’s a tedious tasks, or unpleasant or simply boring. </p><p>The best thing I can come up with to make me do it (or not do it) is to ask what’s the benefit of that task?  Is there one? It it clear? Maybe there’s no benefit at all and I can just not do it and do something else instead. Maybe the benefit is not clear and just looks like another imposed task (self imposed or not) and that’s just something to avoid, but many time, if not always, there’s a direct benefit from doing it (or a cost for not doing it). Being conscious of what the benefit is, might help to get it done. And if there’s no benefit, simply don’t do it. To to whom asked you to do it and try to see if there’s something else you can do instead. </p><p> </p>
+
+            </div>
+        </main>
+        <div class="entries">
+            <div id="entries-filter" class="entries-filter">Other entries</div>
+            <div id="entries-list" class="entries-list">
+                <iframe src="entries.html" onload="resizeIframe(this)"></iframe>
+            </div>
+        </div>
+        <footer class="footer">
+            <nav id="footer-nav">
+                <a href="about-me.html">About me</a>
+                <a href="/feed.json">JSON feed</a>
+                <a href="#" onclick="toggleTheme()">Theme: Ligth / Dark</a>
+            </nav>
+        </footer>
+    </div>
+</body>
+<script>
+    (function setTheme() {
+        const currentTheme = localStorage.getItem('theme') || 'dark';
+        document.querySelector("html").dataset.theme = currentTheme;
+    })();
+</script>
+
+</html>
