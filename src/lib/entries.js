@@ -51,6 +51,7 @@ persistEntry = (entry) => {
         if (oldEntry.fileHtml !== entry.fileHtml) {
             console.log(`should delete ${oldEntry.fileJson} and ${oldEntry.fileHtml}`);
         }
+        entry.date_published = oldEntry.date_published || entry.date_modified;
         index.items[indexOfEntry] = entry;
     } else {
         index.items.unshift(entry);
@@ -70,7 +71,7 @@ persistEntry = (entry) => {
 module.exports = {
 
     // Returns the filename of the first entry
-    first: () => {
+    first() {
         const index = fs.existsSync(entriesIndex)
             ? JSON.parse(fs.readFileSync(entriesIndex))
             : defaultFeed();
@@ -84,7 +85,7 @@ module.exports = {
 
     // Reads the entry with the given id
     // and returns it as a ready to edit html page.
-    loadEntry: (id) => {
+    loadEntry(id) {
 
         // Default values
         let content = `<h1>Title</h1><p>content</p>`;
@@ -107,7 +108,7 @@ module.exports = {
     },
 
     // Saves a new entry
-    newEntry: (entry) => {
+    newEntry(entry) {
         entry.id = uuid();
         entry.date_published = new Date().toISOString();
         const html = persistEntry(entry);
@@ -117,7 +118,7 @@ module.exports = {
     },
 
     // Updates an existing entry
-    updateEntry: (entry) => {
+    updateEntry (entry) {
         return persistEntry(entry);
     }
 }
@@ -160,9 +161,9 @@ const titleFrom = (source) => {
 const defaultFeed = () => ({
         version: 'https://jsonfeed.org/version/1',
         title: 'oscarryz blog',
-        home_page_url: 'https://oscarryz.now.sh',
-        feed_url: 'https://oscarryz.now.sh/feed/json',
-        icon: 'https://oscarryz.now.sh/img/favicon.ico',
+        home_page_url: 'https://oscarryz.com',
+        feed_url: 'https://oscarryz.com/feed/json',
+        icon: 'https://oscarryz.com/img/favicon.ico',
         author: {
             name: "OscarRyz",
             url: "https://twitter.com/oscarryz"

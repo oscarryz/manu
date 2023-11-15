@@ -7,7 +7,7 @@ const sanitizeHtml = require('sanitize-html');
 */
 module.exports = {
 
-    first: (req, res) => {
+    first (req, res) {
         const first = entries.first();
         if (first === undefined) {
             res.status(200).send(entries.loadEntry(undefined))
@@ -16,19 +16,19 @@ module.exports = {
         }
     },
     
-    get: (req,res) => {
+    get(req,res) {
       const entryFile = entries.loadEntry(req.params.id);
       res.status(200).send(entryFile);
     },
 
-    post: (req, res) => {
+    post (req, res) {
         const e = entryFrom(req);
         const entryFile = entries.newEntry(e);
         publish();
         res.redirect(303, entryFile); 
     },
 
-    put: (req, res) => {
+    put (req, res) {
         const id = req.body.id;
         if (id === undefined) {
             res.redirect(303, '/');

@@ -9,21 +9,21 @@ let entryTemplate;
 const templatesDir = path.join(__dirname, '../templates');
 
 module.exports = {
-    entry : () => {
+    entry() {
         if (entryTemplate === undefined) {
             entryTemplate = fs.readFileSync(`${templatesDir}/entry-template.html`);
         }
         return entryTemplate;
     },
 
-    entriesListing : () => {
+    entriesListing() {
         if (entriesListing === undefined) {
         entriesListing = fs.readFileSync(`${templatesDir}/entries-listing.html`);
         }
         return entriesListing;
     },
 
-    editEntry : () => {
+    editEntry() {
         if (editTemplate === undefined) {
           editTemplate = fs.readFileSync(`${templatesDir}/edit-template.html`, 'utf-8');
         }
