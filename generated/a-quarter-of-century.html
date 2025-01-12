@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <link rel="alternate" type="application/json" href="https://oscarryz.com/feed.json" title="OscarRyz JSON Feed">
+    <link rel="me" href="https://mastodon.social/@oscarryz">
+
+    <title>A quarter of century</title>
+    <link rel="stylesheet" href="css/main.css">
+    <script type="text/javascript" async src="js/main.js"></script>
+    <script>
+        function resizeIframe(obj) {
+            obj.style.height = obj.contentWindow.document.body.scrollHeight + 'px';
+            //const currentTheme = localStorage.getItem('theme') || 'dark';
+            //obj.querySelector("html").dataset.theme = currentTheme;
+        }
+        function toggleTheme() {
+            let theme = document.querySelector("html").dataset.theme;
+            if (theme === 'light') {
+                document.querySelector("html").dataset.theme = 'dark';
+                document.querySelector('iframe').contentDocument.querySelector("html").dataset.theme = 'dark';
+                localStorage.setItem('theme', 'dark');
+            } else {
+                document.querySelector("html").dataset.theme = 'light';
+                document.querySelector('iframe').contentDocument.querySelector("html").dataset.theme = 'light';
+                localStorage.setItem('theme', 'light');
+
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div class="grid-container">
+        <header class="header">
+            <div class="toolbar">
+                <div class="dropdown">
+                    <button class="dropbtn">
+                        <i class="material-icons">
+                            more_vert
+                        </i>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="/new">New</a>
+                        <a href="/" onClick="loadDoc(); return false;">Edit</a>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main class="main" data-id="9ff0eeb0-d0e5-11ef-b78c-f7d262b79e5b">
+            <div id="context-text" class="content">
+                <h1>A quarter of century</h1><p>When I was a child, the far distant future was the year 2000, remote, but certain. Thinking about 2005 or beyond was unimaginable.</p><p>I grew up thinking about the decades as the '20s, the '30s, the '70s—all belonging to 1900, of course.</p><p>There was so much hope about the future; obviously, science fiction was the most exciting topic. Would this future ever come? How could it be possible, for instance, to be able to have a conversation through my watch, or to know everything with a small handheld device, or to have self-driving cars? (Well, I don’t think anybody cared about self-driving cars, but we were definitely looking for flying cars.)</p><p>Then the year 2000 arrived. Things were slightly frustrating because the future didn’t deliver what was promised, and considering Windows 98 was the common state of computers (I probably should say “personal” computers, but that’s a bit implied), the “knowing everything” part was still far off. Yet, something nobody really asked for was taking off: the internet, the network of networks, and with it, the promise to have knowledge at reach instantaneously. Also, from the business point of view, the possibility to sell products with fine-grained targeting to the individual.</p><p>This was a real revolution, and then some of the promises of the future started being delivered. I remember how exciting it was to see Steve Jobs unveiling products like the iPod, then the new iPod, and then the iPhone, including the first video call. Google did tremendous work getting search results that were relevant and accurate. By the first decade of the new century, things felt like they were finally taking off. Today it seems we are gaining traction with personal robots and a little bit with the necessary distraction of large language models (LLMs, aka “AI”), quantum computers, and virtual reality, although the former is lagging behind.</p><p>All these exciting times leave us with a void in terms of dreaming about what the future would look like in, say, 2100, 2500—year 3000! The first obstacle is to keep humanity around that long and avoid self-destruction (the planet would survive for sure; I’m not so optimistic humans can live on it). Flying cars seem to be inconvenient unless they are fully self-driving. We still have telekinesis and teleportation as something to dream about. Ah, the end of poverty and inequality seems like another unachievable dream. Humans are always trying to be better than others, and the lack of poverty and world peace would mean new methods of attaining power and trying to be better than others would be needed. We can always resort to athletic competitions, and we can always be smarter, but something tells me this is not what a society without poverty would search for. Instant healing is another futuristic dream still very present.</p><p>2025—a quarter of a century! I have to scroll every year more to select my birth year in forms. Now it’s the '20s again, and we are halfway through. I never thought as a kid I would be living in this fabulous future. I hope I’m at this point halfway through my life, which means I will still have several decades to live. I wonder what that future will be like.</p>
+
+            </div>
+        </main>
+        <div class="entries">
+            <div id="entries-filter" class="entries-filter">Other entries</div>
+            <div id="entries-list" class="entries-list">
+                <iframe src="entries.html" onload="resizeIframe(this)"></iframe>
+            </div>
+        </div>
+        <footer class="footer">
+            <nav id="footer-nav">
+                <a href="about-me.html">About me</a>
+                <a href="/feed.json">JSON feed</a>
+                <a href="#" onclick="toggleTheme()">Theme: Ligth / Dark</a>
+            </nav>
+        </footer>
+    </div>
+</body>
+<script>
+    (function setTheme() {
+        const currentTheme = localStorage.getItem('theme') || 'dark';
+        document.querySelector("html").dataset.theme = currentTheme;
+    })();
+</script>
+
+</html>
