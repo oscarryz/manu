@@ -50,7 +50,7 @@ a {
     color: var(--color-primary);
 }
 
-p>a:not([class]), li>a:not([class]) {
+a:not([class]) {
     text-decoration: none;
     color: var(--color-primary);
     background: linear-gradient( var(--c-high-light), var(--c-high));
@@ -60,7 +60,7 @@ p>a:not([class]), li>a:not([class]) {
 
 }
 @media (prefers-color-scheme: lightl) {
-    p>a:not([class]), li>a:not([class]) {
+    a:not([class]) {
         text-decoration: none;
         color: var(--color-primary);
         background: linear-gradient( var(--c-high-light), var(--c-high));
@@ -70,7 +70,7 @@ p>a:not([class]), li>a:not([class]) {
 
     }
 }
-p>a:not([class]), li>a:not([class]):visited {
+a:not([class]):visited {
     color: var(--color-primary);
 }
 @media only screen and (max-width: 520px) {
