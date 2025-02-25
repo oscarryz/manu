@@ -1,31 +1,31 @@
 @import url("https://fonts.googleapis.com/css?family=Material+Icons|Manuale&display=swap");
 
-
-html[data-theme='dark'] {
+html[data-theme="dark"] {
     --serif-font: "Manuale";
-    --color-primary: #F8F9FC;
-    --color-secondary: #D6D9E0;
-    --c-higha: (39, 121, 246, .75);
-    --c-high: #445FCF;
-    --c-high-light:   rgba(39, 121, 246, .5);
-    --color-selected: #393E4B;
-    --color-background-blue: #23262E;
+    --color-primary: #f8f9fc;
+    --color-secondary: #d6d9e0;
+    --c-higha: (39, 121, 246, 0.75);
+    --c-high: #445fcf;
+    --c-high-light: rgba(39, 121, 246, 0.5);
+    --color-selected: #393e4b;
+    --color-background-blue: #23262e;
     --color-background: #141619;
+    --color-big-title: rgba(64, 64, 64, 0.1);
 }
 
- html[data-theme='light'] {
-        --serif-font: "Manuale";
-        --color-primary: rgba(0,0,0,0.75);
-        --color-secondary: rgba(0,0,0,0.7);
-        --c-high: rgba(39, 121, 246, .25);
-        --c-high-light:   rgba(39, 121, 246, .1);
-        --color-background: #fdfdfd;
-        --color-selected: #dddddd;
-
-    }
+html[data-theme="light"] {
+    --serif-font: "Manuale";
+    --color-primary: rgba(0, 0, 0, 0.75);
+    --color-secondary: rgba(0, 0, 0, 0.7);
+    --c-high: rgba(39, 121, 246, 0.25);
+    --c-high-light: rgba(39, 121, 246, 0.1);
+    --color-background: #fdfdfd;
+    --color-selected: #dddddd;
+    --color-big-title: rgba(165, 165, 165, 0.1);
+}
 
 body {
-    padding : 0rem 1.5rem 1.5rem;
+    padding: 0rem 1.5rem 1.5rem;
     line-height: 1.6;
     font-size: 1.1875rem;
     font-family: var(--serif-font);
@@ -42,8 +42,6 @@ blockquote {
     margin-right: 0;
 }
 
-
-
 a:visited {
     color: var(--color-primary);
 }
@@ -51,30 +49,29 @@ a:visited {
 a {
     text-decoration: none;
     color: var(--color-primary);
-    background: linear-gradient( var(--c-high-light), var(--c-high));
+    background: linear-gradient(var(--c-high-light), var(--c-high));
     background-size: 100% 15%;
     background-repeat: no-repeat;
     background-position: 0% 100%;
 }
 
-a[class] { 
-        text-decoration: inherit;
-        color: inherit;
-        background: none;
+a[class] {
+    text-decoration: inherit;
+    color: inherit;
+    background: none;
 }
 
-.footer a, 
+.footer a,
 .dropdown a {
     text-decoration: inherit;
     color: inherit;
-    background: none; 
+    background: none;
 }
 
-
 @media only screen and (max-width: 520px) {
-  :root {
-      font-size: 1.0625rem;
-  }
+    :root {
+        font-size: 1.0625rem;
+    }
 }
 
 .archive-link {
@@ -88,15 +85,28 @@ a[class] {
 }
 
 .archive-link-current {
-    font-style : italic;
+    font-style: italic;
 }
 .header {
     grid-area: editor-toolbar;
 }
 
+.big-title {
+    position: absolute;
+    top: 2rem;
+    left: -3rem;
+    font-size: 10em;
+    font-weight: bold;
+    color: var(--color-big-title);
+    z-index: -1;
+    pointer-events: none;
+    user-select: none;
+    white-space: nowrap;
+}
+
 .main {
-  grid-area: main-content;
-  max-width: inherit;
+    grid-area: main-content;
+    max-width: inherit;
 }
 
 .title {
@@ -106,7 +116,13 @@ a[class] {
     color: var(--color-primary);
 }
 
-.ProseMirror p, h1, h2, h3, h4, h5, h6,
+.ProseMirror p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
 .content {
     font-family: var(--serif-font);
     color: var(--color-primary);
@@ -118,15 +134,15 @@ h1 {
 }
 
 .ProseMirror p {
-    color: var(--color-secondary)
+    color: var(--color-secondary);
 }
 .content {
     padding-top: 5rem;
 }
 
 .entries {
-  grid-area: entries;
-  padding-top: 6rem;
+    grid-area: entries;
+    padding-top: 6rem;
 }
 
 .entries-filter {
@@ -145,7 +161,7 @@ h1 {
     margin-bottom: 20px;
 }
 .toolbar,
-.footer{
+.footer {
     font-family: var(--serif-font);
     color: var(--color-secondary);
     font-size: 0.875rem;
@@ -164,27 +180,28 @@ h1 {
     padding: 0 10px;
     border-left: solid 1px var(--color-selected);
 }
-.footer a:first-child{
+.footer a:first-child {
     border-left: none;
 }
 
 .grid-container {
-  height: 100%;
-  margin: 0;
+    height: 100%;
+    margin: 0;
 }
 
 .grid-container {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: auto auto auto auto;
-  grid-template-areas:
-  "editor-toolbar"
-  "main-content"
-  "entries"
-  "footer";
-  grid-gap: 50px;
-  max-width: 40rem;
-  margin: auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto auto auto;
+    grid-template-areas:
+        "empty"
+        "editor-toolbar"
+        "main-content"
+        "entries"
+        "footer";
+    grid-gap: 50px;
+    max-width: 40rem;
+    margin: auto;
 }
 
 iframe {
@@ -196,57 +213,30 @@ iframe {
     Dropdown menu
  */
 
+/* New / Edit | Save / Cancel buttons */
 .toolbar {
-    right: 21rem;
-    position: absolute;
-    top: 3.6rem;
     z-index: 11;
-}
-.dropdown {
-    float: right;
-    right: 0;
-    overflow: hidden;
+    display: flex;
+    gap: 1rem; /* adds space between buttons */
 }
 
-.dropdown .dropbtn {
-    font-size: 16px;
+.action-button {
+    font-family: var(--serif-font);
+    font-size: 0.875rem;
+    padding: 0.5rem 1rem;
     border: none;
-    outline: none;
-    padding: 14px 16px;
-    background-color: inherit;
-    font-family: inherit;
-    margin: 0;
-}
-.material-icons {
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: var(--color-background-blue);
     color: var(--color-primary);
+    transition: background-color 0.2s ease;
 }
 
-.dropdown-content {
+.action-button:hover {
+    background-color: var(--color-selected);
+}
+
+.toolbar {
     display: none;
-    position: absolute;
-    background-color: var(--color-background);
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-    right: 15px;
-    top: 38px;
 }
-
-.dropdown-content a {
-    float: none;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    text-align: left;
-}
-
-.dropdown-content a:hover {
-        background-color: var(--color-selected);
-}
-
-.dropdown:hover .dropdown-content {
-    display: block;
-}
-
-
-.dropdown { display:none; }
+.toolbar { display:none; }

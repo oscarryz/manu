@@ -2,13 +2,15 @@
     /* --serif-font: "Manuale"; */
 }
 
-#editor, .editor {
-  background-color: var(--color-background);
-  background-clip: padding-box;
-  border-radius: 4px;
-  border: 0px ;
-  padding: 5px 0;
-  margin-bottom: 23px;
+#editor,
+.editor {
+    color: var(--color-primary);
+    background-color: #00000000;
+    background-clip: padding-box;
+    border-radius: 4px;
+    border: 0px;
+    padding: 5px 0;
+    margin-bottom: 23px;
 }
 .ProseMirror-menubar {
     font-size: 18px;
