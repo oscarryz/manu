@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+    <head>
+        <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+        <link rel="icon" href="img/favicon.ico" type="image/x-icon" />
+        <meta charset="UTF-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, user-scalable=no"
+        />
+        <link
+            rel="alternate"
+            type="application/json"
+            href="https://oscarryz.com/feed.json"
+            title="OscarRyz JSON Feed"
+        />
+        <link rel="me" href="https://mastodon.social/@oscarryz" />
+
+        <title>There are times</title>
+        <link rel="stylesheet" href="css/main.css" />
+        <script type="text/javascript" async src="js/main.js"></script>
+        <script>
+            function resizeIframe(obj) {
+                obj.style.height =
+                    obj.contentWindow.document.body.scrollHeight + "px";
+                //const currentTheme = localStorage.getItem('theme') || 'dark';
+                //obj.querySelector("html").dataset.theme = currentTheme;
+            }
+            function toggleTheme() {
+                let theme = document.querySelector("html").dataset.theme;
+                if (theme === "light") {
+                    document.querySelector("html").dataset.theme = "dark";
+                    document
+                        .querySelector("iframe")
+                        .contentDocument.querySelector("html").dataset.theme =
+                        "dark";
+                    localStorage.setItem("theme", "dark");
+                } else {
+                    document.querySelector("html").dataset.theme = "light";
+                    document
+                        .querySelector("iframe")
+                        .contentDocument.querySelector("html").dataset.theme =
+                        "light";
+                    localStorage.setItem("theme", "light");
+                }
+            }
+        </script>
+    </head>
+
+    <body>
+        <div class="grid-container">
+            <header class="header">
+                <div class="toolbar">
+                    <button
+                        class="action-button"
+                        onClick="newEntry(); return false;"
+                    >
+                        New
+                    </button>
+                    <button
+                        class="action-button"
+                        onClick="loadDoc(); return false;"
+                    >
+                        Edit
+                    </button>
+                </div>
+            </header>
+            <main class="main" data-id="6fcf6f00-f385-11ef-ba7a-a95f2ae78262">
+                <div class="big-title">There are times</div>
+                <div id="context-text" class="content"><h1>There are times</h1><p>When you just have to do it.<br /><br />There are times when you can think and analyze things, and that’s fine. Actually no, that’s necessary.</p><p>But when you have already analyzed all your options, as good as you can, there is no point trying to guess what’s going to happen next, just go and do it!</p>
+</div>
+            </main>
+            <div class="entries">
+                <div id="entries-filter" class="entries-filter">
+                    Other entries
+                </div>
+                <div id="entries-list" class="entries-list">
+                    <iframe
+                        src="entries.html"
+                        onload="resizeIframe(this)"
+                    ></iframe>
+                </div>
+            </div>
+            <footer class="footer">
+                <nav id="footer-nav">
+                    <a href="about-me.html">About me</a>
+                    <a href="/feed.json">JSON feed</a>
+                    <a href="#" onclick="toggleTheme()">Theme: Ligth / Dark</a>
+                </nav>
+            </footer>
+        </div>
+    </body>
+    <script>
+        (function setTheme() {
+            const currentTheme = localStorage.getItem("theme") || "dark";
+            document.querySelector("html").dataset.theme = currentTheme;
+        })();
+    </script>
+</html>
