@@ -8,7 +8,7 @@ html[data-theme="dark"] {
     --c-high: #445fcf;
     --c-high-light: rgba(39, 121, 246, 0.5);
     --color-selected: #393e4b;
-    --color-background-blue: #23262e;
+    --color-background-gray: #23262e;
     --color-background: #141619;
     --color-big-title: rgba(64, 64, 64, 0.1);
 }
@@ -19,6 +19,7 @@ html[data-theme="light"] {
     --color-secondary: rgba(0, 0, 0, 0.7);
     --c-high: rgba(39, 121, 246, 0.25);
     --c-high-light: rgba(39, 121, 246, 0.1);
+    --color-background-gray: #e0e0e0;
     --color-background: #fdfdfd;
     --color-selected: #dddddd;
     --color-big-title: rgba(165, 165, 165, 0.1);
@@ -106,7 +107,9 @@ a[class] {
 
 .main {
     grid-area: main-content;
-    max-width: inherit;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
 }
 
 .title {
@@ -137,12 +140,17 @@ h1 {
     color: var(--color-secondary);
 }
 .content {
-    padding-top: 5rem;
+    max-width: 40rem;
+    margin: 0 auto;
+    width: 100%;
 }
 
 .entries {
     grid-area: entries;
     padding-top: 6rem;
+    width: 100%;
+    max-width: 40rem;
+    margin: 0 auto;
 }
 
 .entries-filter {
@@ -160,6 +168,12 @@ h1 {
     margin-top: 20px;
     margin-bottom: 20px;
 }
+.toolbar {
+    max-width: 40rem;
+    margin: 0 auto; /* Centers the toolbar container */
+    display: flex;
+    justify-content: flex-end; /* Right aligns the buttons */
+}
 .toolbar,
 .footer {
     font-family: var(--serif-font);
@@ -170,9 +184,9 @@ h1 {
 
 .footer {
     grid-area: footer;
-    margin-bottom: 10px;
-}
-.footer {
+    margin-bottom: 0;
+    text-align: right;
+    padding: 2rem 1.5rem;
     list-style: none;
 }
 .footer a {
@@ -185,49 +199,51 @@ h1 {
 }
 
 .grid-container {
-    height: 100%;
-    margin: 0;
-}
-
-.grid-container {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: auto auto auto auto auto;
+    grid-template-rows: auto auto auto auto;
     grid-template-areas:
-        "empty"
+        "footer"
         "editor-toolbar"
         "main-content"
-        "entries"
-        "footer";
-    grid-gap: 50px;
-    max-width: 40rem;
+        "entries";
+    /* max-width: 40rem; */
     margin: auto;
 }
 
 iframe {
     border-width: 0px;
     width: 100%;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
 }
 
+iframe::-webkit-scrollbar {
+    display: none; /* Chrome, Safari and Opera */
+}
 /**
     Dropdown menu
  */
 
 /* New / Edit | Save / Cancel buttons */
-.toolbar {
+.toolbar,
+.dropdown /* legacy dropdown */ {
     z-index: 11;
     display: flex;
     gap: 1rem; /* adds space between buttons */
+    justify-content: flex-end;
 }
+/*  */
 
-.action-button {
+.action-button,
+.dropdown-content /*legacy .dropdown */ {
     font-family: var(--serif-font);
     font-size: 0.875rem;
     padding: 0.5rem 1rem;
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    background-color: var(--color-background-blue);
+    background-color: var(--color-background-gray);
     color: var(--color-primary);
     transition: background-color 0.2s ease;
 }
@@ -235,8 +251,8 @@ iframe {
 .action-button:hover {
     background-color: var(--color-selected);
 }
-
-.toolbar {
+/* legacy .dropdown */
+.dropbtn {
     display: none;
 }
-.toolbar { display:none; }
+.toolbar { visibility: hidden; }

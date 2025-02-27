@@ -10,7 +10,9 @@
     border-radius: 4px;
     border: 0px;
     padding: 5px 0;
-    margin-bottom: 23px;
+    margin: 0 auto;
+    max-width: 40rem;
+    width: 100%;
 }
 .ProseMirror-menubar {
     font-size: 18px;
