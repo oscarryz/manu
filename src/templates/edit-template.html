@@ -11,17 +11,18 @@
         <script src="https://prosemirror.net/examples/prosemirror.js"></script>
         <script src="/js/require-pm.js"></script>
         <script src="/js/pm.js" defer></script>
-        <script>
-            function resizeIframe(obj) {
-                obj.style.height =
-                    obj.contentWindow.document.body.scrollHeight + "px";
-            }
-        </script>
     </head>
 
     <body>
         <!-- <base href="https://prosemirror.net/"> -->
         <div class="grid-container">
+            <footer class="footer">
+                <nav id="footer-nav">
+                    <a href="about-me.html">About me</a>
+                    <a href="/feed.json">JSON feed</a>
+                    <a href="#" onclick="toggleTheme()">Theme: Ligth / Dark</a>
+                </nav>
+            </footer>
             <header class="header">
                 <div class="toolbar">
                     <button
@@ -39,7 +40,7 @@
                 </div>
             </header>
             <main class="main" data-id="${id}">
-                <div id="editor" style="margin-bottom: 23px"></div>
+                <div id="editor" style="margin-bottom: -23px"></div>
                 <div class="big-title">${title}</div>
 
                 <div style="display: none" id="content" class="content">
@@ -54,14 +55,11 @@
                     <iframe
                         src="/entries.html"
                         onload="resizeIframe(this)"
+                        scrolling="no"
+                        frameborder="0"
                     ></iframe>
                 </div>
             </div>
-            <footer class="footer">
-                <nav id="footer-nav">
-                    <a href="#" onclick="toggleTheme()">Theme: Ligth / Dark</a>
-                </nav>
-            </footer>
         </div>
     </body>
     <script>
