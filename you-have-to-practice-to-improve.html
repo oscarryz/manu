@@ -1,82 +1,76 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" data-theme="dark">
+    <head>
+        <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+        <link rel="icon" href="img/favicon.ico" type="image/x-icon" />
+        <meta charset="UTF-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, user-scalable=no"
+        />
+        <link
+            rel="alternate"
+            type="application/json"
+            href="https://oscarryz.com/feed.json"
+            title="OscarRyz JSON Feed"
+        />
+        <link rel="me" href="https://mastodon.social/@oscarryz" />
 
-<head>
-    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
-    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <link rel="alternate" type="application/json" href="https://oscarryz.com/feed.json" title="OscarRyz JSON Feed">
-    <link rel="me" href="https://mastodon.social/@oscarryz">
+        <title>You have to practice to improve</title>
+        <link rel="stylesheet" href="css/main.css" />
+        <script type="text/javascript" async src="js/main.js"></script>
+        <script type="text/javascript" async src="/js/entries.js"></script>
+    </head>
 
-    <title>You have to practice to improve</title>
-    <link rel="stylesheet" href="css/main.css">
-    <script type="text/javascript" async src="js/main.js"></script>
-    <script>
-        function resizeIframe(obj) {
-            obj.style.height = obj.contentWindow.document.body.scrollHeight + 'px';
-            //const currentTheme = localStorage.getItem('theme') || 'dark';
-            //obj.querySelector("html").dataset.theme = currentTheme;
-        }
-        function toggleTheme() {
-            let theme = document.querySelector("html").dataset.theme;
-            if (theme === 'light') {
-                document.querySelector("html").dataset.theme = 'dark';
-                document.querySelector('iframe').contentDocument.querySelector("html").dataset.theme = 'dark';
-                localStorage.setItem('theme', 'dark');
-            } else {
-                document.querySelector("html").dataset.theme = 'light';
-                document.querySelector('iframe').contentDocument.querySelector("html").dataset.theme = 'light';
-                localStorage.setItem('theme', 'light');
-
-            }
-        }
-    </script>
-</head>
-
-<body>
-    <div class="grid-container">
-        <header class="header">
-            <div class="toolbar">
-                <div class="dropdown">
-                    <button class="dropbtn">
-                        <i class="material-icons">
-                            more_vert
-                        </i>
+    <body>
+        <div class="grid-container">
+            <footer class="footer">
+                <nav id="footer-nav">
+                    <a href="about-me.html">About me</a>
+                    <a href="/feed.json">JSON feed</a>
+                    <a href="#" onclick="toggleTheme()">Theme: Ligth / Dark</a>
+                </nav>
+            </footer>
+            <header class="header">
+                <div class="toolbar">
+                    <button
+                        class="action-button"
+                        onClick="newEntry(); return false;"
+                    >
+                        New
                     </button>
-                    <div class="dropdown-content">
-                        <a href="/new">New</a>
-                        <a href="/" onClick="loadDoc(); return false;">Edit</a>
-                    </div>
+                    <button
+                        class="action-button"
+                        onClick="loadDoc(); return false;"
+                    >
+                        Edit
+                    </button>
+                </div>
+            </header>
+            <main class="main" data-id="cfbd4cb0-9d32-11ef-9eba-7bf7e0a73afb">
+                <div class="big-title">You have to practice to improve</div>
+                <div id="context-text" class="content"><h1>You have to practice to improve</h1><p>Have you heard things like "Just do it," "Start small," and "Divide into smaller tasks"? Yet, sometimes you still don't find a way to get things done? I'd like to add an extra thing that I've noticed helps me: <strong>practice</strong>.</p><p>When you learn math, you're given an example, you understand the concept, but only after doing some exercises do you truly grasp it. The more problems you solve, the better you become.</p><p>Similarly, when learning new dance steps, the instructor (or video) demonstrates the moves, but it's only when you try them yourself that you start to get it.</p><p>The same is true for discipline, but unlike math or dance, it's not as easy to measure how good or bad you might be. For instance, no matter how many times you try to "just do it" to solve an advanced calculus problem, or how many times you try "it's just a five minutes task" to learn a professional choreography, it won't work if you’re not an advanced dancer.</p><p>Likewise, you can't just go to the gym or finish a project if you haven't mastered smaller habits. So, find a small, uncomfortable task to practice on. I use "washing the dishes" as an example all the time because I was terrible at it. Once that becomes easy, you can move on to something else and continue building your discipline muscle.</p><p>For the past year or more, I've been trying to write in my free time as a hobby, and often I procrastinate because it feels overwhelming. However, during this time, I've improved in many smaller tasks (like flossing my teeth or drinking water). Today, when I tried to write again, it was still difficult and overwhelming, but I managed to make some progress. Before, I would have just resorted to playing video games. I realized that my improved discipline in other areas helped me achieve this. These small wins remind me of the satisfaction of completing a task and create a positive cycle.</p><p>So, assess what you're trying to improve. Do you need to take a step back, or even two? Practice those smaller steps, master them, and then gradually incorporate more.</p><p>I hope this helps.</p>
+</div>
+            </main>
+            <div class="entries">
+                <div id="entries-filter" class="entries-filter">
+                    Other entries
+                </div>
+                <div id="entries-list" class="entries-list">
+                    <iframe
+                        src="entries.html"
+                        onload="resizeIframe(this)"
+                        scrolling="no"
+                        frameborder="0"
+                    ></iframe>
                 </div>
             </div>
-        </header>
-        <main class="main" data-id="cfbd4cb0-9d32-11ef-9eba-7bf7e0a73afb">
-            <div id="context-text" class="content">
-                <h1>You have to practice to improve</h1><p>Have you heard things like "Just do it," "Start small," and "Divide into smaller tasks"? Yet, sometimes you still don't find a way to get things done? I'd like to add an extra thing that I've noticed helps me: <strong>practice</strong>.</p><p>When you learn math, you're given an example, you understand the concept, but only after doing some exercises do you truly grasp it. The more problems you solve, the better you become.</p><p>Similarly, when learning new dance steps, the instructor (or video) demonstrates the moves, but it's only when you try them yourself that you start to get it.</p><p>The same is true for discipline, but unlike math or dance, it's not as easy to measure how good or bad you might be. For instance, no matter how many times you try to "just do it" to solve an advanced calculus problem, or how many times you try "it's just a five minutes task" to learn a professional choreography, it won't work if you’re not an advanced dancer.</p><p>Likewise, you can't just go to the gym or finish a project if you haven't mastered smaller habits. So, find a small, uncomfortable task to practice on. I use "washing the dishes" as an example all the time because I was terrible at it. Once that becomes easy, you can move on to something else and continue building your discipline muscle.</p><p>For the past year or more, I've been trying to write in my free time as a hobby, and often I procrastinate because it feels overwhelming. However, during this time, I've improved in many smaller tasks (like flossing my teeth or drinking water). Today, when I tried to write again, it was still difficult and overwhelming, but I managed to make some progress. Before, I would have just resorted to playing video games. I realized that my improved discipline in other areas helped me achieve this. These small wins remind me of the satisfaction of completing a task and create a positive cycle.</p><p>So, assess what you're trying to improve. Do you need to take a step back, or even two? Practice those smaller steps, master them, and then gradually incorporate more.</p><p>I hope this helps.</p>
-
-            </div>
-        </main>
-        <div class="entries">
-            <div id="entries-filter" class="entries-filter">Other entries</div>
-            <div id="entries-list" class="entries-list">
-                <iframe src="entries.html" onload="resizeIframe(this)"></iframe>
-            </div>
         </div>
-        <footer class="footer">
-            <nav id="footer-nav">
-                <a href="about-me.html">About me</a>
-                <a href="/feed.json">JSON feed</a>
-                <a href="#" onclick="toggleTheme()">Theme: Ligth / Dark</a>
-            </nav>
-        </footer>
-    </div>
-</body>
-<script>
-    (function setTheme() {
-        const currentTheme = localStorage.getItem('theme') || 'dark';
-        document.querySelector("html").dataset.theme = currentTheme;
-    })();
-</script>
-
+    </body>
+    <script>
+        (function setTheme() {
+            const currentTheme = localStorage.getItem("theme") || "dark";
+            document.querySelector("html").dataset.theme = currentTheme;
+        })();
+    </script>
 </html>
