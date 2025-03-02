@@ -19,36 +19,18 @@
         <title>There are times</title>
         <link rel="stylesheet" href="css/main.css" />
         <script type="text/javascript" async src="js/main.js"></script>
-        <script>
-            function resizeIframe(obj) {
-                obj.style.height =
-                    obj.contentWindow.document.body.scrollHeight + "px";
-                //const currentTheme = localStorage.getItem('theme') || 'dark';
-                //obj.querySelector("html").dataset.theme = currentTheme;
-            }
-            function toggleTheme() {
-                let theme = document.querySelector("html").dataset.theme;
-                if (theme === "light") {
-                    document.querySelector("html").dataset.theme = "dark";
-                    document
-                        .querySelector("iframe")
-                        .contentDocument.querySelector("html").dataset.theme =
-                        "dark";
-                    localStorage.setItem("theme", "dark");
-                } else {
-                    document.querySelector("html").dataset.theme = "light";
-                    document
-                        .querySelector("iframe")
-                        .contentDocument.querySelector("html").dataset.theme =
-                        "light";
-                    localStorage.setItem("theme", "light");
-                }
-            }
-        </script>
+        <script type="text/javascript" async src="js/entries.js"></script>
     </head>
 
     <body>
         <div class="grid-container">
+            <footer class="footer">
+                <nav id="footer-nav">
+                    <a href="about-me.html">About me</a>
+                    <a href="/feed.json">JSON feed</a>
+                    <a href="#" onclick="toggleTheme()">Theme: Ligth / Dark</a>
+                </nav>
+            </footer>
             <header class="header">
                 <div class="toolbar">
                     <button
@@ -78,16 +60,11 @@
                     <iframe
                         src="entries.html"
                         onload="resizeIframe(this)"
+                        scrolling="no"
+                        frameborder="0"
                     ></iframe>
                 </div>
             </div>
-            <footer class="footer">
-                <nav id="footer-nav">
-                    <a href="about-me.html">About me</a>
-                    <a href="/feed.json">JSON feed</a>
-                    <a href="#" onclick="toggleTheme()">Theme: Ligth / Dark</a>
-                </nav>
-            </footer>
         </div>
     </body>
     <script>
