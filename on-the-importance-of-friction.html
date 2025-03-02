@@ -1,76 +1,82 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en" data-theme="dark">
-    <head>
-        <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
-        <link rel="icon" href="img/favicon.ico" type="image/x-icon" />
-        <meta charset="UTF-8" />
-        <meta
-            name="viewport"
-            content="width=device-width, initial-scale=1, user-scalable=no"
-        />
-        <link
-            rel="alternate"
-            type="application/json"
-            href="https://oscarryz.com/feed.json"
-            title="OscarRyz JSON Feed"
-        />
-        <link rel="me" href="https://mastodon.social/@oscarryz" />
 
-        <title>On the importance of friction</title>
-        <link rel="stylesheet" href="css/main.css" />
-        <script type="text/javascript" async src="js/main.js"></script>
-        <script type="text/javascript" async src="/js/entries.js"></script>
-    </head>
+<head>
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <link rel="alternate" type="application/json" href="https://oscarryz.com/feed.json" title="OscarRyz JSON Feed">
+    <link rel="me" href="https://mastodon.social/@oscarryz">
 
-    <body>
-        <div class="grid-container">
-            <footer class="footer">
-                <nav id="footer-nav">
-                    <a href="about-me.html">About me</a>
-                    <a href="/feed.json">JSON feed</a>
-                    <a href="#" onclick="toggleTheme()">Theme: Ligth / Dark</a>
-                </nav>
-            </footer>
-            <header class="header">
-                <div class="toolbar">
-                    <button
-                        class="action-button"
-                        onClick="newEntry(); return false;"
-                    >
-                        New
+    <title>On the importance of friction</title>
+    <link rel="stylesheet" href="css/main.css">
+    <script type="text/javascript" async src="js/main.js"></script>
+    <script>
+        function resizeIframe(obj) {
+            obj.style.height = obj.contentWindow.document.body.scrollHeight + 'px';
+            //const currentTheme = localStorage.getItem('theme') || 'dark';
+            //obj.querySelector("html").dataset.theme = currentTheme;
+        }
+        function toggleTheme() {
+            let theme = document.querySelector("html").dataset.theme;
+            if (theme === 'light') {
+                document.querySelector("html").dataset.theme = 'dark';
+                document.querySelector('iframe').contentDocument.querySelector("html").dataset.theme = 'dark';
+                localStorage.setItem('theme', 'dark');
+            } else {
+                document.querySelector("html").dataset.theme = 'light';
+                document.querySelector('iframe').contentDocument.querySelector("html").dataset.theme = 'light';
+                localStorage.setItem('theme', 'light');
+
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div class="grid-container">
+        <header class="header">
+            <div class="toolbar">
+                <div class="dropdown">
+                    <button class="dropbtn">
+                        <i class="material-icons">
+                            more_vert
+                        </i>
                     </button>
-                    <button
-                        class="action-button"
-                        onClick="loadDoc(); return false;"
-                    >
-                        Edit
-                    </button>
-                </div>
-            </header>
-            <main class="main" data-id="c5d9fdf0-d271-11ef-8738-ed11140cf144">
-                <div class="big-title">On the importance of friction</div>
-                <div id="context-text" class="content"><h1>On the importance of friction</h1><p><em>… or think twice before opening your mouth</em></p><h2>The early days</h2><p>I learned to avoid oversharing personal information as I grew up. If someone called (ha, the landline!) and asked, <em>"Who is this?"</em> I was told to never give my name but to ask: <em>"Who do you want to talk to?</em>" Then, it might be, <em>"Uh... is this ___? This is Uncle Blah!"</em> My instructions: hang up immediately if no such uncle existed, or be very careful if there was a coincidence.</p><p>Likewise, living in a big city, I learned to keep my wallet in my front pocket, not wear a watch or use a simple one, and later, when mobile phones arrived, not to use them in public. Geez! I even adopted the norm of sitting with my back against the wall and scanning the restaurant entry like they do in detective novels, to see who comes in and out. It was stressful.</p><h2>The new era</h2><p>Then the social web reached the masses (okay, now I feel like I'm really getting old). Mainly Facebook, not the many early social webs that came before as they less reach. It started private, with "Share with friends and family only." Naturally, people shared photos of friends and family. I think you could also share publicly back then, just like having your own website. Well, even in 2025, having a personal website isn't frictionless, but it's not as hard as it used to be.</p><p>Back to Facebook, anything you posted was at least somewhat gated – you needed a Facebook account to see it. Then Twitter came along and made everything completely public for anyone. Then people probably not fully aware of the implications use it to overshare: family photos, birthdays, jobs, addresses, vacations, even their lunch!</p><p>The <a href="https://indieweb.org/corporate_web">"CorpoWeb"</a> (ha, that's a great name ) had hijacked the human desire for dopamine and disguised it as another natural instinct: connection.</p><h2>So what now?</h2><p>My personal take is to treat everyone online as strangers (okay, maybe I'm overdoing it because I don't share much with close friends either, but that's another topic). You wouldn't share family photos with someone in a crowded plaza. In the best case scenario, they wouldn't care; in the worst, they could develop a malicious interest and care too much. And the worst part? You gain nothing. Sure, some people might make a living as content creators, but even they can tell you how awful it is to be a public figure constantly harassed.</p><p>Yet, the need for social connection and expressing yourself without being exploited for someone else's profit is real. I don't mind people making money. My company makes money, pay me and that's how I make a living. It's fair. What's not fair is unfairly capitalizing on someone's good intentions without proper compensation – making money off ads from something someone freely posted.</p><p>So yes, think twice before oversharing. Ask yourself, "What am I gaining by sharing this? What could I lose?" If there's no gain, then don't share.</p><h2>Oh yes, Software Friction</h2><p>As it can seen, limiting oversharing isn't just about IndieWeb vs. CorpoWeb. It applies to both online and real-life interactions. Maybe it's not so much about friction but more about privacy and common sense. Now, speaking of software friction, there should be none. No logins, setups, account creations, or even the need for your own website. Software should be frictionless, allowing you to freely achieve your goal – writing a blog post, a book, a spreadsheet – whatever you want to do, without fighting commands or configurations. The limitations or friction should come from your thoughts, not your software.</p><hr /><h5><em>This is an entry for </em><a href="https://vhbelvadi.com/indieweb-carnival-friction"><em>January’s IndieWeb Carnival</em></a><em>. If you have blog consider writing an entry yourself.</em></h5>
-</div>
-            </main>
-            <div class="entries">
-                <div id="entries-filter" class="entries-filter">
-                    Other entries
-                </div>
-                <div id="entries-list" class="entries-list">
-                    <iframe
-                        src="entries.html"
-                        onload="resizeIframe(this)"
-                        scrolling="no"
-                        frameborder="0"
-                    ></iframe>
+                    <div class="dropdown-content">
+                        <a href="/new">New</a>
+                        <a href="/" onClick="loadDoc(); return false;">Edit</a>
+                    </div>
                 </div>
             </div>
+        </header>
+        <main class="main" data-id="c5d9fdf0-d271-11ef-8738-ed11140cf144">
+            <div id="context-text" class="content">
+                <h1>On the importance of friction</h1><p><em>… or think twice before opening your mouth</em></p><h2>The early days</h2><p>I learned to avoid oversharing personal information as I grew up. If someone called (ha, the landline!) and asked, <em>"Who is this?"</em> I was told to never give my name but to ask: <em>"Who do you want to talk to?</em>" Then, it might be, <em>"Uh... is this ___? This is Uncle Blah!"</em> My instructions: hang up immediately if no such uncle existed, or be very careful if there was a coincidence.</p><p>Likewise, living in a big city, I learned to keep my wallet in my front pocket, not wear a watch or use a simple one, and later, when mobile phones arrived, not to use them in public. Geez! I even adopted the norm of sitting with my back against the wall and scanning the restaurant entry like they do in detective novels, to see who comes in and out. It was stressful.</p><h2>The new era</h2><p>Then the social web reached the masses (okay, now I feel like I'm really getting old). Mainly Facebook, not the many early social webs that came before as they less reach. It started private, with "Share with friends and family only." Naturally, people shared photos of friends and family. I think you could also share publicly back then, just like having your own website. Well, even in 2025, having a personal website isn't frictionless, but it's not as hard as it used to be.</p><p>Back to Facebook, anything you posted was at least somewhat gated – you needed a Facebook account to see it. Then Twitter came along and made everything completely public for anyone. Then people probably not fully aware of the implications use it to overshare: family photos, birthdays, jobs, addresses, vacations, even their lunch!</p><p>The <a href="https://indieweb.org/corporate_web">"CorpoWeb"</a> (ha, that's a great name ) had hijacked the human desire for dopamine and disguised it as another natural instinct: connection.</p><h2>So what now?</h2><p>My personal take is to treat everyone online as strangers (okay, maybe I'm overdoing it because I don't share much with close friends either, but that's another topic). You wouldn't share family photos with someone in a crowded plaza. In the best case scenario, they wouldn't care; in the worst, they could develop a malicious interest and care too much. And the worst part? You gain nothing. Sure, some people might make a living as content creators, but even they can tell you how awful it is to be a public figure constantly harassed.</p><p>Yet, the need for social connection and expressing yourself without being exploited for someone else's profit is real. I don't mind people making money. My company makes money, pay me and that's how I make a living. It's fair. What's not fair is unfairly capitalizing on someone's good intentions without proper compensation – making money off ads from something someone freely posted.</p><p>So yes, think twice before oversharing. Ask yourself, "What am I gaining by sharing this? What could I lose?" If there's no gain, then don't share.</p><h2>Oh yes, Software Friction</h2><p>As it can seen, limiting oversharing isn't just about IndieWeb vs. CorpoWeb. It applies to both online and real-life interactions. Maybe it's not so much about friction but more about privacy and common sense. Now, speaking of software friction, there should be none. No logins, setups, account creations, or even the need for your own website. Software should be frictionless, allowing you to freely achieve your goal – writing a blog post, a book, a spreadsheet – whatever you want to do, without fighting commands or configurations. The limitations or friction should come from your thoughts, not your software.</p><hr /><h5><em>This is an entry for </em><a href="https://vhbelvadi.com/indieweb-carnival-friction"><em>January’s IndieWeb Carnival</em></a><em>. If you have blog consider writing an entry yourself.</em></h5>
+
+            </div>
+        </main>
+        <div class="entries">
+            <div id="entries-filter" class="entries-filter">Other entries</div>
+            <div id="entries-list" class="entries-list">
+                <iframe src="entries.html" onload="resizeIframe(this)"></iframe>
+            </div>
         </div>
-    </body>
-    <script>
-        (function setTheme() {
-            const currentTheme = localStorage.getItem("theme") || "dark";
-            document.querySelector("html").dataset.theme = currentTheme;
-        })();
-    </script>
+        <footer class="footer">
+            <nav id="footer-nav">
+                <a href="about-me.html">About me</a>
+                <a href="/feed.json">JSON feed</a>
+                <a href="#" onclick="toggleTheme()">Theme: Ligth / Dark</a>
+            </nav>
+        </footer>
+    </div>
+</body>
+<script>
+    (function setTheme() {
+        const currentTheme = localStorage.getItem('theme') || 'dark';
+        document.querySelector("html").dataset.theme = currentTheme;
+    })();
+</script>
+
 </html>

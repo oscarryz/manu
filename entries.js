@@ -1,5 +1,7 @@
 function resizeIframe(obj) {
   obj.style.height = obj.contentWindow.document.body.scrollHeight + 20 + "px";
+  const currentTheme = localStorage.getItem("theme") || "dark";
+  obj.querySelector("html").dataset.theme = currentTheme;
 }
 
 function toggleTheme() {
