@@ -38,6 +38,14 @@ npm install
 npm start
 ```
 
+# Develop 
+
+Run with `NODE_ENV=dev npm run start` to avoid publishing articles while testing.
+And then to preview `npx http-serve dist/` to see the articles as they would in prod.
+
+Remember to unstage all the articles changed during tests before commiting. 
+
+
 # Deploy 
 
 At the moment this blog has to be run locally and then deployed to a [Github pages](https://pages.github.com/) that is to be setup externally
