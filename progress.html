@@ -1,82 +1,76 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" data-theme="dark">
+    <head>
+        <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+        <link rel="icon" href="img/favicon.ico" type="image/x-icon" />
+        <meta charset="UTF-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, user-scalable=no"
+        />
+        <link
+            rel="alternate"
+            type="application/json"
+            href="https://oscarryz.com/feed.json"
+            title="OscarRyz JSON Feed"
+        />
+        <link rel="me" href="https://mastodon.social/@oscarryz" />
 
-<head>
-    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
-    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <link rel="alternate" type="application/json" href="https://oscarryz.com/feed.json" title="OscarRyz JSON Feed">
-    <link rel="me" href="https://mastodon.social/@oscarryz">
+        <title>Progress</title>
+        <link rel="stylesheet" href="css/main.css" />
+        <script type="text/javascript" async src="js/main.js"></script>
+        <script type="text/javascript" async src="js/entries.js"></script>
+    </head>
 
-    <title>Progress</title>
-    <link rel="stylesheet" href="css/main.css">
-    <script type="text/javascript" async src="js/main.js"></script>
-    <script>
-        function resizeIframe(obj) {
-            obj.style.height = obj.contentWindow.document.body.scrollHeight + 'px';
-            const currentTheme = localStorage.getItem('theme') || 'dark';
-            obj.querySelector("html").dataset.theme = currentTheme;
-        }
-        function toggleTheme() {
-            let theme = document.querySelector("html").dataset.theme;
-            if (theme === 'light') {
-                document.querySelector("html").dataset.theme = 'dark';
-                document.querySelector('iframe').contentDocument.querySelector("html").dataset.theme = 'dark';
-                localStorage.setItem('theme', 'dark');
-            } else {
-                document.querySelector("html").dataset.theme = 'light';
-                document.querySelector('iframe').contentDocument.querySelector("html").dataset.theme = 'light';
-                localStorage.setItem('theme', 'light');
-
-            }
-        }
-    </script>
-</head>
-
-<body>
-    <div class="grid-container">
-        <header class="header">
-            <div class="toolbar">
-                <div class="dropdown">
-                    <button class="dropbtn">
-                        <i class="material-icons">
-                            more_vert
-                        </i>
+    <body>
+        <div class="grid-container">
+            <footer class="footer">
+                <nav id="footer-nav">
+                    <a href="about-me.html">About me</a>
+                    <a href="/feed.json">JSON feed</a>
+                    <a href="#" onclick="toggleTheme()">Theme: Ligth / Dark</a>
+                </nav>
+            </footer>
+            <header class="header">
+                <div class="toolbar">
+                    <button
+                        class="action-button"
+                        onClick="newEntry(); return false;"
+                    >
+                        New
                     </button>
-                    <div class="dropdown-content">
-                        <a href="/new">New</a>
-                        <a href="/" onClick="loadDoc(); return false;">Edit</a>
-                    </div>
+                    <button
+                        class="action-button"
+                        onClick="loadDoc(); return false;"
+                    >
+                        Edit
+                    </button>
+                </div>
+            </header>
+            <main class="main" data-id="d71716d0-50a3-11ee-9356-6792d0b374ab">
+                <div class="big-title">Progress</div>
+                <div id="context-text" class="content"><h1>Progress</h1><p>This is not an early celebratory post, because the progress I’ve made is not an end goal, thus is basically impossible to fail (or to mark as “complete”) Instead is a moment to reflect that in the last 6 months ( probably a year or maybe a little more ) I have finally made some small improvements in my lifestyle.</p><p>I used to go to sleep at 11 pm when I was very young, then it turned into 12 am, 1 am, which, was ok; I still slept around 8 hrs and just needed to started my day a bit later. But in the last years that turned into 2 am, 3 am, 4 am! That’s not good mainly because I still had to go to work and even getting there at 11 am it was as little as 6 hrs of sleep (which now it sounds actually good) but I definitely couldn’t just start working at 11 without stopping to work at 8 pm which kept the cycle going (get home at 9pm, watch tv, have dinner etc.). Still I didn’t feel this was terrible because that was my routine. Of course sleeping at 2-3 am added an extra meal around midnight and mainly the only thing available was fast food (I remember going to the movies for the 12 am show, to have dinner, or checking when was the last time a pizza could be delivered). Anyway, slowly this bad nutrition, poor sleeping turned into low energy, and I started to feel depressed.</p><p>As usual, change happens, not because of a strong will, but rather because small thing changed, in my the thing that changed was that I have to start working at 7 am. Well, sleeping at 4 am and start at 7 am is not a good start, and while I did it several times, things got worse. So what do you do? You have to go to bed earlier, like way earlier. It is hard, I was there laying in bed without wanting to sleep. It took a couple of no-sleep at all days, to be extremely tired to be able to fall asleep at 9-10 pm, which helped, but still didn’t solve the problem like magic, other habits needed to change too.</p><p>So what could I do when I needed to change so many things at once? Sleep early, wake up early, stop using the phone ( so I can fall asleep ), eat healthy, stop midnight cravings, start exercising while at that, save money I guess because why not if I have to do all these things? It was too much. So, what I did was just start one thing at a time (this sound so painfully obvious now, but I tried to do all at once, more than once, actually for years, as a matter of fact, today I still want to do 2-3 things at a time). <a href="https://oscarryz.com/a-routine-that-works.html">Every Sunday I write in a board what I want to do the starting week.</a> Just one thing. for example, “Get up at 6 am”, and then that week I tried and keep trying. If I failed on Tuesday (Monday was usually always done) I try again on Wednesday. If at the end of the week the thing didn’t happen I could try the next week or abandon the attempt and try something else instead; but just one thing. One improvement at a time for a whole week.</p><p>Eventually I was able to wake up at 6 am. Next thing, go to be before 10 pm, and then before 9 pm. Nah didn’t work. Oh it’s because I’m watching videos at 8 pm? Ok, stop watching videos. No progress? What about put the phone in night mode and then watch videos without color, without sound. Eventually I stopped watching videos and then I was able to sleep early and then I was able to wake up early and because I was sleeping I was not eating junk food at midnight etc. a positive cycle started.</p><p><br /><br /><br /></p><p>This week is my second week running early in the morning (just 2 miles) , at, wait for it…. at 5 am! Why 5 am? (Ok, 5 am is the aim, but I start around 5:30ish) Because if I want to eat breakfast before 7, I have to make breakfast by 6:30, so I have to finish doing whatever I do before that by 6, because there are gaps here and there and those little gaps take 10, 20 minutes each time. So if I wanted to run, I needed to get up earlier. And because I didn’t want to just “rush” (I hate when I feel I’m in a rush) I kept pushing the starting time to 5 ish.</p><p>Today, while I was thinking while making breakfast at 6:40 am, how far I’ve gone following this approach. There are many other things I want to try and start doing, and I know I eventually will do them, there’s no rush. I’ve been trying for decades to get healthier habits so I’m sure the next thing I’m going to improve can wait for another (several) week(s), but when I get there it will stick.</p>
+</div>
+            </main>
+            <div class="entries">
+                <div id="entries-filter" class="entries-filter">
+                    Other entries
+                </div>
+                <div id="entries-list" class="entries-list">
+                    <iframe
+                        src="entries.html"
+                        onload="resizeIframe(this)"
+                        scrolling="no"
+                        frameborder="0"
+                    ></iframe>
                 </div>
             </div>
-        </header>
-        <main class="main" data-id="d71716d0-50a3-11ee-9356-6792d0b374ab">
-            <div id="context-text" class="content">
-                <h1>Progress</h1><p>This is not an early celebratory post, because the progress I’ve made is not an end goal, thus is basically impossible to fail (or to mark as “complete”) Instead is a moment to reflect that in the last 6 months ( probably a year or maybe a little more ) I have finally made some small improvements in my lifestyle.</p><p>I used to go to sleep at 11 pm when I was very young, then it turned into 12 am, 1 am, which, was ok; I still slept around 8 hrs and just needed to started my day a bit later. But in the last years that turned into 2 am, 3 am, 4 am! That’s not good mainly because I still had to go to work and even getting there at 11 am it was as little as 6 hrs of sleep (which now it sounds actually good) but I definitely couldn’t just start working at 11 without stopping to work at 8 pm which kept the cycle going (get home at 9pm, watch tv, have dinner etc.). Still I didn’t feel this was terrible because that was my routine. Of course sleeping at 2-3 am added an extra meal around midnight and mainly the only thing available was fast food (I remember going to the movies for the 12 am show, to have dinner, or checking when was the last time a pizza could be delivered). Anyway, slowly this bad nutrition, poor sleeping turned into low energy, and I started to feel depressed.</p><p>As usual, change happens, not because of a strong will, but rather because small thing changed, in my the thing that changed was that I have to start working at 7 am. Well, sleeping at 4 am and start at 7 am is not a good start, and while I did it several times, things got worse. So what do you do? You have to go to bed earlier, like way earlier. It is hard, I was there laying in bed without wanting to sleep. It took a couple of no-sleep at all days, to be extremely tired to be able to fall asleep at 9-10 pm, which helped, but still didn’t solve the problem like magic, other habits needed to change too.</p><p>So what could I do when I needed to change so many things at once? Sleep early, wake up early, stop using the phone ( so I can fall asleep ), eat healthy, stop midnight cravings, start exercising while at that, save money I guess because why not if I have to do all these things? It was too much. So, what I did was just start one thing at a time (this sound so painfully obvious now, but I tried to do all at once, more than once, actually for years, as a matter of fact, today I still want to do 2-3 things at a time). <a href="https://oscarryz.com/a-routine-that-works.html">Every Sunday I write in a board what I want to do the starting week.</a> Just one thing. for example, “Get up at 6 am”, and then that week I tried and keep trying. If I failed on Tuesday (Monday was usually always done) I try again on Wednesday. If at the end of the week the thing didn’t happen I could try the next week or abandon the attempt and try something else instead; but just one thing. One improvement at a time for a whole week.</p><p>Eventually I was able to wake up at 6 am. Next thing, go to be before 10 pm, and then before 9 pm. Nah didn’t work. Oh it’s because I’m watching videos at 8 pm? Ok, stop watching videos. No progress? What about put the phone in night mode and then watch videos without color, without sound. Eventually I stopped watching videos and then I was able to sleep early and then I was able to wake up early and because I was sleeping I was not eating junk food at midnight etc. a positive cycle started.</p><p><br /><br /></p><p>This week is my second week running early in the morning (just 2 miles) , at, wait for it…. at 5 am! Why 5 am? (Ok, 5 am is the aim, but I start around 5:30ish) Because if I want to eat breakfast before 7, I have to make breakfast by 6:30, so I have to finish doing whatever I do before that by 6, because there are gaps here and there and those little gaps take 10, 20 minutes each time. So if I wanted to run, I needed to get up earlier. And because I didn’t want to just “rush” (I hate when I feel I’m in a rush) I kept pushing the starting time to 5 ish.</p><p>Today, while I was thinking while making breakfast at 6:40 am, how far I’ve gone following this approach. There are many other things I want to try and start doing, and I know I eventually will do them, there’s no rush. I’ve been trying for decades to get healthier habits so I’m sure the next thing I’m going to improve can wait for another (several) week(s), but when I get there it will stick.</p>
-
-            </div>
-        </main>
-        <div class="entries">
-            <div id="entries-filter" class="entries-filter">Other entries</div>
-            <div id="entries-list" class="entries-list">
-                <iframe src="entries.html" onload="resizeIframe(this)"></iframe>
-            </div>
         </div>
-        <footer class="footer">
-            <nav id="footer-nav">
-                <a href="about-me.html">About me</a>
-                <a href="/feed.json">JSON feed</a>
-                <a href="#" onclick="toggleTheme()">Theme: Ligth / Dark</a>
-            </nav>
-        </footer>
-    </div>
-</body>
-<script>
-    (function setTheme() {
-        const currentTheme = localStorage.getItem('theme') || 'dark';
-        document.querySelector("html").dataset.theme = currentTheme;
-    })();
-</script>
-
+    </body>
+    <script>
+        (function setTheme() {
+            const currentTheme = localStorage.getItem("theme") || "dark";
+            document.querySelector("html").dataset.theme = currentTheme;
+        })();
+    </script>
 </html>
