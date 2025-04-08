@@ -1,80 +1,76 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" data-theme="dark">
+    <head>
+        <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+        <link rel="icon" href="img/favicon.ico" type="image/x-icon" />
+        <meta charset="UTF-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, user-scalable=no"
+        />
+        <link
+            rel="alternate"
+            type="application/json"
+            href="https://oscarryz.com/feed.json"
+            title="OscarRyz JSON Feed"
+        />
+        <link rel="me" href="https://mastodon.social/@oscarryz" />
 
-<head>
-    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
-    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <link rel="alternate" type="application/json" href="https://oscarryz.now.sh/feed.json" title="OscarRyz JSON Feed">
-    <title>Social Networks power</title>
-    <link rel="stylesheet" href="css/main.css">
-    <script type="text/javascript" async src="js/main.js"></script>
-    <script>
-        function resizeIframe(obj) {
-            obj.style.height = obj.contentWindow.document.body.scrollHeight + 'px';
-            const currentTheme = localStorage.getItem('theme') || 'dark';
-            obj.querySelector("html").dataset.theme = currentTheme;
-        }
-        function toggleTheme() {
-            let theme = document.querySelector("html").dataset.theme;
-            if (theme === 'light') {
-                document.querySelector("html").dataset.theme = 'dark';
-                document.querySelector('iframe').contentDocument.querySelector("html").dataset.theme = 'dark';
-                localStorage.setItem('theme', 'dark');
-            } else {
-                document.querySelector("html").dataset.theme = 'light';
-                document.querySelector('iframe').contentDocument.querySelector("html").dataset.theme = 'light';
-                localStorage.setItem('theme', 'light');
+        <title>Social Networks power</title>
+        <link rel="stylesheet" href="css/main.css" />
+        <script type="text/javascript" async src="js/main.js"></script>
+        <script type="text/javascript" async src="js/entries.js"></script>
+    </head>
 
-            }
-        }
-    </script>
-</head>
-
-<body>
-    <div class="grid-container">
-        <header class="header">
-            <div class="toolbar">
-                <div class="dropdown">
-                    <button class="dropbtn">
-                        <i class="material-icons">
-                            more_vert
-                        </i>
+    <body>
+        <div class="grid-container">
+            <footer class="footer">
+                <nav id="footer-nav">
+                    <a href="about-me.html">About me</a>
+                    <a href="/feed.json">JSON feed</a>
+                    <a href="#" onclick="toggleTheme()">Theme: Ligth / Dark</a>
+                </nav>
+            </footer>
+            <header class="header">
+                <div class="toolbar">
+                    <button
+                        class="action-button"
+                        onClick="newEntry(); return false;"
+                    >
+                        New
                     </button>
-                    <div class="dropdown-content">
-                        <a href="/new">New</a>
-                        <a href="/" onClick="loadDoc(); return false;">Edit</a>
-                    </div>
+                    <button
+                        class="action-button"
+                        onClick="loadDoc(); return false;"
+                    >
+                        Edit
+                    </button>
+                </div>
+            </header>
+            <main class="main" data-id="ad06b5d0-6596-11eb-9cce-b9cbcc929643">
+                <div class="big-title">Social Networks power</div>
+                <div id="context-text" class="content"><h1>Social Networks power</h1><p>There have been some concerns about how much power do social networks have, and if people should abandon them or not, and also move to where exactly.</p><p>Some other voices disregard these concerns with “Well they already know everything about me” or “Social Networks only care about famous people, not simpletons like you”. None of these arguments are valid.</p><p>I don’t think that’s the problem here. It’s very unlikely and impractical to try to go back to a previous era where these things didn’t exist. Some communities have tried to isolate themselves from modern society and the problems it brings (I think about the <a href="https://en.wikipedia.org/wiki/Amish">Amish</a>), but let’s be realistic, that’s not going to happen.</p><p>I’m not sure if I’m just getting older and wiser but, I’ve seen this before, with the T.V. while the differences are notable the same principle can be followed; educate yourself and your family on how much exposure is healthy, how many hours do you need to be on the device (t.v., or phones, or in this case Social Networks), and how much is too much. Another example is any kind of addiction if you stop doing X activity for spending all your time doing Y, you have an addiction problem.</p><p>So I think it’s a matter of education, I see in the future kids will get a class on social media just like today (most) get Sexual Education.</p><p>So, don’t abandon them or move to some other platform. They are a very good tool if used properly (never before like today we’ve been able to get so much information so quickly or to be face to face with someone in an instant just like we used to see in the SciFi shows in the ’80s). Treat them as you would treat a stranger (because that’s exactly that it is, a window for a stranger to peek in your life), don’t overshare your life, don’t share your personal information, don’t tell them who your family is and all your details to someone you don’t even know.</p><p>Yes, they need to be regulated and it will take some time before that happens, in the meantime, keep using them wisely to keep in contact with your friends and family for that’s what I think is the best use of them.</p>
+</div>
+            </main>
+            <div class="entries">
+                <div id="entries-filter" class="entries-filter">
+                    Other entries
+                </div>
+                <div id="entries-list" class="entries-list">
+                    <iframe
+                        src="entries.html"
+                        onload="resizeIframe(this)"
+                        scrolling="no"
+                        frameborder="0"
+                    ></iframe>
                 </div>
             </div>
-        </header>
-        <main class="main" data-id="ad06b5d0-6596-11eb-9cce-b9cbcc929643">
-            <div id="context-text" class="content">
-                <h1>Social Networks power</h1><p>There have been some concerns about how much power do social networks have, and if people should abandon them or not, and also move to where exactly.</p><p>Some other voices disregard these concerns with “Well they already know everything about me” or “Social Networks only care about famous people, not simpletons like you”. None of these arguments are valid.</p><p>I don’t think that’s the problem here. It’s very unlikely and impractical to try to go back to a previous era where these things didn’t exist. Some communities have tried to isolate themselves from modern society and the problems it brings (I think about the <a href="https://en.wikipedia.org/wiki/Amish">Amish</a>), but let’s be realistic, that’s not going to happen.</p><p>I’m not sure if I’m just getting older and wiser but, I’ve seen this before, with the T.V. while the differences are notable the same principle can be followed; educate yourself and your family on how much exposure is healthy, how many hours do you need to be on the device (t.v., or phones, or in this case Social Networks), and how much is too much. Another example is any kind of addiction if you stop doing X activity for spending all your time doing Y, you have an addiction problem.</p><p>So I think it’s a matter of education, I see in the future kids will get a class on social media just like today (most) get Sexual Education.</p><p>So, don’t abandon them or move to some other platform. They are a very good tool if used properly (never before like today we’ve been able to get so much information so quickly or to be face to face with someone in an instant just like we used to see in the SciFi shows in the ’80s). Treat them as you would treat a stranger (because that’s exactly that it is, a window for a stranger to peek in your life), don’t overshare your life, don’t share your personal information, don’t tell them who your family is and all your details to someone you don’t even know.</p><p>Yes, they need to be regulated and it will take some time before that happens, in the meantime, keep using them wisely to keep in contact with your friends and family for that’s what I think is the best use of them.</p>
-
-            </div>
-        </main>
-        <div class="entries">
-            <div id="entries-filter" class="entries-filter">Other entries</div>
-            <div id="entries-list" class="entries-list">
-                <iframe src="entries.html" onload="resizeIframe(this)"></iframe>
-            </div>
         </div>
-        <footer class="footer">
-            <nav id="footer-nav">
-                <a href="about-me.html">About me</a>
-                <a href="/feed.json">JSON feed</a>
-                <a href="#" onclick="toggleTheme()">Theme: Ligth / Dark</a>
-            </nav>
-        </footer>
-    </div>
-</body>
-<script>
-    (function setTheme() {
-        const currentTheme = localStorage.getItem('theme') || 'dark';
-        document.querySelector("html").dataset.theme = currentTheme;
-    })();
-</script>
-
+    </body>
+    <script>
+        (function setTheme() {
+            const currentTheme = localStorage.getItem("theme") || "dark";
+            document.querySelector("html").dataset.theme = currentTheme;
+        })();
+    </script>
 </html>

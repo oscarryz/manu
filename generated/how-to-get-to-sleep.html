@@ -1,78 +1,76 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" data-theme="dark">
+    <head>
+        <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+        <link rel="icon" href="img/favicon.ico" type="image/x-icon" />
+        <meta charset="UTF-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, user-scalable=no"
+        />
+        <link
+            rel="alternate"
+            type="application/json"
+            href="https://oscarryz.com/feed.json"
+            title="OscarRyz JSON Feed"
+        />
+        <link rel="me" href="https://mastodon.social/@oscarryz" />
 
-<head>
-    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
-    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-	<link rel="alternate" type="application/json" href="https://oscarryz.now.sh/feed.json" title="OscarRyz JSON Feed">
-	<title>How to get to sleep</title>
-	<link rel="stylesheet" href="css/main.css">
-	<script type="text/javascript" async src="js/main.js"></script>
-	<script>
-		function resizeIframe(obj) {
-            obj.style.height = obj.contentWindow.document.body.scrollHeight + 'px';
-            const currentTheme = localStorage.getItem('theme') || 'dark';
-            obj.querySelector("html").dataset.theme=currentTheme;
-        }
-        function toggleTheme() {
-          let theme = document.querySelector("html").dataset.theme;
-          if (theme === 'light') {
-            document.querySelector("html").dataset.theme='dark';
-            document.querySelector('iframe').contentDocument.querySelector("html").dataset.theme = 'dark';
-            localStorage.setItem('theme', 'dark');
-        } else {
-            document.querySelector("html").dataset.theme = 'light';
-            document.querySelector('iframe').contentDocument.querySelector("html").dataset.theme= 'light';
-            localStorage.setItem('theme', 'light');
+        <title>How to get to sleep</title>
+        <link rel="stylesheet" href="css/main.css" />
+        <script type="text/javascript" async src="js/main.js"></script>
+        <script type="text/javascript" async src="js/entries.js"></script>
+    </head>
 
-          }
-        }
-	</script>
-</head>
-
-<body>
-	<div class="grid-container">
-		<header class="header">
-			<div class="toolbar">
-				<div class="dropdown">
-					<button class="dropbtn">
-                        <i class="material-icons">
-                            more_vert
-                        </i>
+    <body>
+        <div class="grid-container">
+            <footer class="footer">
+                <nav id="footer-nav">
+                    <a href="about-me.html">About me</a>
+                    <a href="/feed.json">JSON feed</a>
+                    <a href="#" onclick="toggleTheme()">Theme: Ligth / Dark</a>
+                </nav>
+            </footer>
+            <header class="header">
+                <div class="toolbar">
+                    <button
+                        class="action-button"
+                        onClick="newEntry(); return false;"
+                    >
+                        New
                     </button>
-					<div class="dropdown-content">
-						<a href="/new">New</a>
-						<a href="/" onClick="loadDoc(); return false;">Edit</a>
-					</div>
-				</div>
-			</div>
-		</header>
-		<main class="main" data-id="6e161ca0-c68e-11ea-90e2-ffb7e57b375c">
-			<!--            <h1 id="content-title" class="title">How to get to sleep</h1>-->
-			<div id="context-text" class="content"><h1>How to get to sleep</h1><h6>July 15th, 2020</h6><p><em>Guarantee to work… almost</em></p><ol><li><p>Think of a fond memory of yours; it could be a trip, a childhood memory. Pretty much anything.</p></li><li><p>Try to remember the details, how did you get there, what happened the day before or a few moments earlier.</p></li><li><p>Remember the details of the event and let it flow into what happened next. Recreate it in your mind.</p></li><li><p>Remember who you were with, details about the place. What became of those people? What other memories do you have about that place?</p></li><li><p>Finally, stop trying to control the memories and let it flow.</p></li></ol><p>This works for me almost all the time. I find that while trying to remember those things I usually start dreaming about them and eventually fall asleep. Also, I stop thinking about other topics which are usually the reason why I can’t sleep in the first place. <br><br>And if it doesn’t work at least I’ve had a good time reliving those memories that otherwise get lost in the business of the everyday.</p>
+                    <button
+                        class="action-button"
+                        onClick="loadDoc(); return false;"
+                    >
+                        Edit
+                    </button>
+                </div>
+            </header>
+            <main class="main" data-id="6e161ca0-c68e-11ea-90e2-ffb7e57b375c">
+                <div class="big-title">How to get to sleep</div>
+                <div id="context-text" class="content"><h1>How to get to sleep</h1><h6>July 15th, 2020</h6><p><em>Guarantee to work… almost</em></p><ol><li><p>Think of a fond memory of yours; it could be a trip, a childhood memory. Pretty much anything.</p></li><li><p>Try to remember the details, how did you get there, what happened the day before or a few moments earlier.</p></li><li><p>Remember the details of the event and let it flow into what happened next. Recreate it in your mind.</p></li><li><p>Remember who you were with, details about the place. What became of those people? What other memories do you have about that place?</p></li><li><p>Finally, stop trying to control the memories and let it flow.</p></li></ol><p>This works for me almost all the time. I find that while trying to remember those things I usually start dreaming about them and eventually fall asleep. Also, I stop thinking about other topics which are usually the reason why I can’t sleep in the first place. <br /><br />And if it doesn’t work at least I’ve had a good time reliving those memories that otherwise get lost in the business of the everyday.</p>
 </div>
-</main>
-<div class="entries">
-	<div id="entries-filter" class="entries-filter">Other entries</div>
-	<div id="entries-list" class="entries-list">
-		<iframe src="entries.html" onload="resizeIframe(this)"></iframe>
-	</div>
-</div>
-<footer class="footer">
-	<nav id="footer-nav">
-        <a href="about-me.html">About me</a>
-        <a href="/feed.json">JSON feed</a>
-        <a href="#" onclick="toggleTheme()">Theme: Ligth / Dark</a>
-	</nav>
-</footer>
-</div>
-</body>
-<script>
-       (function setTheme() {
-            const currentTheme = localStorage.getItem('theme') || 'dark';
-            document.querySelector("html").dataset.theme=currentTheme;
+            </main>
+            <div class="entries">
+                <div id="entries-filter" class="entries-filter">
+                    Other entries
+                </div>
+                <div id="entries-list" class="entries-list">
+                    <iframe
+                        src="entries.html"
+                        onload="resizeIframe(this)"
+                        scrolling="no"
+                        frameborder="0"
+                    ></iframe>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script>
+        (function setTheme() {
+            const currentTheme = localStorage.getItem("theme") || "dark";
+            document.querySelector("html").dataset.theme = currentTheme;
         })();
-</script>
+    </script>
 </html>

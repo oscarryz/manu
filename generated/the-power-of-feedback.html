@@ -1,80 +1,76 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" data-theme="dark">
+    <head>
+        <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+        <link rel="icon" href="img/favicon.ico" type="image/x-icon" />
+        <meta charset="UTF-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, user-scalable=no"
+        />
+        <link
+            rel="alternate"
+            type="application/json"
+            href="https://oscarryz.com/feed.json"
+            title="OscarRyz JSON Feed"
+        />
+        <link rel="me" href="https://mastodon.social/@oscarryz" />
 
-<head>
-    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
-    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <link rel="alternate" type="application/json" href="https://oscarryz.com/feed.json" title="OscarRyz JSON Feed">
-    <title>The power of feedback</title>
-    <link rel="stylesheet" href="css/main.css">
-    <script type="text/javascript" async src="js/main.js"></script>
-    <script>
-        function resizeIframe(obj) {
-            obj.style.height = obj.contentWindow.document.body.scrollHeight + 'px';
-            const currentTheme = localStorage.getItem('theme') || 'dark';
-            obj.querySelector("html").dataset.theme = currentTheme;
-        }
-        function toggleTheme() {
-            let theme = document.querySelector("html").dataset.theme;
-            if (theme === 'light') {
-                document.querySelector("html").dataset.theme = 'dark';
-                document.querySelector('iframe').contentDocument.querySelector("html").dataset.theme = 'dark';
-                localStorage.setItem('theme', 'dark');
-            } else {
-                document.querySelector("html").dataset.theme = 'light';
-                document.querySelector('iframe').contentDocument.querySelector("html").dataset.theme = 'light';
-                localStorage.setItem('theme', 'light');
+        <title>The power of feedback</title>
+        <link rel="stylesheet" href="css/main.css" />
+        <script type="text/javascript" async src="js/main.js"></script>
+        <script type="text/javascript" async src="js/entries.js"></script>
+    </head>
 
-            }
-        }
-    </script>
-</head>
-
-<body>
-    <div class="grid-container">
-        <header class="header">
-            <div class="toolbar">
-                <div class="dropdown">
-                    <button class="dropbtn">
-                        <i class="material-icons">
-                            more_vert
-                        </i>
+    <body>
+        <div class="grid-container">
+            <footer class="footer">
+                <nav id="footer-nav">
+                    <a href="about-me.html">About me</a>
+                    <a href="/feed.json">JSON feed</a>
+                    <a href="#" onclick="toggleTheme()">Theme: Ligth / Dark</a>
+                </nav>
+            </footer>
+            <header class="header">
+                <div class="toolbar">
+                    <button
+                        class="action-button"
+                        onClick="newEntry(); return false;"
+                    >
+                        New
                     </button>
-                    <div class="dropdown-content">
-                        <a href="/new">New</a>
-                        <a href="/" onClick="loadDoc(); return false;">Edit</a>
-                    </div>
+                    <button
+                        class="action-button"
+                        onClick="loadDoc(); return false;"
+                    >
+                        Edit
+                    </button>
+                </div>
+            </header>
+            <main class="main" data-id="66c0ec80-bc39-11ec-80f3-954b512adf78">
+                <div class="big-title">The power of feedback</div>
+                <div id="context-text" class="content"><h1>The power of feedback</h1><p>It’s very hard to know what are we doing good or what are we doing right objectively.</p><p>That’s why is important to request feedback and keep an open mind and practice <a href="https://www.google.com/search?hl=en&amp;q=active%20listening">active listening</a> so we can understand and process that feedback.</p><p>When giving and receiving feedback is important to know the communication style of the interlocutor and try to adapt to it. The most important part regardless is to keep it objective and separate the facts from the person, we are not prising or criticizing the person but the actions based on their merits.</p><p>It takes practice to give and receive feedback but the benefits are huge, we can now action of things we didn’t know, or we didn’t know in their entirely.</p>
+</div>
+            </main>
+            <div class="entries">
+                <div id="entries-filter" class="entries-filter">
+                    Other entries
+                </div>
+                <div id="entries-list" class="entries-list">
+                    <iframe
+                        src="entries.html"
+                        onload="resizeIframe(this)"
+                        scrolling="no"
+                        frameborder="0"
+                    ></iframe>
                 </div>
             </div>
-        </header>
-        <main class="main" data-id="66c0ec80-bc39-11ec-80f3-954b512adf78">
-            <div id="context-text" class="content">
-                <h1>The power of feedback</h1><p>It’s very hard to know what are we doing good or what are we doing right objectively.</p><p>That’s why is important to request feedback and keep an open mind and practice <a href="https://www.google.com/search?hl=en&amp;q=active%20listening">active listening</a> so we can understand and process that feedback.</p><p>When giving and receiving feedback is important to know the communication style of the interlocutor and try to adapt to it. The most important part regardless is to keep it objective and separate the facts from the person, we are not prising or criticizing the person but the actions based on their merits.</p><p>It takes practice to give and receive feedback but the benefits are huge, we can now action of things we didn’t know, or we didn’t know in their entirely.</p>
-
-            </div>
-        </main>
-        <div class="entries">
-            <div id="entries-filter" class="entries-filter">Other entries</div>
-            <div id="entries-list" class="entries-list">
-                <iframe src="entries.html" onload="resizeIframe(this)"></iframe>
-            </div>
         </div>
-        <footer class="footer">
-            <nav id="footer-nav">
-                <a href="about-me.html">About me</a>
-                <a href="/feed.json">JSON feed</a>
-                <a href="#" onclick="toggleTheme()">Theme: Ligth / Dark</a>
-            </nav>
-        </footer>
-    </div>
-</body>
-<script>
-    (function setTheme() {
-        const currentTheme = localStorage.getItem('theme') || 'dark';
-        document.querySelector("html").dataset.theme = currentTheme;
-    })();
-</script>
-
+    </body>
+    <script>
+        (function setTheme() {
+            const currentTheme = localStorage.getItem("theme") || "dark";
+            document.querySelector("html").dataset.theme = currentTheme;
+        })();
+    </script>
 </html>

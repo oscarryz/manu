@@ -1,82 +1,76 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" data-theme="dark">
+    <head>
+        <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+        <link rel="icon" href="img/favicon.ico" type="image/x-icon" />
+        <meta charset="UTF-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, user-scalable=no"
+        />
+        <link
+            rel="alternate"
+            type="application/json"
+            href="https://oscarryz.com/feed.json"
+            title="OscarRyz JSON Feed"
+        />
+        <link rel="me" href="https://mastodon.social/@oscarryz" />
 
-<head>
-    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
-    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <link rel="alternate" type="application/json" href="https://oscarryz.com/feed.json" title="OscarRyz JSON Feed">
-    <link rel="me" href="https://mastodon.social/@oscarryz">
+        <title>Taking days off</title>
+        <link rel="stylesheet" href="css/main.css" />
+        <script type="text/javascript" async src="js/main.js"></script>
+        <script type="text/javascript" async src="js/entries.js"></script>
+    </head>
 
-    <title>Taking days off</title>
-    <link rel="stylesheet" href="css/main.css">
-    <script type="text/javascript" async src="js/main.js"></script>
-    <script>
-        function resizeIframe(obj) {
-            obj.style.height = obj.contentWindow.document.body.scrollHeight + 'px';
-            const currentTheme = localStorage.getItem('theme') || 'dark';
-            obj.querySelector("html").dataset.theme = currentTheme;
-        }
-        function toggleTheme() {
-            let theme = document.querySelector("html").dataset.theme;
-            if (theme === 'light') {
-                document.querySelector("html").dataset.theme = 'dark';
-                document.querySelector('iframe').contentDocument.querySelector("html").dataset.theme = 'dark';
-                localStorage.setItem('theme', 'dark');
-            } else {
-                document.querySelector("html").dataset.theme = 'light';
-                document.querySelector('iframe').contentDocument.querySelector("html").dataset.theme = 'light';
-                localStorage.setItem('theme', 'light');
-
-            }
-        }
-    </script>
-</head>
-
-<body>
-    <div class="grid-container">
-        <header class="header">
-            <div class="toolbar">
-                <div class="dropdown">
-                    <button class="dropbtn">
-                        <i class="material-icons">
-                            more_vert
-                        </i>
+    <body>
+        <div class="grid-container">
+            <footer class="footer">
+                <nav id="footer-nav">
+                    <a href="about-me.html">About me</a>
+                    <a href="/feed.json">JSON feed</a>
+                    <a href="#" onclick="toggleTheme()">Theme: Ligth / Dark</a>
+                </nav>
+            </footer>
+            <header class="header">
+                <div class="toolbar">
+                    <button
+                        class="action-button"
+                        onClick="newEntry(); return false;"
+                    >
+                        New
                     </button>
-                    <div class="dropdown-content">
-                        <a href="/new">New</a>
-                        <a href="/" onClick="loadDoc(); return false;">Edit</a>
-                    </div>
+                    <button
+                        class="action-button"
+                        onClick="loadDoc(); return false;"
+                    >
+                        Edit
+                    </button>
+                </div>
+            </header>
+            <main class="main" data-id="0c346e20-6e91-11ee-b199-f136936acdc1">
+                <div class="big-title">Taking days off</div>
+                <div id="context-text" class="content"><h1>Taking days off</h1><p>I’m so grateful to be able to take some time off to spend with the family.</p><p>It’s very important to be able to relax and stop thinking about the day to day and just enjoy the moment. Even if it’s only to play in the backyard bursting soap bubbles.</p><p>Autumn is finally here and I was able to spend time outside where the heat is no longer unbearable. Actually I liked the chill wind, but not to much to need gloves.</p><p>Anyway, having too much time off can be boring too, a week or two once in a while makes things so much better. I’m very fortunate to be able to do it.</p><p><br /><br /></p><p>Now let’s go back to work!</p>
+</div>
+            </main>
+            <div class="entries">
+                <div id="entries-filter" class="entries-filter">
+                    Other entries
+                </div>
+                <div id="entries-list" class="entries-list">
+                    <iframe
+                        src="entries.html"
+                        onload="resizeIframe(this)"
+                        scrolling="no"
+                        frameborder="0"
+                    ></iframe>
                 </div>
             </div>
-        </header>
-        <main class="main" data-id="0c346e20-6e91-11ee-b199-f136936acdc1">
-            <div id="context-text" class="content">
-                <h1>Taking days off</h1><p>I’m so grateful to be able to take some time off to spend with the family. </p><p>It’s very important to be able to relax and stop thinking about the day to day and just enjoy the moment. Even if it’s only to play in the backyard bursting soap bubbles. </p><p>Autumn is finally here and I was able to spend time outside where the heat is no longer unbearable. Actually I liked the chill wind, but not to much to need gloves. </p><p>Anyway, having too much time off can be boring too, a week or two once in a while makes things so much better. I’m very fortunate to be able to do it. </p><p><br /></p><p>Now let’s go back to work! </p>
-
-            </div>
-        </main>
-        <div class="entries">
-            <div id="entries-filter" class="entries-filter">Other entries</div>
-            <div id="entries-list" class="entries-list">
-                <iframe src="entries.html" onload="resizeIframe(this)"></iframe>
-            </div>
         </div>
-        <footer class="footer">
-            <nav id="footer-nav">
-                <a href="about-me.html">About me</a>
-                <a href="/feed.json">JSON feed</a>
-                <a href="#" onclick="toggleTheme()">Theme: Ligth / Dark</a>
-            </nav>
-        </footer>
-    </div>
-</body>
-<script>
-    (function setTheme() {
-        const currentTheme = localStorage.getItem('theme') || 'dark';
-        document.querySelector("html").dataset.theme = currentTheme;
-    })();
-</script>
-
+    </body>
+    <script>
+        (function setTheme() {
+            const currentTheme = localStorage.getItem("theme") || "dark";
+            document.querySelector("html").dataset.theme = currentTheme;
+        })();
+    </script>
 </html>

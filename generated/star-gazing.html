@@ -1,80 +1,76 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" data-theme="dark">
+    <head>
+        <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+        <link rel="icon" href="img/favicon.ico" type="image/x-icon" />
+        <meta charset="UTF-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, user-scalable=no"
+        />
+        <link
+            rel="alternate"
+            type="application/json"
+            href="https://oscarryz.com/feed.json"
+            title="OscarRyz JSON Feed"
+        />
+        <link rel="me" href="https://mastodon.social/@oscarryz" />
 
-<head>
-    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
-    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <link rel="alternate" type="application/json" href="https://oscarryz.now.sh/feed.json" title="OscarRyz JSON Feed">
-    <title>Star gazing</title>
-    <link rel="stylesheet" href="css/main.css">
-    <script type="text/javascript" async src="js/main.js"></script>
-    <script>
-        function resizeIframe(obj) {
-            obj.style.height = obj.contentWindow.document.body.scrollHeight + 'px';
-            const currentTheme = localStorage.getItem('theme') || 'dark';
-            obj.querySelector("html").dataset.theme = currentTheme;
-        }
-        function toggleTheme() {
-            let theme = document.querySelector("html").dataset.theme;
-            if (theme === 'light') {
-                document.querySelector("html").dataset.theme = 'dark';
-                document.querySelector('iframe').contentDocument.querySelector("html").dataset.theme = 'dark';
-                localStorage.setItem('theme', 'dark');
-            } else {
-                document.querySelector("html").dataset.theme = 'light';
-                document.querySelector('iframe').contentDocument.querySelector("html").dataset.theme = 'light';
-                localStorage.setItem('theme', 'light');
+        <title>Star gazing</title>
+        <link rel="stylesheet" href="css/main.css" />
+        <script type="text/javascript" async src="js/main.js"></script>
+        <script type="text/javascript" async src="js/entries.js"></script>
+    </head>
 
-            }
-        }
-    </script>
-</head>
-
-<body>
-    <div class="grid-container">
-        <header class="header">
-            <div class="toolbar">
-                <div class="dropdown">
-                    <button class="dropbtn">
-                        <i class="material-icons">
-                            more_vert
-                        </i>
+    <body>
+        <div class="grid-container">
+            <footer class="footer">
+                <nav id="footer-nav">
+                    <a href="about-me.html">About me</a>
+                    <a href="/feed.json">JSON feed</a>
+                    <a href="#" onclick="toggleTheme()">Theme: Ligth / Dark</a>
+                </nav>
+            </footer>
+            <header class="header">
+                <div class="toolbar">
+                    <button
+                        class="action-button"
+                        onClick="newEntry(); return false;"
+                    >
+                        New
                     </button>
-                    <div class="dropdown-content">
-                        <a href="/new">New</a>
-                        <a href="/" onClick="loadDoc(); return false;">Edit</a>
-                    </div>
+                    <button
+                        class="action-button"
+                        onClick="loadDoc(); return false;"
+                    >
+                        Edit
+                    </button>
+                </div>
+            </header>
+            <main class="main" data-id="f9caceb0-dd33-11ea-ad7e-bfb0df3ce950">
+                <div class="big-title">Star gazing</div>
+                <div id="context-text" class="content"><h1>Star gazing</h1><h5>August 13th, 2am</h5><p>It took me three days but finally today I was able to watch shooting stars.</p><p>I grew up in a place where going out after 8pm requires you to wear a sweater, no matter the time of the year, and definitely at least three layers after midnight. Now I live in Texas and my brain struggles to understand it's 30C (86f) at 2 am. I for one am glad as I could pull a chair in the garden and layback to watch the sky.</p><p>Now, when they say “meteor shower” what comes to mind? Meteorites falling as rain, am I right? Nothing even close. But definitely much more than what one could expect to see by just turning your head up to the sky.</p><p>It's a fun experience, at the beginning it's confusing, you're there and absolutely nothing happens. Then the night sounds started to freak me out, the wind blowing in the trees, the crickets, the creaking on the neighbor fence, and even the AC turning on and off make me wanted to run back into the house. Then it hits me, all of these things still happen without me while I’m sleeping. These night things welcome me into their world by just ignoring me and accepting me as I am.</p><p>So I relax a bit and start to feel comfortable, but still nothing happens. Then there it is! A first shooting star, although I immediately start wondering if I imagined it, it was way too brief and too dim, nothing like some others I’ve seen before. Oh well.</p><p>20 minutes in, check my phone app to see (for the 10th time) where the perseids are located and while I’m moving my sight into the screen I see another one, very clear! very bright!. Ok ok, put the phone away and get ready to be amazed by the rest of the stars. Nothing happens.</p><p>So, things start getting a bit uncomfortable, I’m wearing pants and a long sleeve in 30c (86f) weather due to the mosquitoes, so I’m sweating a bit. My hands (the only uncovered part besides my face) start getting a bit itchy, a mosquito must have found it’s way there. I’m starting to worry about the possibility of having the chair in the middle of an ant “house”, and I’ve just seen 1 1/2 star.</p><p>“Come on! where are they?” I ask myself knowing (but not accepting) that I need to be patient. I take a conscious deep breath and realize all of this is part of the experience, the being in the middle of the yard , in the dark, my head leaning back. So I cover my hands a bit more, lay back and enjoy the moment. I hear the same night sounds but now they’re just like a lullaby, the cracking on the fence it’s not scary anymore, it’s just a rhythmic sound. The wind on the trees, which is a sound I adore in the day, it’s even delightful in the night. I hear some dogs barking very far away and I compare them to those where I grew up. There are some other sounds whose source I cannot fully detect but they’re fine I stop trying to figure out where they come from.</p><p>40 minutes in and finally I stopped trying to make things happen just because I want to. They’ll just happen when they have to. I just have to be present. So I start preparing my wishes for the upcoming stars as I know they’ll show up. And a few minutes later there was one, and another, and another. Some of them dim and shy, that last one I saw, about the brightest I’ve ever seen, 4 seconds crossing the sky.</p><p>One hour after and many wishes for all my loved ones after, I walk back to the house. The moon is about to show up and Illuminate the sky. Went into the house and enjoyed all the other things that sleep in there.</p><p>This has been a very nice star gazing night.</p>
+</div>
+            </main>
+            <div class="entries">
+                <div id="entries-filter" class="entries-filter">
+                    Other entries
+                </div>
+                <div id="entries-list" class="entries-list">
+                    <iframe
+                        src="entries.html"
+                        onload="resizeIframe(this)"
+                        scrolling="no"
+                        frameborder="0"
+                    ></iframe>
                 </div>
             </div>
-        </header>
-        <main class="main" data-id="f9caceb0-dd33-11ea-ad7e-bfb0df3ce950">
-            <div id="context-text" class="content">
-                <h1>Star gazing</h1><h5>August 13th, 2am</h5><p>It took me three days but finally today I was able to watch shooting stars.</p><p>I grew up in a place where going out after 8pm requires you to wear a sweater, no matter the time of the year, and definitely at least three layers after midnight. Now I live in Texas and my brain struggles to understand it's 30C (86f) at 2 am. I for one am glad as I could pull a chair in the garden and layback to watch the sky.</p><p>Now, when they say “meteor shower” what comes to mind? Meteorites falling as rain, am I right? Nothing even close. But definitely much more than what one could expect to see by just turning your head up to the sky.</p><p>It's a fun experience, at the beginning it's confusing, you're there and absolutely nothing happens. Then the night sounds started to freak me out, the wind blowing in the trees, the crickets, the creaking on the neighbor fence, and even the AC turning on and off make me wanted to run back into the house. Then it hits me, all of these things still happen without me while I’m sleeping. These night things welcome me into their world by just ignoring me and accepting me as I am.</p><p>So I relax a bit and start to feel comfortable, but still nothing happens. Then there it is! A first shooting star, although I immediately start wondering if I imagined it, it was way too brief and too dim, nothing like some others I’ve seen before. Oh well.</p><p>20 minutes in, check my phone app to see (for the 10th time) where the perseids are located and while I’m moving my sight into the screen I see another one, very clear! very bright!. Ok ok, put the phone away and get ready to be amazed by the rest of the stars. Nothing happens.</p><p>So, things start getting a bit uncomfortable, I’m wearing pants and a long sleeve in 30c (86f) weather due to the mosquitoes, so I’m sweating a bit. My hands (the only uncovered part besides my face) start getting a bit itchy, a mosquito must have found it’s way there. I’m starting to worry about the possibility of having the chair in the middle of an ant “house”, and I’ve just seen 1 1/2 star.</p><p>“Come on! where are they?” I ask myself knowing (but not accepting) that I need to be patient. I take a conscious deep breath and realize all of this is part of the experience, the being in the middle of the yard , in the dark, my head leaning back. So I cover my hands a bit more, lay back and enjoy the moment. I hear the same night sounds but now they’re just like a lullaby, the cracking on the fence it’s not scary anymore, it’s just a rhythmic sound. The wind on the trees, which is a sound I adore in the day, it’s even delightful in the night. I hear some dogs barking very far away and I compare them to those where I grew up. There are some other sounds whose source I cannot fully detect but they’re fine I stop trying to figure out where they come from.</p><p>40 minutes in and finally I stopped trying to make things happen just because I want to. They’ll just happen when they have to. I just have to be present. So I start preparing my wishes for the upcoming stars as I know they’ll show up. And a few minutes later there was one, and another, and another. Some of them dim and shy, that last one I saw, about the brightest I’ve ever seen, 4 seconds crossing the sky.</p><p>One hour after and many wishes for all my loved ones after, I walk back to the house. The moon is about to show up and Illuminate the sky. Went  into the house and enjoyed all the other things that sleep in there.</p><p>This has been a very nice star gazing night.</p>
-
-            </div>
-        </main>
-        <div class="entries">
-            <div id="entries-filter" class="entries-filter">Other entries</div>
-            <div id="entries-list" class="entries-list">
-                <iframe src="entries.html" onload="resizeIframe(this)"></iframe>
-            </div>
         </div>
-        <footer class="footer">
-            <nav id="footer-nav">
-                <a href="about-me.html">About me</a>
-                <a href="/feed.json">JSON feed</a>
-                <a href="#" onclick="toggleTheme()">Theme: Ligth / Dark</a>
-            </nav>
-        </footer>
-    </div>
-</body>
-<script>
-    (function setTheme() {
-        const currentTheme = localStorage.getItem('theme') || 'dark';
-        document.querySelector("html").dataset.theme = currentTheme;
-    })();
-</script>
-
+    </body>
+    <script>
+        (function setTheme() {
+            const currentTheme = localStorage.getItem("theme") || "dark";
+            document.querySelector("html").dataset.theme = currentTheme;
+        })();
+    </script>
 </html>
