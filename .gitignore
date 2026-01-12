@@ -67,3 +67,5 @@ dist/*
 # gitpod
 .gitpod.yml
 
+.DS_Store
+mise.toml
