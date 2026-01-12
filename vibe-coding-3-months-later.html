@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+    <head>
+        <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+        <link rel="icon" href="img/favicon.ico" type="image/x-icon" />
+        <meta charset="UTF-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, user-scalable=no"
+        />
+        <link
+            rel="alternate"
+            type="application/json"
+            href="https://oscarryz.com/feed.json"
+            title="OscarRyz JSON Feed"
+        />
+        <link rel="me" href="https://mastodon.social/@oscarryz" />
+
+        <title>Vibe Coding … 3 months later </title>
+        <link rel="stylesheet" href="css/main.css" />
+        <script type="text/javascript" async src="js/main.js"></script>
+        <script type="text/javascript" async src="js/entries.js"></script>
+    </head>
+
+    <body>
+        <div class="grid-container">
+            <footer class="footer">
+                <nav id="footer-nav">
+                    <a href="about-me.html">About me</a>
+                    <a href="/feed.json">JSON feed</a>
+                    <a href="#" onclick="toggleTheme()">Theme: Light / Dark</a>
+                </nav>
+            </footer>
+            <header class="header">
+                <div class="toolbar">
+                    <button
+                        class="action-button"
+                        onClick="newEntry(); return false;"
+                    >
+                        New
+                    </button>
+                    <button
+                        class="action-button"
+                        onClick="loadDoc(); return false;"
+                    >
+                        Edit
+                    </button>
+                </div>
+            </header>
+            <main class="main" data-id="0b7048c0-efc1-11f0-8eae-09772ab3454c">
+                <div class="big-title">Vibe Coding … 3 months later </div>
+                <div id="context-text" class="content"><h1>Vibe Coding … 3 months later </h1><h3>Pausing</h3><p>After 220+ commits and around 32k lines of generated code, I paused my vibe coding experiment. Around the 25k LOC mark, doing any modification became increasingly difficult. I tried refactoring the code several times to make it easier to modify but with no luck; some sessions turned into abysmal regressions and others, after many hours, into very small improvements.</p><h3>Domain</h3><p>The project is a programming language compiler, so the domain is well known. It also allows one to test it directly by running the generated compiler without having to launch the browser; for instance, regressions were easy to test: a source file that used to compile now doesn’t compile anymore, etc.</p><h3>Problems</h3><p>In general, it was very good until I reached a project size that the tool (Cursor) couldn’t keep everything in memory and/or, after several hours of running, it started showing problems, even when the content was summarized.</p><p>While the domain is well known, the programming language itself is rather innovative (classes, functions, and threads are represented by a block of code). So, it is not like most programming languages; this context had to be explained every time to the tool by referencing the docs.</p><p>The other aspect that made me stop is that, at some point, my own lack of knowledge in compiler theory didn’t allow me to specify smaller tasks. Everything was thrown into the code generation file, and debugging was getting harder and harder for me to help the tool.</p><p>This is/was a side project, so I did this after work; late at night, I had very little energy to debug or understand what the tool was generating (in addition to my lack of knowledge). The sessions were not short (4–6 hrs). So, at least as of 4Q 2025, the tool is not quite there yet.</p><h3>Patterns</h3><p>Regardless, I think using Software Engineering principles (unit-testing, iterative approach, understanding the domain, etc.) gives us experienced developers a huge advantage over non-engineers / junior developers. I think the tool has to mature to make better use of static analysis (e.g., index the source code to know where everything is) and let the “AI” higher understanding feature do the actual modification. More often than not, the tool spent a lot of time trying to figure out where some functionality was added by using grep or other approaches; sometimes it got it right, sometimes it missed something. This is where working on a single codebase for a long while makes a human better: we get familiar with where things are and we can refactor/test more intuitively. I think this is also where we introduced bugs, to be honest. The tool, however, “forgets” within a couple of sessions; it was kind of weird to have a very successful session one day, only to have to walk it through the whole concept again the next day (or even later in the night).</p><h3>TL;DR</h3><ul><li><p>Vibe coding works for small(ish) scale projects; I suspect ~10k LOC.</p></li><li><p>The developer still needs to fully understand what is going on to help the tool with better suggestions.</p></li><li><p>The tools need to get better at static code analysis so they don’t have to spend cycles trying to remember where things are.</p></li><li><p>It is frustrating to spend 5 hrs vibe coding one day just to start from (almost) scratch the next day: “Look at the @file_summary_you_made_yesterday.md to understand more of the background for this project…”</p></li></ul>
+</div>
+            </main>
+            <div class="entries">
+                <div id="entries-filter" class="entries-filter">
+                    Other entries
+                </div>
+                <div id="entries-list" class="entries-list">
+                    <iframe
+                        src="entries.html"
+                        onload="resizeIframe(this)"
+                        scrolling="no"
+                        frameborder="0"
+                    ></iframe>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script>
+        (function setTheme() {
+            const currentTheme = localStorage.getItem("theme") || "dark";
+            document.querySelector("html").dataset.theme = currentTheme;
+        })();
+    </script>
+</html>
