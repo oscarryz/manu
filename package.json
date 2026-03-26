@@ -30,7 +30,7 @@
     "debug": "4.3.4",
     "express": "^4.21.2",
     "gh-pages": "^6.3.0",
-    "lodash": "4.17.21",
+    "lodash": "4.17.23",
     "prosemirror-example-setup": "1.0.1",
     "start": "5.1.0",
     "uuid": "3.3.3"
