@@ -1,6 +1,6 @@
 # manu
 
-Minimalist Blogging Platform that powers https://oscarryz.com. 
+A minimalist blogging platform that powers https://oscarryz.com. 
 
 This is based largely on the https://manuelmoreale.com/ blog (he was very kind to share some tips) and https://www.proseful.com which shares some principles on what blogging should be like.
 
