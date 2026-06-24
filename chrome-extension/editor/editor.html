@@ -1,0 +1,39 @@
+<!doctype html>
+<html data-theme="dark">
+    <meta charset="utf8" />
+
+    <head>
+        <title>Manu Editor</title>
+        <link rel="stylesheet" href="../css/main.css" />
+        <link rel="stylesheet" href="../css/prosemirror-editor.css" />
+        <link rel="stylesheet" href="../css/editor.css" />
+        <script src="theme.js"></script>
+        <script src="../js/prosemirror.js"></script>
+        <script src="../js/require-pm.js"></script>
+        <script src="editor.js" defer></script>
+    </head>
+
+    <body>
+        <div class="grid-container">
+            <footer class="footer">
+                <nav id="footer-nav">
+                    <a href="https://www.oscarryz.com/about-me.html" target="_blank">About me</a>
+                    <a href="https://www.oscarryz.com/feed.json" target="_blank">JSON feed</a>
+                    <a href="#" id="theme-toggle">Theme: Light / Dark</a>
+                </nav>
+            </footer>
+            <header class="header">
+                <div class="toolbar">
+                    <button class="action-button" id="save-btn">Save</button>
+                    <button class="action-button" id="cancel-btn">Cancel</button>
+                </div>
+            </header>
+            <main class="main" data-id="" id="main">
+                <div id="editor" style="margin-bottom: -23px"></div>
+                <div class="big-title" id="big-title"></div>
+                <div style="display: none" id="content" class="content"></div>
+            </main>
+        </div>
+    </body>
+
+</html>

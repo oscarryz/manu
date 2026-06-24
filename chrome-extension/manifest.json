@@ -1,0 +1,28 @@
+{
+  "manifest_version": 3,
+  "name": "Manu Blog Editor",
+  "version": "1.0.0",
+  "description": "Edit your manu blog directly from the browser",
+  "permissions": ["storage"],
+  "host_permissions": [
+    "https://www.oscarryz.com/*",
+    "https://oscarryz.com/*",
+    "https://api.github.com/repos/oscarryz/manu/contents/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://www.oscarryz.com/*", "https://oscarryz.com/*"],
+      "js": ["content-script.js"]
+    }
+  ],
+  "action": {
+    "default_popup": "popup/popup.html",
+    "default_title": "Manu Blog Editor"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["editor/editor.html"],
+      "matches": ["https://www.oscarryz.com/*", "https://oscarryz.com/*"]
+    }
+  ]
+}

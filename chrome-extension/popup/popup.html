@@ -1,0 +1,87 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Manu Blog Editor</title>
+        <style>
+            * { box-sizing: border-box; }
+            body {
+                width: 280px;
+                padding: 16px;
+                font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+                font-size: 13px;
+                background: #141619;
+                color: #f8f9fc;
+                margin: 0;
+            }
+            h3 { margin: 0 0 16px; font-size: 15px; font-weight: 600; }
+            label {
+                display: block;
+                font-size: 11px;
+                font-weight: 600;
+                margin-top: 12px;
+                color: #d6d9e0;
+                letter-spacing: 0.05em;
+                text-transform: uppercase;
+            }
+            input {
+                width: 100%;
+                padding: 6px 8px;
+                font-size: 12px;
+                margin-top: 4px;
+                background: #23262e;
+                border: 1px solid #393e4b;
+                border-radius: 4px;
+                color: #f8f9fc;
+                outline: none;
+                font-family: inherit;
+            }
+            input:focus { border-color: #445fcf; }
+            button {
+                margin-top: 16px;
+                width: 100%;
+                padding: 8px;
+                font-size: 13px;
+                cursor: pointer;
+                background: #23262e;
+                border: 1px solid #393e4b;
+                border-radius: 4px;
+                color: #f8f9fc;
+                font-family: inherit;
+            }
+            button:hover { background: #393e4b; }
+            #status {
+                margin-top: 8px;
+                font-size: 11px;
+                color: #4ade80;
+                min-height: 16px;
+            }
+        </style>
+    </head>
+    <body>
+        <h3>Manu Blog Editor</h3>
+
+        <label>GitHub Token</label>
+        <input type="password" id="token" placeholder="ghp_…" autocomplete="off" />
+        <div style="font-size: 10px; color: #888; margin-top: 4px;">
+            Needs <strong style="color:#d6d9e0">Contents: read &amp; write</strong> (fine-grained) or <strong style="color:#d6d9e0">repo</strong> scope (classic)
+        </div>
+
+        <label>Owner</label>
+        <input type="text" id="owner" />
+
+        <label>Repository</label>
+        <input type="text" id="repo" />
+
+        <label>Branch</label>
+        <input type="text" id="branch" />
+
+        <label>Site URL</label>
+        <input type="text" id="siteUrl" />
+
+        <button id="save-btn">Save Settings</button>
+        <div id="status"></div>
+
+        <script src="popup.js"></script>
+    </body>
+</html>
