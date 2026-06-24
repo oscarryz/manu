@@ -12,10 +12,10 @@
     {
       "id": "4fb99df4-3ca5-40e7-b5e3-5d72034d6e9f",
       "title": "Making things simple",
-      "content_html": "<h1>Making things simple</h1><p>It is not trivial; every new thing added is a new thing that has to be maintained, but everything that is not added makes the existing ones work more, or simply there are no features.</p><p>Then you have to think how to reuse existing spaces, how you would add more features without breaking the existing patterns. Not an easy task.</p><p>Right now I’m trying to make this “blogging platform” even simpler than what it is. I’ll write more on it later.</p>",
+      "content_html": "<h1>Making things simple</h1><p>It is not trivial; every new thing added is a new thing that has to be maintained, and everything that is not added makes the existing ones work more, or simply there are no features.</p><p>Then you have to think how to reuse existing spaces, how you would add more features without breaking the existing patterns. Not an easy task.</p><p>Right now I’m trying to make this “blogging platform” even simpler than what it is. I’ll write more on it later.</p>",
       "date_published": "2026-06-24T08:01:18.372Z",
-      "date_modified": "2026-06-24T08:01:18.372Z",
-      "url": "https://www.oscarryz.com/making-things-simple.html"
+      "date_modified": "2026-06-24T08:03:49.875Z",
+      "url": "https://oscarryz.com/making-things-simple.html"
     },
     {
       "id": "df10c900-6a16-11f1-9ed7-91a1f03b666d",
