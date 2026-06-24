@@ -37,11 +37,26 @@
                 font-family: inherit;
             }
             input:focus { border-color: #445fcf; }
+            .hint {
+                font-size: 10px;
+                color: #888;
+                margin-top: 4px;
+            }
+            .hint strong { color: #d6d9e0; }
+            hr {
+                border: none;
+                border-top: 1px solid #23262e;
+                margin: 16px 0 0;
+            }
+            .btn-row {
+                margin-top: 12px;
+                display: flex;
+                gap: 8px;
+            }
             button {
-                margin-top: 16px;
-                width: 100%;
+                flex: 1;
                 padding: 8px;
-                font-size: 13px;
+                font-size: 12px;
                 cursor: pointer;
                 background: #23262e;
                 border: 1px solid #393e4b;
@@ -49,13 +64,16 @@
                 color: #f8f9fc;
                 font-family: inherit;
             }
-            button:hover { background: #393e4b; }
+            button:hover:not(:disabled) { background: #393e4b; }
+            button:disabled { opacity: 0.5; cursor: default; }
             #status {
                 margin-top: 8px;
                 font-size: 11px;
                 color: #4ade80;
                 min-height: 16px;
+                word-break: break-all;
             }
+            #status.error { color: #f87171; }
         </style>
     </head>
     <body>
@@ -63,9 +81,7 @@
 
         <label>GitHub Token</label>
         <input type="password" id="token" placeholder="ghp_…" autocomplete="off" />
-        <div style="font-size: 10px; color: #888; margin-top: 4px;">
-            Needs <strong style="color:#d6d9e0">Contents: read &amp; write</strong> (fine-grained) or <strong style="color:#d6d9e0">repo</strong> scope (classic)
-        </div>
+        <div class="hint">Needs <strong>Contents: read &amp; write</strong> (fine-grained) or <strong>repo</strong> scope (classic)</div>
 
         <label>Owner</label>
         <input type="text" id="owner" />
@@ -79,7 +95,12 @@
         <label>Site URL</label>
         <input type="text" id="siteUrl" />
 
-        <button id="save-btn">Save Settings</button>
+        <hr />
+
+        <div class="btn-row">
+            <button id="save-btn">Save Settings</button>
+            <button id="sync-btn">Sync Assets</button>
+        </div>
         <div id="status"></div>
 
         <script src="popup.js"></script>

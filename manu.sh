@@ -1,1 +1,0 @@
-npm install && NODE_ENV="${NODE_ENV:-production}" node bin/server.js 

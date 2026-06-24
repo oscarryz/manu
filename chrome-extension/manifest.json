@@ -3,6 +3,9 @@
   "name": "Manu Blog Editor",
   "version": "1.0.0",
   "description": "Edit your manu blog directly from the browser",
+  "background": {
+    "service_worker": "background.js"
+  },
   "permissions": ["storage"],
   "host_permissions": [
     "https://www.oscarryz.com/*",
