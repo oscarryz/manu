@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+    <head>
+        <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+        <link rel="icon" href="img/favicon.ico" type="image/x-icon" />
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <link rel="alternate" type="application/json" href="https://oscarryz.com/feed.json" title="OscarRyz JSON Feed" />
+        <link rel="me" href="https://mastodon.social/@oscarryz" />
+        <title>Making things simple</title>
+        <link rel="stylesheet" href="css/main.css" />
+        <script type="text/javascript" async src="js/main.js"></script>
+        <script type="text/javascript" async src="js/entries.js"></script>
+    </head>
+    <body>
+        <div class="grid-container">
+            <footer class="footer">
+                <nav id="footer-nav">
+                    <a href="about-me.html">About me</a>
+                    <a href="/feed.json">JSON feed</a>
+                    <a href="#" onclick="toggleTheme()">Theme: Light / Dark</a>
+                </nav>
+            </footer>
+            <header class="header">
+                <div class="toolbar">
+                    <button class="action-button" onClick="newEntry(); return false;">New</button>
+                    <button class="action-button" onClick="loadDoc(); return false;">Edit</button>
+                </div>
+            </header>
+            <main class="main" data-id="4fb99df4-3ca5-40e7-b5e3-5d72034d6e9f">
+                <div class="big-title">Making things simple</div>
+                <div id="context-text" class="content"><h1>Making things simple</h1><p>It is not trivial; every new thing added is a new thing that has to be maintained, but everything that is not added makes the existing ones work more, or simply there are no features.</p><p>Then you have to think how to reuse existing spaces, how you would add more features without breaking the existing patterns. Not an easy task.</p><p>Right now I’m trying to make this “blogging platform” even simpler than what it is. I’ll write more on it later.</p></div>
+            </main>
+            <div class="entries">
+                <div id="entries-filter" class="entries-filter">Other entries</div>
+                <div id="entries-list" class="entries-list">
+                    <iframe src="entries.html" onload="resizeIframe(this)" scrolling="no" frameborder="0"></iframe>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script>
+        (function setTheme() {
+            const currentTheme = localStorage.getItem("theme") || "dark";
+            document.querySelector("html").dataset.theme = currentTheme;
+        })();
+    </script>
+</html>
