@@ -2,58 +2,33 @@
 
 A minimalist blogging platform that powers https://oscarryz.com. 
 
-This is based largely on the https://manuelmoreale.com/ blog (he was very kind to share some tips) and https://www.proseful.com which shares some principles on what blogging should be like.
+The design is largely based on https://manuelmoreale.com/ blog (he was very kind to share some tips) and https://www.proseful.com (defunq) which shares some principles on what blogging should be like.
 
+# "Architecure"
 
-This is a very simple blogging platform with the followig elements:
+The blogging platform is a chrome extension that adds "Edit" and "New" buttons to the https://oscarryz.com website.   
 
-- A WYSIWYG editor ( Use https://prosemirror.net to avoid start from scratch)
-- A controller that takes what the user writes and generate the HTML
-- Save the content to a flat file system (no database or remote storages)
-- Deploy as static file service (Github pages or any other platform that serves static files)
+When New is is pressed it loads a wysiwyg editor ( ProseMirror ) and saves the content to gh-pages directly upon saving.   
+When Edit is pressed it behaves siimlarly but it preloads the content so it can be edited.  
 
-
-[Prototype](https://www.figma.com/proto/3dpkBtXMu7a01QbFbKZOoZ/Blog-Platform?node-id=40%3A131&scaling=min-zoom)
-
+Finally the gh-pages is synced with Vercel.  
 
 # Pre-requisites
 
-- node 10.16.3+
-- npm 6.9.0+
-- git
 - github account
 
 
 # Install
 
+- Clone
 ```
 git clone git@github.com:oscarryz/manu.git
-cd manu
-npm install
 ```
+
+- Load unpacked extension. 
+- Create token in Github
+- Configure the access token the extension
 
 # Running
 
-```
-npm start
-```
-
-# Develop 
-
-Run with `NODE_ENV=dev npm run start` to avoid publishing articles while testing.
-And then to preview `npx http-serve dist/` to see the articles as they would in prod.
-
-Remember to unstage all the articles changed during tests before commiting. 
-
-
-# Deploy 
-
-At the moment this blog has to be run locally and then deployed to a [Github pages](https://pages.github.com/) that is to be setup externally
-
-Once that is being setup run:
-
-```
-npm run deploy
-```
-
-Currently this project deploys to oscarryz.github.io/manu which only project members have access to. The places to look at are the directory `/bin/deploy.sh` and the `package.json` that uses the `gh-pages` npm artifact
+Visit oscarryz.com
