@@ -10,6 +10,14 @@
   },
   "items": [
     {
+      "id": "4fb99df4-3ca5-40e7-b5e3-5d72034d6e9f",
+      "title": "Making things simple",
+      "content_html": "<h1>Making things simple</h1><p>It is not trivial; every new thing added is a new thing that has to be maintained, but everything that is not added makes the existing ones work more, or simply there are no features.</p><p>Then you have to think how to reuse existing spaces, how you would add more features without breaking the existing patterns. Not an easy task.</p><p>Right now I’m trying to make this “blogging platform” even simpler than what it is. I’ll write more on it later.</p>",
+      "date_published": "2026-06-24T08:01:18.372Z",
+      "date_modified": "2026-06-24T08:01:18.372Z",
+      "url": "https://www.oscarryz.com/making-things-simple.html"
+    },
+    {
       "id": "df10c900-6a16-11f1-9ed7-91a1f03b666d",
       "title": "Gratitude",
       "content_html": "<h1>Gratitude</h1><p>I know a good way to handle your stress (and your life in general) is to practice gratitude. As with many other things I’ve learned in the past, I didn’t quite get why. The obvious way is to pause for a bit and “count your blessings”. And then after a couple of months, it is easy to forget to do it.</p><p>Today I was commuting, a “long” commute (40 minutes instead of the 12 my train usually takes). The train was passing through a semi-abandoned construction site, the kind that has piles of dirt and nothing much else, and I noticed it was covered in beautiful flowers from the spring—the whole slope, maybe 20 meters, nicely decorated with tiny white flowers.</p><p>It has been a year since I moved to the Netherlands. The surprise element of seeing something for the first time is diminishing, but this sighting reminded me how fortunate I am to live here, to be in a place where the flowers appear like this, that my commute is not that long, and all the other many little things I have.</p>\n",
