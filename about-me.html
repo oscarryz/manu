@@ -1,95 +1,126 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" data-theme="dark">
+    <head>
+        <meta charset="UTF-8" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Prosto+One&display=swap&text=Oscar+Reyes"
+            rel="stylesheet"
+        />
+        <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+        <link rel="icon" href="img/favicon.ico" type="image/x-icon" />
+        <link
+            rel="webmention"
+            href="https://webmention.io/oscarryz.com_about-me.html/webmention"
+        />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, user-scalable=no"
+        />
+        <title>Oscar Reyes</title>
+        <link rel="stylesheet" href="css/main.css" />
+        <link href="css/all.css" rel="stylesheet" />
+        <!--load all styles -->
+        <script>
+            function toggleTheme() {
+                let theme = document.querySelector("html").dataset.theme;
+                if (theme === "light") {
+                    document.querySelector("html").dataset.theme = "dark";
+                    document
+                        .querySelector("iframe")
+                        .contentDocument.querySelector("html").dataset.theme =
+                        "dark";
+                    localStorage.setItem("theme", "dark");
+                } else {
+                    document.querySelector("html").dataset.theme = "light";
+                    document
+                        .querySelector("iframe")
+                        .contentDocument.querySelector("html").dataset.theme =
+                        "light";
+                    localStorage.setItem("theme", "light");
+                }
+            }
+        </script>
+    </head>
 
-<head>
-	<meta charset="UTF-8">
-	<link href="https://fonts.googleapis.com/css2?family=Prosto+One&display=swap&text=Oscar+Reyes" rel="stylesheet">
-	<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
-	<link rel="icon" href="img/favicon.ico" type="image/x-icon">
-	<link rel="webmention" href="https://webmention.io/oscarryz.com_about-me.html/webmention" />
-	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-	<title>Oscar Reyes</title>
-	<link rel="stylesheet" href="css/main.css">
-	<link href="css/all.css" rel="stylesheet"> <!--load all styles -->
-	<script>
-		function toggleTheme() {
-			let theme = document.querySelector("html").dataset.theme;
-			if (theme === 'light') {
-				document.querySelector("html").dataset.theme = 'dark';
-				document.querySelector('iframe').contentDocument.querySelector("html").dataset.theme = 'dark';
-				localStorage.setItem('theme', 'dark');
-			} else {
-				document.querySelector("html").dataset.theme = 'light';
-				document.querySelector('iframe').contentDocument.querySelector("html").dataset.theme = 'light';
-				localStorage.setItem('theme', 'light');
-
-			}
-		}
-	</script>
-</head>
-
-<body>
-	<div class="grid-container">
-		<header class="header">
-			<div class="toolbar">
-			</div>
-		</header>
-		<style>
-			.display {
-				font-family: "Prosto One", sans-serif;
-				font-size: 4.2rem;
-				line-height: 5rem;
-				letter-spacing: .25rem;
-				background: var(--color-primary);
-				-webkit-text-fill-color: transparent;
-				-webkit-background-clip: text;
-			}
-			.grid-container {
-				max-width: 50rem;
-			}
-			.highlight {
-				color: #DE8B98;
-				border-bottom: 2px solid #DE8B98;	
-			}
-			.links {
-				font-size: 1rem;
-			}
-		</style>
-		<main class="main" data-id="ddad7880-c7db-11ea-9c10-ed5a9bda1952">
-			<div id="context-text" class="content">
-				<h1 class="display">Oscar Reyes</h1>
-				<h6 class="highlight">about</h6>
-				<p>Senior Java Developer at iO</p>
-				<p>Lives in Utrecht, The Netherlands</p>
-				<p><quote>
-					<i>"I move to the Netherlands a year ago. I'm still fascinated with the country and I kept thinking why not all the countries are like this? I've grown enourmously in this year. I feel really happy about it"</i>
-				</quote></p>
-				<h6 class="highlight">links</h6>
-				<div class="links">
-				<!-- <p><svg width="16px" height="16px" viewBox="0 -2 26 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg"> -->
-					<!-- <path d="M12 8.56675C12 8.56675 7.87619 0.22183 2.70999 1.05903C-0.906331 1.64506 2.17634 10.571 3.21796 12.0702C4.25958 13.5694 6.32331 12.5684 6.32331 12.5684C6.32331 12.5684 0.640808 14.0699 5.29012 18.5743C9.73023 22.876 12 16.0718 12 16.0718" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> -->
-					<!-- <path d="M12.1523 8.62388C12.1523 8.62388 16.2762 0.278959 21.4424 1.11616C25.0587 1.70219 21.976 10.6281 20.9344 12.1273C19.8928 13.6265 17.829 12.6255 17.829 12.6255C17.829 12.6255 23.5115 14.127 18.8622 18.6314C14.4221 22.9331 12.1523 16.129 12.1523 16.129" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> -->
-				<!-- </svg><a ref="me" href="https://bsky.app/profile/oscarryz.com">@oscarryz.com</a></p> -->
-				<!-- <p><i class="fab fa-twitter"></i> <a rel="me" href="https://twitter.com/oscarryz">@oscarryz</a></p> -->
-				<!-- <p><i class="fab fa-mastodon"></i> <a rel="me" href="https://mastodon.social/@oscarryz">oscarryz@mastodon.social</a></p> -->
-				<p><i class="fab fa-github"></i> <a rel="me" href="https://github.com/oscarryz" title="">/oscarryz</a></p>
-				<!-- <p><i class="fab fa-stack-overflow"></i> <a href="https://stackoverflow.com/users/20654/oscarryz" title="">OscarRyz</a></p> -->
-				<p><i class="fa fa-globe-americas"></i> <a href="https://oscarryz.com" title="">oscarryz.com</a><br><br><br></p>
-				</div>
-			</div>
-		</main>
-		<footer class="footer">
-			<nav id="footer-nav">
-				<a href="#" onclick="toggleTheme()">Theme: Light / Dark</a>
-			</nav>
-		</footer>
-	</div>
-</body>
-<script>
-	(function setTheme() {
-		const currentTheme = localStorage.getItem('theme') || 'dark';
-		document.querySelector("html").dataset.theme = currentTheme;
-	})();
-</script>
-
+    <body>
+        <div class="grid-container">
+            <header class="header">
+                <div class="toolbar"></div>
+            </header>
+            <style>
+                .display {
+                    font-family: "Prosto One", sans-serif;
+                    font-size: 4.2rem;
+                    line-height: 5rem;
+                    letter-spacing: 0.25rem;
+                    background: var(--color-primary);
+                    -webkit-text-fill-color: transparent;
+                    -webkit-background-clip: text;
+                }
+                .grid-container {
+                    max-width: 50rem;
+                }
+                .highlight {
+                    color: #de8b98;
+                    border-bottom: 2px solid #de8b98;
+                }
+                .links {
+                    font-size: 1rem;
+                }
+            </style>
+            <main class="main" data-id="ddad7880-c7db-11ea-9c10-ed5a9bda1952">
+                <div id="context-text" class="content">
+                    <h1 class="display">Oscar Reyes</h1>
+                    <h6 class="highlight">about</h6>
+                    <p>Senior Java Developer at iO</p>
+                    <p>Lives in Utrecht, The Netherlands</p>
+                    <p>
+                        <quote>
+                            <i
+                                >"I move to the Netherlands last year. I kept
+                                thinking why not all the countries are like
+                                this?."</i
+                            >
+                        </quote>
+                    </p>
+                    <h6 class="highlight">links</h6>
+                    <div class="links">
+                        <!-- <p><svg width="16px" height="16px" viewBox="0 -2 26 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg"> -->
+                        <!-- <path d="M12 8.56675C12 8.56675 7.87619 0.22183 2.70999 1.05903C-0.906331 1.64506 2.17634 10.571 3.21796 12.0702C4.25958 13.5694 6.32331 12.5684 6.32331 12.5684C6.32331 12.5684 0.640808 14.0699 5.29012 18.5743C9.73023 22.876 12 16.0718 12 16.0718" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> -->
+                        <!-- <path d="M12.1523 8.62388C12.1523 8.62388 16.2762 0.278959 21.4424 1.11616C25.0587 1.70219 21.976 10.6281 20.9344 12.1273C19.8928 13.6265 17.829 12.6255 17.829 12.6255C17.829 12.6255 23.5115 14.127 18.8622 18.6314C14.4221 22.9331 12.1523 16.129 12.1523 16.129" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> -->
+                        <!-- </svg><a ref="me" href="https://bsky.app/profile/oscarryz.com">@oscarryz.com</a></p> -->
+                        <!-- <p><i class="fab fa-twitter"></i> <a rel="me" href="https://twitter.com/oscarryz">@oscarryz</a></p> -->
+                        <!-- <p><i class="fab fa-mastodon"></i> <a rel="me" href="https://mastodon.social/@oscarryz">oscarryz@mastodon.social</a></p> -->
+                        <p>
+                            <i class="fab fa-github"></i>
+                            <a
+                                rel="me"
+                                href="https://github.com/oscarryz"
+                                title=""
+                                >/oscarryz</a
+                            >
+                        </p>
+                        <!-- <p><i class="fab fa-stack-overflow"></i> <a href="https://stackoverflow.com/users/20654/oscarryz" title="">OscarRyz</a></p> -->
+                        <p>
+                            <i class="fa fa-globe-americas"></i>
+                            <a href="https://oscarryz.com" title=""
+                                >oscarryz.com</a
+                            ><br /><br /><br />
+                        </p>
+                    </div>
+                </div>
+            </main>
+            <footer class="footer">
+                <nav id="footer-nav">
+                    <a href="#" onclick="toggleTheme()">Theme: Light / Dark</a>
+                </nav>
+            </footer>
+        </div>
+    </body>
+    <script>
+        (function setTheme() {
+            const currentTheme = localStorage.getItem("theme") || "dark";
+            document.querySelector("html").dataset.theme = currentTheme;
+        })();
+    </script>
 </html>
