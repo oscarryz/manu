@@ -10,6 +10,14 @@
   },
   "items": [
     {
+      "id": "181d5d1f-7df2-479a-9db7-69a9b1e6d7e5",
+      "title": "Concluding things",
+      "content_html": "<h1>Concluding things</h1><p>It is slightly weird when a project finishes or when you change jobs. You put a lot of effort and energy into understanding how things work, getting along with the people you’re going to work with, and integrating; and then when things are over, the next day you’re no longer part of that team. It is too abrupt.</p><p>There is something “unnatural” about this process; I imagine in nature, when you join a new group this happens slowly, there is an integration phase, and when you leave a group, you can still go back and visit your friends. But work being somehow artificial, this change is too sudden. For instance, when I moved out of my house in Texas, I finished packing our stuff, took a taxi, and saw what was my house for the last time. I don’t think I’ll ever visit that street again. That is different; as much as I loved my house, that was a building. When you switch jobs, you literally are there one day, and the next day you’re not. </p><p>It is weird.</p>",
+      "date_published": "2026-07-01T05:48:53.505Z",
+      "date_modified": "2026-07-01T05:48:53.505Z",
+      "url": "https://oscarryz.com/concluding-things.html"
+    },
+    {
       "id": "4fb99df4-3ca5-40e7-b5e3-5d72034d6e9f",
       "title": "Making things simple",
       "content_html": "<h1>Making things simple</h1><p>It is not trivial; every new thing added is a new thing that has to be maintained, and everything that is not added makes the existing ones work more, or simply there are no features.</p><p>Then you have to think how to reuse existing spaces, how you would add more features without breaking the existing patterns. Not an easy task.</p><p>Right now I’m trying to make this “blogging platform” even simpler than what it is. I’ll write more on it later.</p>",
