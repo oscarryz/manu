@@ -24,9 +24,12 @@
         if (found) entry = found;
       }
     } catch (e) {
+      const hint = /40[13]/.test(e.message)
+        ? 'Your GitHub token may be expired or invalid. Update it in the extension popup.'
+        : 'Check your network connection and extension settings.';
       document.getElementById('save-btn').disabled = true;
       document.getElementById('content').innerHTML =
-        '<h1>Failed to load entry</h1><p>' + e.message + '</p>';
+        '<h1>Failed to load entry</h1><p>' + hint + '</p><p><small>' + e.message + '</small></p>';
       initEditor();
       return;
     }
