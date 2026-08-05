@@ -24,7 +24,11 @@
         if (found) entry = found;
       }
     } catch (e) {
-      console.error('Failed to load entry:', e);
+      document.getElementById('save-btn').disabled = true;
+      document.getElementById('content').innerHTML =
+        '<h1>Failed to load entry</h1><p>' + e.message + '</p>';
+      initEditor();
+      return;
     }
     document.getElementById('main').dataset.id = id;
     document.getElementById('big-title').textContent = entry.title;
